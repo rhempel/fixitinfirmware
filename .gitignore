@@ -1,0 +1,7 @@
+# Ignote these files and folders - they are generated
+
+/.doit.db.*
+/__pycache__
+/cache
+/output
+
