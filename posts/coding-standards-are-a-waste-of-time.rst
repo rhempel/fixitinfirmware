@@ -6,7 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
-
+.. status: draft
 
 .. image:: /images/accent/GeneKranzAtConsole.thumbnail.jpg
     :alt: https://history.nasa.gov/SP-4223/p118.jpg
