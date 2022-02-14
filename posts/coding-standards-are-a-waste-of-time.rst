@@ -212,9 +212,9 @@ coding standard simply cannot help with.
 .. _`umm_malloc`: https://github.com/rhempel/umm_malloc
 .. _`study at TU Delft`: http://resolver.tudelft.nl/uuid:646de5ba-eee8-4ec8-8bbc-2c188e1847ea
 .. _`Language Subsetting`: https://www.leshatton.org/Documents/MISRA_comp_1105.pdf
-.. _`Uncle Bob's SOLID': https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html
+.. _`Uncle Bob's SOLID`: https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html
 
-.. _`Big MISRA study': https://arxiv.org/pdf/2007.08978.pdf
-.. _`Codig Standard JAVA': https://www.jstage.jst.go.jp/article/transinf/E98.D/7/E98.D_2014EDP7327/_article
+.. _`Big MISRA study`: https://arxiv.org/pdf/2007.08978.pdf
+.. _`Coding Standard JAVA`: https://www.jstage.jst.go.jp/article/transinf/E98.D/7/E98.D_2014EDP7327/_article
 
 
