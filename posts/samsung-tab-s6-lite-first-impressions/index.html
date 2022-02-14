@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samsung Tab S6 Lite First Impressions | Fix It In Firmware</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Ralph Hempel">
+<link rel="prev" href="../termux-install-jupyter-and-more/" title="Installing Jupyter and More Tools" type="text/html">
+<link rel="next" href="../mission-statements/" title="Mission Statements" type="text/html">
+<meta property="og:site_name" content="Fix It In Firmware">
+<meta property="og:title" content="Samsung Tab S6 Lite First Impressions">
+<meta property="og:url" content="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/">
+<meta property="og:description" content="I have been resisting getting a tablet (Android or iOS) for years now, in
+part because it's yet another piece of tech that might not be as useful
+as I imagined it to be. The good news is that the Sams">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-02-20T12:00:00-05:00">
+<meta property="article:tag" content="android">
+<meta property="article:tag" content="samsung">
+<meta property="article:tag" content="termux">
+</head>
+<body>
+<!-- <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> -->
+
+<!-- Menubar -->
+
+<div class="bg-image mb-4" style="background-image: url('../../images/headers/resistors.jpg');">
+<div class="mask" style="background-color: rgba(0,0,0,0.5); height: 100%; width: 100%;">
+
+<nav class="navbar navbar-expand-md static-top
+navbar-dark
+style=" background-color: transparent><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" style="font-size: 250%" href="../../">
+
+            <span id="blog-title">Fix It In Firmware</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto" style="font-size: 120%">
+<li class="nav-item">
+<a href="../../index.html" class="nav-link text-white">Home</a>
+                </li>
+<li class="nav-item">
+<a href="../../pages/about/" class="nav-link text-white">About</a>
+                </li>
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link text-white">Archives</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/index.html" class="nav-link text-white">Tags</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav>
+</div>
+</div>
+
+<!-- End of Menubar -->
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Samsung Tab S6 Lite First Impressions</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Ralph Hempel
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2021-02-20T12:00:00-05:00" itemprop="datePublished" title="2021-02-20">2021-02-20</time></a>
+            </p>
+            
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <img alt="/images/products/samsung-tab-s6-lite-with-name.webp" class="align-right" src="../../images/products/samsung-tab-s6-lite-with-name.webp" style="width: 240px;"><p>I have been resisting getting a tablet (Android or iOS) for years now, in
+part because it's yet another piece of tech that might not be as useful
+as I imagined it to be. The good news is that the Samsung Tab S6 Lite
+is actually good enough to do useful work on, it's not too expensive, and
+it comes with an S-Pen.</p>
+<p>In terms of first impressions, I am super happy with this tablet in
+combination with an inexpensive case from <a class="reference external" href="https://www.amazon.de/-/en/INFILAND-Case-Galaxy-Lite-Navy/dp/B0863BMT4X/ref=sr_1_10?dchild=1&amp;keywords=tablet+h%C3%BClle+tab+s6+lite+infiland&amp;qid=1613914719&amp;sr=8-10">Infiland</a>. It has great
+battery life, loads web pages quickly, and is not so precious that
+I don't mind taking it everywhere.</p>
+<p>To be relevant in my daily life, a tablet must be able to do the following
+things besides the normally expected tasks:</p>
+<blockquote>
+<ol class="arabic simple">
+<li><p>Edit text files</p></li>
+<li><p>Run Python programs</p></li>
+<li><p>Log in to ssh sessions on remote computers</p></li>
+<li><p>Allow sketching of ideas using a stylus</p></li>
+</ol>
+</blockquote>
+<p>With the addition of <a class="reference external" href="https://termux.com/">Termux</a> an Android tablet can be a surprisingly
+powerful computer, giving you access to almost anything you can expect
+of a Linux machine.</p>
+<p>To make the setup as easy as possible, I set used the free installer
+for <a class="reference external" href="https://f-droid.org/en/packages/com.termux/">Termux from F-Droid</a>.</p>
+<p>In subsequent articles I'll add git, Python, matplotlib, and a few other
+packages. In fact, this website is generated on the Galaxy Tab S6 Lite
+using <a class="reference external" href="https://getnikola.com/">Nikola</a> , a static website generator.</p>
+<p>Note that the point of this exercise is not to make a really great
+portable programming system - that's what your laptop is for. What
+we are trying to accomplish here is to see if an inexpensive Android
+tablet can be used to maintain a lightweight static website and
+occasionally so some programming.</p>
+<p>With that in mind, the next section covers installing and configuring
+a couple of packages that let you access the Termux shell from your
+"real" computer.</p>
+<section id="remote-access-your-tablet-with-sshd"><h2>Remote Access Your Tablet with <cite>sshd</cite>
+</h2>
+<p>The first thing we'll do is install <cite>sshd</cite> and transfer our public ssh key
+to the tablet so that we can log in over a secure connection. If you don't
+have an <cite>ssh</cite> keypair yet go ahead and generate one on your regular computer
+now. You probably already have one if you use <cite>git</cite>.</p>
+<p>On the tablet do the following:</p>
+<pre class="code bash"><a id="rest_code_a662cb6323d141aa98e298ac7745f115-1" name="rest_code_a662cb6323d141aa98e298ac7745f115-1" href="#rest_code_a662cb6323d141aa98e298ac7745f115-1"></a>$ pkg install termux-auth
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-2" name="rest_code_a662cb6323d141aa98e298ac7745f115-2" href="#rest_code_a662cb6323d141aa98e298ac7745f115-2"></a>$ passwd
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-3" name="rest_code_a662cb6323d141aa98e298ac7745f115-3" href="#rest_code_a662cb6323d141aa98e298ac7745f115-3"></a>New password:
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-4" name="rest_code_a662cb6323d141aa98e298ac7745f115-4" href="#rest_code_a662cb6323d141aa98e298ac7745f115-4"></a>Retype new password:
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-5" name="rest_code_a662cb6323d141aa98e298ac7745f115-5" href="#rest_code_a662cb6323d141aa98e298ac7745f115-5"></a>New password was successfully set.
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-6" name="rest_code_a662cb6323d141aa98e298ac7745f115-6" href="#rest_code_a662cb6323d141aa98e298ac7745f115-6"></a>
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-7" name="rest_code_a662cb6323d141aa98e298ac7745f115-7" href="#rest_code_a662cb6323d141aa98e298ac7745f115-7"></a>$ ip a show wlan0
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-8" name="rest_code_a662cb6323d141aa98e298ac7745f115-8" href="#rest_code_a662cb6323d141aa98e298ac7745f115-8"></a><span class="m">2</span>: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="m">1500</span> qdisc mq state UP group default qlen <span class="m">1000</span>
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-9" name="rest_code_a662cb6323d141aa98e298ac7745f115-9" href="#rest_code_a662cb6323d141aa98e298ac7745f115-9"></a>    link/ether aa:bb:cc:dd:ee:ff brd ff:ff:ff:ff:ff:ff
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-10" name="rest_code_a662cb6323d141aa98e298ac7745f115-10" href="#rest_code_a662cb6323d141aa98e298ac7745f115-10"></a>    inet <span class="m">192</span>.168.0.102/24 brd <span class="m">192</span>.168.0.255 scope global wlan0
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-11" name="rest_code_a662cb6323d141aa98e298ac7745f115-11" href="#rest_code_a662cb6323d141aa98e298ac7745f115-11"></a>       valid_lft forever preferred_lft forever
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-12" name="rest_code_a662cb6323d141aa98e298ac7745f115-12" href="#rest_code_a662cb6323d141aa98e298ac7745f115-12"></a>    inet6 fe80::14a9:aabb:ccdd:eeff/64 scope link
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-13" name="rest_code_a662cb6323d141aa98e298ac7745f115-13" href="#rest_code_a662cb6323d141aa98e298ac7745f115-13"></a>       valid_lft forever preferred_lft forever
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-14" name="rest_code_a662cb6323d141aa98e298ac7745f115-14" href="#rest_code_a662cb6323d141aa98e298ac7745f115-14"></a>
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-15" name="rest_code_a662cb6323d141aa98e298ac7745f115-15" href="#rest_code_a662cb6323d141aa98e298ac7745f115-15"></a>$ pkg upgrade
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-16" name="rest_code_a662cb6323d141aa98e298ac7745f115-16" href="#rest_code_a662cb6323d141aa98e298ac7745f115-16"></a>$ pkg install openssh
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-17" name="rest_code_a662cb6323d141aa98e298ac7745f115-17" href="#rest_code_a662cb6323d141aa98e298ac7745f115-17"></a>
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-18" name="rest_code_a662cb6323d141aa98e298ac7745f115-18" href="#rest_code_a662cb6323d141aa98e298ac7745f115-18"></a>$ sshd
+</pre>
+<p>At this point you have <cite>sshd</cite> running on the tablet, but of course you need
+to send your public key so that you can log on securely in the future. Note
+the IP_ADDRESS that your tablet is using and do the following on your
+computer:</p>
+<pre class="code bash"><a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-1" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-1" href="#rest_code_357deafbb4584b6fab5352c6fa34c5aa-1"></a>ssh-copy-id -p <span class="m">8022</span> -i path/to/id_rsa.pub IP_ADDRESS
+<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-2" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-2" href="#rest_code_357deafbb4584b6fab5352c6fa34c5aa-2"></a>
+<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-3" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-3" href="#rest_code_357deafbb4584b6fab5352c6fa34c5aa-3"></a><span class="c1"># Test out the ssh access</span>
+<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-4" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-4" href="#rest_code_357deafbb4584b6fab5352c6fa34c5aa-4"></a>
+<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-5" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-5" href="#rest_code_357deafbb4584b6fab5352c6fa34c5aa-5"></a>ssh -p <span class="m">8022</span> IP_ADDRESS
+</pre>
+<p>For complete details refer to <a class="reference external" href="https://wiki.termux.com/wiki/Remote_Access">Termux Wiki - Remote Access</a>.</p>
+</section><section id="grant-storage-permissions-to-termux"><h2>Grant Storage Permissions to Termux</h2>
+<p>By default and in compliance with Android's SELinux policies, Termux keeps
+its file separate from other apps, and has limited access to your tablet's
+files. This will limit your ability to access Termux files over <cite>ssh</cite> and
+make it harder to make useful scripts that access data outside of Termux.</p>
+<p>For a detailed description of how Termux handles storage, how to set it up,
+and how to trigger the Android file picker to get any file it has access
+to, refer to <a class="reference external" href="https://wiki.termux.com/wiki/Internal_and_external_storage">Termux Wiki - Internal and External Storage</a>.</p>
+<p>Enabling acccess to the shared files is as easy as:</p>
+<pre class="code bash"><a id="rest_code_5e2cbebbbd884197971b9b159bd6b14a-1" name="rest_code_5e2cbebbbd884197971b9b159bd6b14a-1" href="#rest_code_5e2cbebbbd884197971b9b159bd6b14a-1"></a>termux-setup-storage
+</pre>
+<p>That's it for now - next step is getting a few useful Termux packages installed.</p>
+</section>
+</div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/android/" rel="tag">android</a></li>
+            <li><a class="tag p-category" href="../../categories/samsung/" rel="tag">samsung</a></li>
+            <li><a class="tag p-category" href="../../categories/termux/" rel="tag">termux</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../termux-install-jupyter-and-more/" rel="prev" title="Installing Jupyter and More Tools">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../mission-statements/" rel="next" title="Mission Statements">Next post</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer class="container px-3 py-2" id="footer">
+            Contents © 2022         <a href="mailto:rhempel@fixitinfirmware.com">Ralph Hempel</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+        <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>

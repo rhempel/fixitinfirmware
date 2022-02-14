@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="A site dedicated to care and feeding of embedded systems">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fix It In Firmware (old posts, page 1) | Fix It In Firmware</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://fixitinfirmware.com/index-1.html">
+<link rel="prev" href="index-2.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<!-- <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> -->
+
+<!-- Menubar -->
+
+<div class="bg-image mb-4" style="background-image: url('images/headers/resistors.jpg');">
+<div class="mask" style="background-color: rgba(0,0,0,0.5); height: 100%; width: 100%;">
+
+<nav class="navbar navbar-expand-md static-top
+navbar-dark
+style=" background-color: transparent><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" style="font-size: 250%" href=".">
+
+            <span id="blog-title">Fix It In Firmware</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto" style="font-size: 120%">
+<li class="nav-item">
+<a href="index.html" class="nav-link text-white">Home</a>
+                </li>
+<li class="nav-item">
+<a href="pages/about/" class="nav-link text-white">About</a>
+                </li>
+<li class="nav-item">
+<a href="archive.html" class="nav-link text-white">Archives</a>
+                </li>
+<li class="nav-item">
+<a href="categories/index.html" class="nav-link text-white">Tags</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav>
+</div>
+</div>
+
+<!-- End of Menubar -->
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+    
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/samsung-tab-s6-lite-first-impressions/" class="u-url">Samsung Tab S6 Lite First Impressions</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Ralph Hempel
+            </span></p>
+            <p class="dateline">
+            <a href="posts/samsung-tab-s6-lite-first-impressions/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-02-20T12:00:00-05:00" itemprop="datePublished" title="2021-02-20">2021-02-20</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <img alt="/images/products/samsung-tab-s6-lite-with-name.webp" class="align-right" src="images/products/samsung-tab-s6-lite-with-name.webp" style="width: 240px;"><p>I have been resisting getting a tablet (Android or iOS) for years now, in
+part because it's yet another piece of tech that might not be as useful
+as I imagined it to be. The good news is that the Samsung Tab S6 Lite
+is actually good enough to do useful work on, it's not too expensive, and
+it comes with an S-Pen.</p>
+<p>In terms of first impressions, I am super happy with this tablet in
+combination with an inexpensive case from <a class="reference external" href="https://www.amazon.de/-/en/INFILAND-Case-Galaxy-Lite-Navy/dp/B0863BMT4X/ref=sr_1_10?dchild=1&amp;keywords=tablet+h%C3%BClle+tab+s6+lite+infiland&amp;qid=1613914719&amp;sr=8-10">Infiland</a>. It has great
+battery life, loads web pages quickly, and is not so precious that
+I don't mind taking it everywhere.</p>
+<p>To be relevant in my daily life, a tablet must be able to do the following
+things besides the normally expected tasks:</p>
+<blockquote>
+<ol class="arabic simple">
+<li><p>Edit text files</p></li>
+<li><p>Run Python programs</p></li>
+<li><p>Log in to ssh sessions on remote computers</p></li>
+<li><p>Allow sketching of ideas using a stylus</p></li>
+</ol>
+</blockquote>
+<p>With the addition of <a class="reference external" href="https://termux.com/">Termux</a> an Android tablet can be a surprisingly
+powerful computer, giving you access to almost anything you can expect
+of a Linux machine.</p>
+<p>To make the setup as easy as possible, I set used the free installer
+for <a class="reference external" href="https://f-droid.org/en/packages/com.termux/">Termux from F-Droid</a>.</p>
+<p>In subsequent articles I'll add git, Python, matplotlib, and a few other
+packages. In fact, this website is generated on the Galaxy Tab S6 Lite
+using <a class="reference external" href="https://getnikola.com/">Nikola</a> , a static website generator.</p>
+<p>Note that the point of this exercise is not to make a really great
+portable programming system - that's what your laptop is for. What
+we are trying to accomplish here is to see if an inexpensive Android
+tablet can be used to maintain a lightweight static website and
+occasionally so some programming.</p>
+<p>With that in mind, the next section covers installing and configuring
+a couple of packages that let you access the Termux shell from your
+"real" computer.</p>
+<section id="remote-access-your-tablet-with-sshd"><h2>Remote Access Your Tablet with <cite>sshd</cite>
+</h2>
+<p>The first thing we'll do is install <cite>sshd</cite> and transfer our public ssh key
+to the tablet so that we can log in over a secure connection. If you don't
+have an <cite>ssh</cite> keypair yet go ahead and generate one on your regular computer
+now. You probably already have one if you use <cite>git</cite>.</p>
+<p>On the tablet do the following:</p>
+<pre class="code bash"><a id="rest_code_a662cb6323d141aa98e298ac7745f115-1" name="rest_code_a662cb6323d141aa98e298ac7745f115-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-1"></a>$ pkg install termux-auth
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-2" name="rest_code_a662cb6323d141aa98e298ac7745f115-2" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-2"></a>$ passwd
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-3" name="rest_code_a662cb6323d141aa98e298ac7745f115-3" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-3"></a>New password:
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-4" name="rest_code_a662cb6323d141aa98e298ac7745f115-4" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-4"></a>Retype new password:
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-5" name="rest_code_a662cb6323d141aa98e298ac7745f115-5" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-5"></a>New password was successfully set.
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-6" name="rest_code_a662cb6323d141aa98e298ac7745f115-6" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-6"></a>
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-7" name="rest_code_a662cb6323d141aa98e298ac7745f115-7" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-7"></a>$ ip a show wlan0
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-8" name="rest_code_a662cb6323d141aa98e298ac7745f115-8" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-8"></a><span class="m">2</span>: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="m">1500</span> qdisc mq state UP group default qlen <span class="m">1000</span>
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-9" name="rest_code_a662cb6323d141aa98e298ac7745f115-9" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-9"></a>    link/ether aa:bb:cc:dd:ee:ff brd ff:ff:ff:ff:ff:ff
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-10" name="rest_code_a662cb6323d141aa98e298ac7745f115-10" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-10"></a>    inet <span class="m">192</span>.168.0.102/24 brd <span class="m">192</span>.168.0.255 scope global wlan0
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-11" name="rest_code_a662cb6323d141aa98e298ac7745f115-11" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-11"></a>       valid_lft forever preferred_lft forever
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-12" name="rest_code_a662cb6323d141aa98e298ac7745f115-12" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-12"></a>    inet6 fe80::14a9:aabb:ccdd:eeff/64 scope link
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-13" name="rest_code_a662cb6323d141aa98e298ac7745f115-13" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-13"></a>       valid_lft forever preferred_lft forever
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-14" name="rest_code_a662cb6323d141aa98e298ac7745f115-14" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-14"></a>
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-15" name="rest_code_a662cb6323d141aa98e298ac7745f115-15" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-15"></a>$ pkg upgrade
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-16" name="rest_code_a662cb6323d141aa98e298ac7745f115-16" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-16"></a>$ pkg install openssh
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-17" name="rest_code_a662cb6323d141aa98e298ac7745f115-17" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-17"></a>
+<a id="rest_code_a662cb6323d141aa98e298ac7745f115-18" name="rest_code_a662cb6323d141aa98e298ac7745f115-18" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-18"></a>$ sshd
+</pre>
+<p>At this point you have <cite>sshd</cite> running on the tablet, but of course you need
+to send your public key so that you can log on securely in the future. Note
+the IP_ADDRESS that your tablet is using and do the following on your
+computer:</p>
+<pre class="code bash"><a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-1" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-1"></a>ssh-copy-id -p <span class="m">8022</span> -i path/to/id_rsa.pub IP_ADDRESS
+<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-2" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-2" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-2"></a>
+<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-3" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-3" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-3"></a><span class="c1"># Test out the ssh access</span>
+<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-4" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-4" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-4"></a>
+<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-5" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-5" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-5"></a>ssh -p <span class="m">8022</span> IP_ADDRESS
+</pre>
+<p>For complete details refer to <a class="reference external" href="https://wiki.termux.com/wiki/Remote_Access">Termux Wiki - Remote Access</a>.</p>
+</section><section id="grant-storage-permissions-to-termux"><h2>Grant Storage Permissions to Termux</h2>
+<p>By default and in compliance with Android's SELinux policies, Termux keeps
+its file separate from other apps, and has limited access to your tablet's
+files. This will limit your ability to access Termux files over <cite>ssh</cite> and
+make it harder to make useful scripts that access data outside of Termux.</p>
+<p>For a detailed description of how Termux handles storage, how to set it up,
+and how to trigger the Android file picker to get any file it has access
+to, refer to <a class="reference external" href="https://wiki.termux.com/wiki/Internal_and_external_storage">Termux Wiki - Internal and External Storage</a>.</p>
+<p>Enabling acccess to the shared files is as easy as:</p>
+<pre class="code bash"><a id="rest_code_5e2cbebbbd884197971b9b159bd6b14a-1" name="rest_code_5e2cbebbbd884197971b9b159bd6b14a-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_5e2cbebbbd884197971b9b159bd6b14a-1"></a>termux-setup-storage
+</pre>
+<p>That's it for now - next step is getting a few useful Termux packages installed.</p>
+</section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/welcome-to-maintenance/" class="u-url">Welcome to Maintenance</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Ralph Hempel
+            </span></p>
+            <p class="dateline">
+            <a href="posts/welcome-to-maintenance/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-01-05T12:00:00-05:00" itemprop="datePublished" title="2021-01-05">2021-01-05</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Great news - the company you work for is doing relatively well considering the
+global pandemic of 2020-2021 and you still have a job. Your team has made a
+final release of your flagship product and the engineers are being assigned to
+new projects. Just before the monthly all-hands, your manager schedules a 1:1
+where he tells you that you are now going to be on the maintenance crew for the
+project that your team has released.</p>
+<p>Maintenance, sustaining, support - no matter what the word is, this is not
+where you thought you would end up. Fixing bugs and adding features that were
+dropped to meet the schedule is no fun and a dead-end.</p>
+<p>Or is it?</p>
+<p>In my experience the maintenance team performs a vital business function, and
+it's a great time to really lean in and develop some of the skills that will
+make you a much better embedded systems programmer. This is also an opportunity
+to help your leadership team get a better idea of what is needed to support a
+high-performing firmware maintenance team.</p>
+<p>If the company you work for doesn't have a great culture around maintenance
+after product launch in place, don't worry. You will have to do some extra
+work to drive organizational change, but patience and solid data to back up
+your ideas can kick-start the change journey.</p>
+<section id="first-steps"><h2>First Steps</h2>
+<p>In your new role on the maintenance team it's important to take stock of
+the expectations on your team and the resources you have available.</p>
+<p>When we talk about resources in a traditional project management
+context, the first thing that comes to a PM's mind is budget, developers,
+and and equipment.</p>
+<p>Before we go too far down this path, I'd like to ask you to deliberately
+leave developers out of the resources category. The reason is simple - if
+you need a bigger hard drive, you buy it. If you need more desks you can
+move them from another department. Those are resources - people are not
+resources. Please encourage your company to avoid calling developers
+resources because it implies a 1:1 trade capability. We already know
+that no two developers have the same capability or capacity, so let's
+stop using the word resource for staff.</p>
+<p>I'll suggest here that resources may also include:</p>
+<ul class="simple">
+<li><p>Product requirements (including features that are not yet implemented)</p></li>
+<li><p>Technical and user documentation</p></li>
+<li><p>Test plans and automated test systems</p></li>
+<li><p>Source code, CI/CD pipelines</p></li>
+<li><p>Any specially modified PCBAs or programming fixtures</p></li>
+</ul>
+<p>Any artifacts that the team needs to build and support your product is a
+resource, so identify and conserve them.</p>
+</section><section id="technical-debt"><h2>Technical Debt</h2>
+<p>Wait, you don't have some of these items, or they are at best incomplete and
+outdated? Welcome to the reality of technical debt. Some projects have the
+misfortune to run long enough that they get bogged down in technical debt and
+end up cancelled. Other projects have a short enough run that the developers do
+only what is absolutely needed to get the job done, and corners will be cut -
+most likely in documentation.</p>
+<p>Now is the time to meet with the development team (that you may have even
+been a part of) and gather any artifacts that they still have. If
+you're lucky there's a decent bug/feature list in a tool like JIRA and some
+form of Wiki or Confluence site for the documentation.</p>
+<p>Expect to spend at least a week or two getting these resources into useable
+shape together with the rest of your team - and avoid falling into the trap
+of doing any more actual coding until you are satisfied that you and the team
+are prepared to look after the code properly.</p>
+<p>In the next installment we'll talk about building a culture of quality
+and accountability.</p>
+</section>
+</div>
+    </article>
+</div>
+        <ul class="pager postindexpager clearfix">
+<li class="previous"><a href="index-2.html" rel="prev">Newer posts</a></li>
+        </ul>
+<!--End of body content--><footer class="container px-3 py-2" id="footer">
+            Contents © 2022         <a href="mailto:rhempel@fixitinfirmware.com">Ralph Hempel</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+        <script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>

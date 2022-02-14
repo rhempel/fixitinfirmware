@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about Roles)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/cat_roles.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Mon, 14 Feb 2022 23:25:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Coding Standards Are A Waste Of Time </title><link>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="https://history.nasa.gov/SP-4223/p118.jpg" class="align-right" src="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg"&gt;
+&lt;p&gt;You've been working for hours to figure out why the system you are debugging
+only fails very occasionally. When you get good bug reports that show it takes
+about 25 days of continuous run time for the failure to occur, and it's
+happened at 4 different sites now, you get a spidey sense that it might be
+related to a timer. You pull out your phone and fire up &lt;a class="reference external" href="https://thomasokken.com/free42/"&gt;Free-42&lt;/a&gt; (because you
+like RPN calculators) and do the math for a 1 msec timer interval and figure
+out that a 32 bit unsigned int should be good for about 50 days ...&lt;/p&gt;
+&lt;p&gt;When you find the place where someone did a bit of math with the clock using
+signed instead of unsigned values, you say "I wish that we had a coding
+standard to catch this".&lt;/p&gt;
+&lt;p&gt;Said nobody. Ever.&lt;/p&gt;
+&lt;p&gt;What you really needed was a developers guide for this project, a test-driven
+development mindset, and a review process that could work together to have a
+better chance at catching the problem.&lt;/p&gt;
+&lt;p&gt;If you take a few minutes and Google "are coding standards useful" you will get
+many articles and blog posts promoting the same basic benefits:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The code will be easy to read&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The code will be easy to understand&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The code will be easy to maintain&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The code will be easy to debug&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is exactly the kind of fluff that management likes to read after yet
+another difficult project delivery. Sometimes consultants are brought in to
+review the development process and they comment on the lack of a coding standard
+(among other things). If only we stuck to a coding standard our problems would
+go away.&lt;/p&gt;
+&lt;p&gt;The thing is, a coding standard is the easiest document to write and to have
+meetings about. Everyone has an opinion about how to write pretty code, how
+variables and functions should be named, and whether to use camel-case or
+underlines to separate words.&lt;/p&gt;
+&lt;p&gt;But is the coding standard really going to fix things? There is a hard truth in
+software engineering that is often forgotten. Joel Spolsky summarized it very
+neatly in Part 1 of &lt;a class="reference external" href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/"&gt;Things You Should Never Do&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote class="epigraph"&gt;
+&lt;p&gt;There’s a subtle reason that programmers always want to throw away the code
+and start over. The reason is that they think the old code is a mess. And
+here is the interesting observation: they are probably wrong. The reason that
+they think the old code is a mess is because of a cardinal, fundamental law of
+programming:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;It’s harder to read code than to write it.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is why code reuse is so hard. This is why everybody on your team has a
+different function they like to use for splitting strings into arrays of
+strings. They write their own function because it’s easier and more fun than
+figuring out how the old function works.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Joel Spolsky&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let's explore this a bit further ...&lt;/p&gt;
+&lt;section id="but-coding-standards-make-reading-code-easier"&gt;
+&lt;h2&gt;But Coding Standards Make Reading Code Easier&lt;/h2&gt;
+&lt;p&gt;To be fair, it &lt;em&gt;is&lt;/em&gt; actually a little easier to read well-formed code, but
+that's something you can fix in a few minutes with any number of code
+formatting utilities. You can fix up most naming problems with a decent editor.
+But you can't make a more complex module easier to understand, maintain, or
+debug just by having a coding standard.&lt;/p&gt;
+&lt;p&gt;It feels good to write and read a nicely formatted block of code where the
+names all make sense, the flow is clear, and the comments explain the thinking
+behind the hard parts.&lt;/p&gt;
+&lt;p&gt;Now multiply that by a few hundred files and pretty soon you are in the 20-50
+kloc range - here's where the time you and your team discussed the number of
+spaces to indent a block or enforcing only one exit point per function was
+wasted. You would have been better off working on a project level design and
+developers guide.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="but-coding-standards-make-understanding-code-easier"&gt;
+&lt;h2&gt;But Coding Standards Make Understanding Code Easier&lt;/h2&gt;
+&lt;p&gt;Sure. For projects with a hundred or so lines of code. Do you really think that
+your coding standard is the one thing that is keeping new team members from
+understanding how your interrupt domain functions buffer data so the background
+task can process it when it's needed? Or how you guarantee that time critical
+hardware updates can run during garbage collection cycles?&lt;/p&gt;
+&lt;p&gt;It doesn't matter if the code is easy to read if the system is hard to
+understand. That's why there are &lt;a class="reference external" href="https://www.cliffsnotes.com/"&gt;Cliff's Notes&lt;/a&gt; for topics like The Great Gatsby
+and Differential Equations.&lt;/p&gt;
+&lt;p&gt;It's very helpful to have a relatively short document to give you and your team
+a detailed guide to the technical challenges the system is designed to solve as
+well as a Developer's Guide that explains how those challenges are solved.&lt;/p&gt;
+&lt;p&gt;But wait. Isn't writing a Design Guide and Developer's Guide exactly what we
+are &lt;em&gt;not&lt;/em&gt; supposed to do anymore? Doesn't Agile prefer working code over
+documentation? Shouldn't we avoid doing Big Up Front Design (BUFD)?&lt;/p&gt;
+&lt;p&gt;Maybe, yes, and yes. I'm no fan of BUFD - unless it's for a relatively small
+piece of code where you know all the design constraints and requirements and
+you have good acceptance criteria and your team has written some variant of
+this code more than once or twice.&lt;/p&gt;
+&lt;p&gt;For any complex project that's going to run for a few quarters or years there
+is no way to think ahead to all the problems or to find a process to eliminate
+risk. And that's why you and your team should spend your time writing Design
+Guides and Developer's Guides as you go. Take time in each sprint to update
+these guides with new knowledge for the project.&lt;/p&gt;
+&lt;p&gt;For long-running and complex projects, your biggest enemy is not the lack of
+coding standards. It's staff turnover and adding more developers to the
+project. The loss of tribal knowledge and the friction of onboarding new
+developers is what's going to be the root cause of many issues that can be
+avoided if you spend time writing great guides.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="but-coding-standards-make-maintanance-and-debugging-easier"&gt;
+&lt;h2&gt;But Coding Standards Make Maintanance and Debugging Easier&lt;/h2&gt;
+&lt;p&gt;A coding standard might make the &lt;em&gt;mechanics&lt;/em&gt; of maintaining code easier, but
+they sure don't help you find &lt;em&gt;where&lt;/em&gt; to make the changes to add features or
+fix bugs.&lt;/p&gt;
+&lt;p&gt;Debugging code is one of the hardest activities there is, and a coding standard
+is not going to help with that either. There are of course a few general rules
+that can be used to make it easier for the compiler to tell you about a
+potential bug. And there are static and dynamic code analyzers that can point
+you to dangerous constructs.&lt;/p&gt;
+&lt;p&gt;In my experience, this is completely backwards. For full disclosure I was a
+strong advocate for compile time and code analyzers to find potential bugs. I
+changed my mind when I discovered Test-Driven Development (TDD).&lt;/p&gt;
+&lt;p&gt;Actually I discovered the &lt;a class="reference external" href="https://www.amazon.com/Driven-Development-Embedded-Pragmatic-Programmers/dp/193435662X"&gt;TDD For Embedded Systems&lt;/a&gt; book by James Grenning back
+in 2011, but I didn't really dig in and &lt;em&gt;do&lt;/em&gt; TDD until I refactored my
+&lt;a class="reference external" href="https://github.com/rhempel/umm_malloc"&gt;umm_malloc&lt;/a&gt; project using TDD in about 2018.&lt;/p&gt;
+&lt;p&gt;Then I wrote a non-trivial (2000 loc) feature extension for another project
+using TDD. It worked pretty much the first time it was integrated it into the
+codebase running on our embedded target.  When I reflected on how TDD improved
+our development process I realized that &lt;em&gt;I never had to use the debugger&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Ever. Not even once.&lt;/p&gt;
+&lt;p&gt;Long story short, the bit about debugging being easier when you have a coding
+standard is simply untrue. Easier maintenance is also a myth - you still have
+to know where to change the code, or how to plug a new feature in.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="what-can-we-do-to-improve-outcomes"&gt;
+&lt;h2&gt;What Can We Do To Improve Outcomes?&lt;/h2&gt;
+&lt;p&gt;The first thing we can do is take a look around us and have some hard
+conversations about &lt;em&gt;why&lt;/em&gt; we think a coding standard is so important, and
+if so, does it need to apply uniformly to each and every project?&lt;/p&gt;
+&lt;p&gt;I'm going to argue that a coding standard is not nearly as important as a project level
+Developers Guide - unless your department only works on variants of the same
+codebase for all projects. I'll also ask you to recall all the hours you have
+spent getting to a semi-done coding standard, giving up in the end because
+you cannot get an agreement on something like allowing an early return out
+of a function.&lt;/p&gt;
+&lt;p&gt;Next we can do a literature survey looking for actual (not anecdotal)
+evidence of the benefit of a coding standard - even an industry standard one
+like MISRA-C. Guess what? A &lt;a class="reference external" href="http://resolver.tudelft.nl/uuid:646de5ba-eee8-4ec8-8bbc-2c188e1847ea"&gt;study at TU Delft&lt;/a&gt; (a very well respected CS school)
+and Les Hatton's paper on &lt;a class="reference external" href="https://www.leshatton.org/Documents/MISRA_comp_1105.pdf"&gt;Language Subsetting&lt;/a&gt; using MISRA-C have shown that
+the standard is not much better than random chance at catching faults. To make
+matters worse, Hatton's earlier paper shows that there is a non-trivial chance
+that fixing code to be MISRA-C compliant actually &lt;em&gt;increases&lt;/em&gt; the risk of
+introducing new and subtle bugs.&lt;/p&gt;
+&lt;p&gt;The third thing you and your team can do is start working in pairs or small
+groups to break down your functional components into pieces that are
+decoupled from the rest of the system, and that follow good software engineering
+principles, like &lt;a class="reference external" href="https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html"&gt;Uncle Bob's SOLID&lt;/a&gt; response to a reader's letter.&lt;/p&gt;
+&lt;p&gt;Finally, find a TDD evangelist in your team and take them off their
+assigned tasks for a while. Let them float in a couple of teams and ask them
+to coach developers in TDD. Make sure that your developers know the difference
+between code &lt;em&gt;coverage&lt;/em&gt; and code &lt;em&gt;correctness&lt;/em&gt; - it's usually easy to write
+tests after the code is done that prove code coverage. It takes a little
+longer (at the beginning) to write code that makes failing tests pass, but
+pretty soon the rhythm of writing a test, breaking your program, and then
+writing code to make the test pass becomes natural.&lt;/p&gt;
+&lt;p&gt;Your new developers will be &lt;em&gt;much&lt;/em&gt; more productive on your complex system
+if they have read a good Developers Guide and understand the workflow for
+adding features or fixing (hopefully rare) bugs. They won't need a Coding
+Standard because you'll have a senior staff member coaching them for the
+first few months, they will have a safety net of tests, and they will develop
+a mindset that drives quality, attention to detail, and testability that a
+coding standard simply cannot help with.&lt;/p&gt;
+&lt;/section&gt;</description><category>code</category><category>maintenance</category><guid>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</guid><pubDate>Sat, 27 Nov 2021 17:00:00 GMT</pubDate></item><item><title>Mission Statements</title><link>https://fixitinfirmware.com/posts/mission-statements/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="https://history.nasa.gov/SP-4223/p118.jpg" class="align-right" src="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg"&gt;
+&lt;p&gt;Misson statements. Hands up for anyone who loves their company
+mission statement.&lt;/p&gt;
+&lt;p&gt;Hands up for anyone who &lt;em&gt;knows&lt;/em&gt; their company mission statement.&lt;/p&gt;
+&lt;p&gt;In many organizations, the mission statement is laid out by top level
+leadership, sometimes with input from departments or individuals. It tends
+to be a general and somewhat fluffy set of words that could apply to
+just about any organization. And that makes most mission statements
+forgettable.&lt;/p&gt;
+&lt;p&gt;But that doesn't mean your maintenance team should not have a mission
+statement! Your job together with your team is to come up with a
+statement that reflects how you want to be seen and heard within
+the organization moving forward.&lt;/p&gt;
+&lt;p&gt;One step towards improving your team's visibility is to have a 30-60 minute
+workshop to identify your key responsibilities and accountabilities. Don't
+work on your misison statement yet - just keep that list up on a
+whiteboard and make sure that it accurately reflects the team's
+purpose. As you do your work, feel free to update the whiteboard by
+adding, consolidating, or removing items. Within 2-4 weeks the lists will
+be boiled down to a few items that will represent your team's "reason
+for being" - that's the core of your mission.&lt;/p&gt;
+&lt;p&gt;Maintenance engineering can be extremely demanding because
+your work impacts not only future production but also every unit that
+has ever been produced and sold. You could be working on tasks
+as varied as reducing manufacturing cost, adding a new feature, or
+making a fix that can be applied in the field. In rare cases your team
+will have to make a call to stop production or even recall a product.&lt;/p&gt;
+&lt;p&gt;How do those high level tasks fit into your company's mission statement?
+They probably don't - and that's why you and the team need to have one
+that feels authentic and relevant for you, while still supporting the
+overall company mission.&lt;/p&gt;
+&lt;p&gt;Mission statements that are authentic are very hard to come by, so why
+not take inspiration from an existing statement and modify it (if needed)
+to be relevant for your team?&lt;/p&gt;
+&lt;p&gt;Two of my personal favorites are:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;"Tough and competent"&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;"Failure is not an option"&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="attribution"&gt;—Gene Kranz (Apollo Flight Director)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Almost every engineer has at one time or another watched Apollo 13 and
+has reflected on their personal work. If you haven't watched it recently,
+please make some time to do so, or look up any documentary on the
+Apollo program. Maybe bring it up in your next team meeting and ask
+for input on an engineering heavy documentary that you can all watch.&lt;/p&gt;
+&lt;p&gt;Then spend 30 minutes or so on a team reflection to gather input on
+what is the most relevant thing the team can do in the next 2-4 weeks
+that makes them feel proud of what they are doing.&lt;/p&gt;
+&lt;section id="but-we-did-fail-now-what"&gt;
+&lt;h2&gt;... but we DID fail - now what?&lt;/h2&gt;
+&lt;p&gt;I just said that &lt;em&gt;Failure is not an option&lt;/em&gt; is one of my guiding star
+statements. At LEGO we have a similar one - &lt;em&gt;Only the best is good enough&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;As much as I admire these statements, they come with a downside. They
+may set up the organization to believe that failures will not happen, or
+support a culture of not releasing a product until it's perfect and
+complete.&lt;/p&gt;
+&lt;p&gt;Of course these are relevant statements for space flight, where cost and
+quality are in step with each other. In consumer and commercial goods,
+you &lt;em&gt;will&lt;/em&gt; have failures in design, production, software, and process - and
+they will almost always be coupled with schedule and cost pressure or
+incorrect assumptions.&lt;/p&gt;
+&lt;p&gt;Your job as part of the maintenance team is to be prepared to address
+these failures, and to do so professionally. That means making sure that:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;p&gt;You value facts over guessing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You fix the root cause and not the symptom&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You communicate clearly in a timely fashion&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is where &lt;em&gt;Tough and Competent&lt;/em&gt; comes in. You and the team need to
+be competent in gathering facts and getting to root cause. Then you
+need to be tough in challenging assumptions and reporting your findings
+and recommendations.&lt;/p&gt;
+&lt;p&gt;What you and your team discover, how you solve the problem, and the
+way you communicate it up the chain will have a huge impact on your team's
+visibility and credibility. Never waste the opportunity.&lt;/p&gt;
+&lt;p&gt;Managing engineering failures that get escalated to senior leadership
+is a real challenge, and I'll review personal stories of failure and
+success in future posts.&lt;/p&gt;
+&lt;/section&gt;</description><category>maintenance</category><category>opportunity</category><category>resources</category><guid>https://fixitinfirmware.com/posts/mission-statements/</guid><pubDate>Thu, 01 Jul 2021 17:00:00 GMT</pubDate></item><item><title>Welcome to Maintenance</title><link>https://fixitinfirmware.com/posts/welcome-to-maintenance/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;p&gt;Great news - the company you work for is doing relatively well considering the
+global pandemic of 2020-2021 and you still have a job. Your team has made a
+final release of your flagship product and the engineers are being assigned to
+new projects. Just before the monthly all-hands, your manager schedules a 1:1
+where he tells you that you are now going to be on the maintenance crew for the
+project that your team has released.&lt;/p&gt;
+&lt;p&gt;Maintenance, sustaining, support - no matter what the word is, this is not
+where you thought you would end up. Fixing bugs and adding features that were
+dropped to meet the schedule is no fun and a dead-end.&lt;/p&gt;
+&lt;p&gt;Or is it?&lt;/p&gt;
+&lt;p&gt;In my experience the maintenance team performs a vital business function, and
+it's a great time to really lean in and develop some of the skills that will
+make you a much better embedded systems programmer. This is also an opportunity
+to help your leadership team get a better idea of what is needed to support a
+high-performing firmware maintenance team.&lt;/p&gt;
+&lt;p&gt;If the company you work for doesn't have a great culture around maintenance
+after product launch in place, don't worry. You will have to do some extra
+work to drive organizational change, but patience and solid data to back up
+your ideas can kick-start the change journey.&lt;/p&gt;
+&lt;section id="first-steps"&gt;
+&lt;h2&gt;First Steps&lt;/h2&gt;
+&lt;p&gt;In your new role on the maintenance team it's important to take stock of
+the expectations on your team and the resources you have available.&lt;/p&gt;
+&lt;p&gt;When we talk about resources in a traditional project management
+context, the first thing that comes to a PM's mind is budget, developers,
+and and equipment.&lt;/p&gt;
+&lt;p&gt;Before we go too far down this path, I'd like to ask you to deliberately
+leave developers out of the resources category. The reason is simple - if
+you need a bigger hard drive, you buy it. If you need more desks you can
+move them from another department. Those are resources - people are not
+resources. Please encourage your company to avoid calling developers
+resources because it implies a 1:1 trade capability. We already know
+that no two developers have the same capability or capacity, so let's
+stop using the word resource for staff.&lt;/p&gt;
+&lt;p&gt;I'll suggest here that resources may also include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Product requirements (including features that are not yet implemented)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Technical and user documentation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Test plans and automated test systems&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Source code, CI/CD pipelines&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Any specially modified PCBAs or programming fixtures&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Any artifacts that the team needs to build and support your product is a
+resource, so identify and conserve them.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="technical-debt"&gt;
+&lt;h2&gt;Technical Debt&lt;/h2&gt;
+&lt;p&gt;Wait, you don't have some of these items, or they are at best incomplete and
+outdated? Welcome to the reality of technical debt. Some projects have the
+misfortune to run long enough that they get bogged down in technical debt and
+end up cancelled. Other projects have a short enough run that the developers do
+only what is absolutely needed to get the job done, and corners will be cut -
+most likely in documentation.&lt;/p&gt;
+&lt;p&gt;Now is the time to meet with the development team (that you may have even
+been a part of) and gather any artifacts that they still have. If
+you're lucky there's a decent bug/feature list in a tool like JIRA and some
+form of Wiki or Confluence site for the documentation.&lt;/p&gt;
+&lt;p&gt;Expect to spend at least a week or two getting these resources into useable
+shape together with the rest of your team - and avoid falling into the trap
+of doing any more actual coding until you are satisfied that you and the team
+are prepared to look after the code properly.&lt;/p&gt;
+&lt;p&gt;In the next installment we'll talk about building a culture of quality
+and accountability.&lt;/p&gt;
+&lt;/section&gt;</description><category>maintenance</category><category>opportunity</category><category>resources</category><guid>https://fixitinfirmware.com/posts/welcome-to-maintenance/</guid><pubDate>Tue, 05 Jan 2021 17:00:00 GMT</pubDate></item></channel></rss>

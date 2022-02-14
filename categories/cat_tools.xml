@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about Tools)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/cat_tools.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Mon, 14 Feb 2022 23:25:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Installing Jupyter and More Tools</title><link>https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;p&gt;Let's jump right into installing git and a few other helpful
+tools on our Samsung Tab 6S Lite Android Tablet.&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-1" name="rest_code_13992ca9ca8840b79059d2872a4124cc-1" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-1"&gt;&lt;/a&gt;$ pkg search git
+&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-2" name="rest_code_13992ca9ca8840b79059d2872a4124cc-2" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-3" name="rest_code_13992ca9ca8840b79059d2872a4124cc-3" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-3"&gt;&lt;/a&gt;Checking availability of current mirror: ok
+&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-4" name="rest_code_13992ca9ca8840b79059d2872a4124cc-4" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-4"&gt;&lt;/a&gt;
+&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-5" name="rest_code_13992ca9ca8840b79059d2872a4124cc-5" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-5"&gt;&lt;/a&gt;Sorting... Done
+&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-6" name="rest_code_13992ca9ca8840b79059d2872a4124cc-6" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-6"&gt;&lt;/a&gt;Full Text Search... Done
+&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-7" name="rest_code_13992ca9ca8840b79059d2872a4124cc-7" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-7"&gt;&lt;/a&gt;python/stable &lt;span class="m"&gt;2&lt;/span&gt;.33.0-1 aarch64
+&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-8" name="rest_code_13992ca9ca8840b79059d2872a4124cc-8" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-8"&gt;&lt;/a&gt;  Fast, scaleable, distributed revision control system
+&lt;a id="rest_code_13992ca9ca8840b79059d2872a4124cc-9" name="rest_code_13992ca9ca8840b79059d2872a4124cc-9" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_13992ca9ca8840b79059d2872a4124cc-9"&gt;&lt;/a&gt;...
+&lt;/pre&gt;&lt;p&gt;And now we can install the packages we need (I have not included all the
+other package searches needed for this session).&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_a359907d96604d8396aaf87f7be67f37-1" name="rest_code_a359907d96604d8396aaf87f7be67f37-1" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_a359907d96604d8396aaf87f7be67f37-1"&gt;&lt;/a&gt;$ pkg install git build-essential
+&lt;/pre&gt;&lt;p&gt;Similarly, now that we have Python installed, we can add a few
+packages that we know will be needed to do useful work, like numpy
+and matplotlib.&lt;/p&gt;
+&lt;p&gt;We can also install sphinx and a few other utilities. If you run
+into trouble check out &lt;a class="reference external" href="https://wiki.termux.com/wiki/Python"&gt;Termux specific install hints for Python packages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In some cases, the packages need to be built from
+source on the tablet - but this takes a lot of time, so
+it might be better to take advantage of the "pointless"
+install method that gives us pre-built binaries:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-1" name="rest_code_452a659342c94e46a19801e5f385bca3-1" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Subscribe to the pointless repository&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-2" name="rest_code_452a659342c94e46a19801e5f385bca3-2" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-3" name="rest_code_452a659342c94e46a19801e5f385bca3-3" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-3"&gt;&lt;/a&gt;$ curl -LO https://its-pointless.github.io/setup-pointless-repo.sh
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-4" name="rest_code_452a659342c94e46a19801e5f385bca3-4" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-4"&gt;&lt;/a&gt;$ bash setup-pointless-repo.sh
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-5" name="rest_code_452a659342c94e46a19801e5f385bca3-5" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-5"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-6" name="rest_code_452a659342c94e46a19801e5f385bca3-6" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-6"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Now we can install (and search) for the Python packages using&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-7" name="rest_code_452a659342c94e46a19801e5f385bca3-7" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-7"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pkg instead of pip&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-8" name="rest_code_452a659342c94e46a19801e5f385bca3-8" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-8"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-9" name="rest_code_452a659342c94e46a19801e5f385bca3-9" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-9"&gt;&lt;/a&gt;$ pkg install numpy
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-10" name="rest_code_452a659342c94e46a19801e5f385bca3-10" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-10"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-11" name="rest_code_452a659342c94e46a19801e5f385bca3-11" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-11"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pillow has some prerequisites&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-12" name="rest_code_452a659342c94e46a19801e5f385bca3-12" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-12"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-13" name="rest_code_452a659342c94e46a19801e5f385bca3-13" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-13"&gt;&lt;/a&gt;pkg install libjpeg-turbo libpng
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-14" name="rest_code_452a659342c94e46a19801e5f385bca3-14" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-14"&gt;&lt;/a&gt;pip install pillow
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-15" name="rest_code_452a659342c94e46a19801e5f385bca3-15" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-15"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-16" name="rest_code_452a659342c94e46a19801e5f385bca3-16" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-16"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pynacl has some prerequisites&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-17" name="rest_code_452a659342c94e46a19801e5f385bca3-17" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-17"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-18" name="rest_code_452a659342c94e46a19801e5f385bca3-18" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-18"&gt;&lt;/a&gt;pkg install libsodium
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-19" name="rest_code_452a659342c94e46a19801e5f385bca3-19" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-19"&gt;&lt;/a&gt;pip install pynacl
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-20" name="rest_code_452a659342c94e46a19801e5f385bca3-20" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-20"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-21" name="rest_code_452a659342c94e46a19801e5f385bca3-21" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-21"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# matplotlib has some prerequisites&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-22" name="rest_code_452a659342c94e46a19801e5f385bca3-22" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-22"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-23" name="rest_code_452a659342c94e46a19801e5f385bca3-23" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-23"&gt;&lt;/a&gt;pkg install freetype libjpeg-turbo libpng
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-24" name="rest_code_452a659342c94e46a19801e5f385bca3-24" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-24"&gt;&lt;/a&gt;pip install matplotlib
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-25" name="rest_code_452a659342c94e46a19801e5f385bca3-25" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-25"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-26" name="rest_code_452a659342c94e46a19801e5f385bca3-26" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-26"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# lxml has some prerequisites&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-27" name="rest_code_452a659342c94e46a19801e5f385bca3-27" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-27"&gt;&lt;/a&gt;pkg install libxml2 libxslt
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-28" name="rest_code_452a659342c94e46a19801e5f385bca3-28" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-28"&gt;&lt;/a&gt;pip install lxml
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-29" name="rest_code_452a659342c94e46a19801e5f385bca3-29" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-29"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-30" name="rest_code_452a659342c94e46a19801e5f385bca3-30" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-30"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# sphinx has some prerequisites - but they are mostly already there&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-31" name="rest_code_452a659342c94e46a19801e5f385bca3-31" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-31"&gt;&lt;/a&gt;pip install sphinx
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-32" name="rest_code_452a659342c94e46a19801e5f385bca3-32" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-32"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-33" name="rest_code_452a659342c94e46a19801e5f385bca3-33" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-33"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# nikola has some prerequisites - but they are mostly already there&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-34" name="rest_code_452a659342c94e46a19801e5f385bca3-34" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-34"&gt;&lt;/a&gt;pip install nikola
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-35" name="rest_code_452a659342c94e46a19801e5f385bca3-35" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-35"&gt;&lt;/a&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-36" name="rest_code_452a659342c94e46a19801e5f385bca3-36" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-36"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# ipython has some prerequisites&lt;/span&gt;
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-37" name="rest_code_452a659342c94e46a19801e5f385bca3-37" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-37"&gt;&lt;/a&gt;pkg install libzmq libcrypt clang
+&lt;a id="rest_code_452a659342c94e46a19801e5f385bca3-38" name="rest_code_452a659342c94e46a19801e5f385bca3-38" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_452a659342c94e46a19801e5f385bca3-38"&gt;&lt;/a&gt;pip install pyzmq jupyter
+&lt;/pre&gt;&lt;p&gt;OK, now we have a pretty powerful piece of machinery at our fingertips. We
+can start an iPython notebook like this:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_6d17f9a87a7b45f89b97a90c3843dcce-1" name="rest_code_6d17f9a87a7b45f89b97a90c3843dcce-1" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_6d17f9a87a7b45f89b97a90c3843dcce-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Start a Jupyter notebook session&lt;/span&gt;
+&lt;a id="rest_code_6d17f9a87a7b45f89b97a90c3843dcce-2" name="rest_code_6d17f9a87a7b45f89b97a90c3843dcce-2" href="https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/#rest_code_6d17f9a87a7b45f89b97a90c3843dcce-2"&gt;&lt;/a&gt;jupyter notebook
+&lt;/pre&gt;&lt;p&gt;And you can paste in a &lt;a class="reference external" href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/simple_plot.html"&gt;Matplotlib sample plot&lt;/a&gt; to make sure it's working.
+I think we can call it a day and now we are ready to have some serious fun
+with an Android tablet!&lt;/p&gt;</description><category>android</category><category>python</category><category>samsung</category><category>termux</category><guid>https://fixitinfirmware.com/posts/termux-install-jupyter-and-more/</guid><pubDate>Sat, 20 Feb 2021 17:00:00 GMT</pubDate></item><item><title>Installing Python on Termux</title><link>https://fixitinfirmware.com/posts/installing-python-on-termux/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;p&gt;As mentioned in a previous post, I'm really liking my Samsung Galaxy
+Tab S6 Lite. Now it's time to turn it into a device capable of
+lightweight programming - and the pleasant surprise is that it might
+be good enough for even more.&lt;/p&gt;
+&lt;p&gt;Let's get started with installing Python 3.x from the Termux package
+repository. To find packages matching Python in the name:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-1" name="rest_code_6182d28aa5c845f3b80725861391d449-1" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-1"&gt;&lt;/a&gt;$ pkg search python
+&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-2" name="rest_code_6182d28aa5c845f3b80725861391d449-2" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-3" name="rest_code_6182d28aa5c845f3b80725861391d449-3" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-3"&gt;&lt;/a&gt;Checking availability of current mirror: ok
+&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-4" name="rest_code_6182d28aa5c845f3b80725861391d449-4" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-4"&gt;&lt;/a&gt;
+&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-5" name="rest_code_6182d28aa5c845f3b80725861391d449-5" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-5"&gt;&lt;/a&gt;Sorting... Done
+&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-6" name="rest_code_6182d28aa5c845f3b80725861391d449-6" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-6"&gt;&lt;/a&gt;Full Text Search... Done
+&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-7" name="rest_code_6182d28aa5c845f3b80725861391d449-7" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-7"&gt;&lt;/a&gt;python/stable &lt;span class="m"&gt;3&lt;/span&gt;.9.7 aarch64
+&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-8" name="rest_code_6182d28aa5c845f3b80725861391d449-8" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-8"&gt;&lt;/a&gt;  Python &lt;span class="m"&gt;3&lt;/span&gt; programming language intended to &lt;span class="nb"&gt;enable&lt;/span&gt; clear programs
+&lt;a id="rest_code_6182d28aa5c845f3b80725861391d449-9" name="rest_code_6182d28aa5c845f3b80725861391d449-9" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-9"&gt;&lt;/a&gt;...
+&lt;/pre&gt;&lt;p&gt;That's good enough - we get Python 3.9.7 which is quite up to date. Note
+that Termux uses a rolling release model - that means you get the most
+up to date packages, but you can't mix and match or downgrade to older
+versions without a LOT of work.&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_d4451545119d409096e163af917fd221-1" name="rest_code_d4451545119d409096e163af917fd221-1" href="https://fixitinfirmware.com/posts/installing-python-on-termux/#rest_code_d4451545119d409096e163af917fd221-1"&gt;&lt;/a&gt;$ pkg install python
+&lt;/pre&gt;&lt;p&gt;This will take a few minutes, so be patient. Once that's done you can
+fire up Python and test out the console. Next we'll install iPython
+and some useful packages like numpy and matplotlib - maybe we can do
+a little more than lightweight work on this tablet!&lt;/p&gt;
+&lt;p&gt;in subsequent articles I'll add git, Python, matplotlib, and a few other
+packages. In fact, this website is generated on the Galaxy Tab S6 Lite
+using &lt;a class="reference external" href="https://getnikola.com/"&gt;Nikola&lt;/a&gt; , a static website generator.&lt;/p&gt;</description><category>android</category><category>python</category><category>samsung</category><category>termux</category><guid>https://fixitinfirmware.com/posts/installing-python-on-termux/</guid><pubDate>Sat, 20 Feb 2021 17:00:00 GMT</pubDate></item><item><title>Installing vim and Setting Up Profile</title><link>https://fixitinfirmware.com/posts/termux-install-vim-and-set-up-profile/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;p&gt;Setting up vim and profile&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_bd53017aa2494846874e356c5ef2ba06-1" name="rest_code_bd53017aa2494846874e356c5ef2ba06-1" href="https://fixitinfirmware.com/posts/termux-install-vim-and-set-up-profile/#rest_code_bd53017aa2494846874e356c5ef2ba06-1"&gt;&lt;/a&gt;$ pkg install x11-repo
+&lt;a id="rest_code_bd53017aa2494846874e356c5ef2ba06-2" name="rest_code_bd53017aa2494846874e356c5ef2ba06-2" href="https://fixitinfirmware.com/posts/termux-install-vim-and-set-up-profile/#rest_code_bd53017aa2494846874e356c5ef2ba06-2"&gt;&lt;/a&gt;$ pkg install vim-gtk
+&lt;/pre&gt;</description><category>android</category><category>python</category><category>samsung</category><category>termux</category><guid>https://fixitinfirmware.com/posts/termux-install-vim-and-set-up-profile/</guid><pubDate>Sat, 20 Feb 2021 17:00:00 GMT</pubDate></item><item><title>Samsung Tab S6 Lite First Impressions</title><link>https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="/images/products/samsung-tab-s6-lite-with-name.webp" class="align-right" src="https://fixitinfirmware.com/images/products/samsung-tab-s6-lite-with-name.webp" style="width: 240px;"&gt;
+&lt;p&gt;I have been resisting getting a tablet (Android or iOS) for years now, in
+part because it's yet another piece of tech that might not be as useful
+as I imagined it to be. The good news is that the Samsung Tab S6 Lite
+is actually good enough to do useful work on, it's not too expensive, and
+it comes with an S-Pen.&lt;/p&gt;
+&lt;p&gt;In terms of first impressions, I am super happy with this tablet in
+combination with an inexpensive case from &lt;a class="reference external" href="https://www.amazon.de/-/en/INFILAND-Case-Galaxy-Lite-Navy/dp/B0863BMT4X/ref=sr_1_10?dchild=1&amp;amp;keywords=tablet+h%C3%BClle+tab+s6+lite+infiland&amp;amp;qid=1613914719&amp;amp;sr=8-10"&gt;Infiland&lt;/a&gt;. It has great
+battery life, loads web pages quickly, and is not so precious that
+I don't mind taking it everywhere.&lt;/p&gt;
+&lt;p&gt;To be relevant in my daily life, a tablet must be able to do the following
+things besides the normally expected tasks:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;p&gt;Edit text files&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Run Python programs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Log in to ssh sessions on remote computers&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Allow sketching of ideas using a stylus&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;With the addition of &lt;a class="reference external" href="https://termux.com/"&gt;Termux&lt;/a&gt; an Android tablet can be a surprisingly
+powerful computer, giving you access to almost anything you can expect
+of a Linux machine.&lt;/p&gt;
+&lt;p&gt;To make the setup as easy as possible, I set used the free installer
+for &lt;a class="reference external" href="https://f-droid.org/en/packages/com.termux/"&gt;Termux from F-Droid&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In subsequent articles I'll add git, Python, matplotlib, and a few other
+packages. In fact, this website is generated on the Galaxy Tab S6 Lite
+using &lt;a class="reference external" href="https://getnikola.com/"&gt;Nikola&lt;/a&gt; , a static website generator.&lt;/p&gt;
+&lt;p&gt;Note that the point of this exercise is not to make a really great
+portable programming system - that's what your laptop is for. What
+we are trying to accomplish here is to see if an inexpensive Android
+tablet can be used to maintain a lightweight static website and
+occasionally so some programming.&lt;/p&gt;
+&lt;p&gt;With that in mind, the next section covers installing and configuring
+a couple of packages that let you access the Termux shell from your
+"real" computer.&lt;/p&gt;
+&lt;section id="remote-access-your-tablet-with-sshd"&gt;
+&lt;h2&gt;Remote Access Your Tablet with &lt;cite&gt;sshd&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;The first thing we'll do is install &lt;cite&gt;sshd&lt;/cite&gt; and transfer our public ssh key
+to the tablet so that we can log in over a secure connection. If you don't
+have an &lt;cite&gt;ssh&lt;/cite&gt; keypair yet go ahead and generate one on your regular computer
+now. You probably already have one if you use &lt;cite&gt;git&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;On the tablet do the following:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-1" name="rest_code_a662cb6323d141aa98e298ac7745f115-1" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-1"&gt;&lt;/a&gt;$ pkg install termux-auth
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-2" name="rest_code_a662cb6323d141aa98e298ac7745f115-2" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-2"&gt;&lt;/a&gt;$ passwd
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-3" name="rest_code_a662cb6323d141aa98e298ac7745f115-3" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-3"&gt;&lt;/a&gt;New password:
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-4" name="rest_code_a662cb6323d141aa98e298ac7745f115-4" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-4"&gt;&lt;/a&gt;Retype new password:
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-5" name="rest_code_a662cb6323d141aa98e298ac7745f115-5" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-5"&gt;&lt;/a&gt;New password was successfully set.
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-6" name="rest_code_a662cb6323d141aa98e298ac7745f115-6" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-6"&gt;&lt;/a&gt;
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-7" name="rest_code_a662cb6323d141aa98e298ac7745f115-7" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-7"&gt;&lt;/a&gt;$ ip a show wlan0
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-8" name="rest_code_a662cb6323d141aa98e298ac7745f115-8" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-8"&gt;&lt;/a&gt;&lt;span class="m"&gt;2&lt;/span&gt;: wlan0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu &lt;span class="m"&gt;1500&lt;/span&gt; qdisc mq state UP group default qlen &lt;span class="m"&gt;1000&lt;/span&gt;
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-9" name="rest_code_a662cb6323d141aa98e298ac7745f115-9" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-9"&gt;&lt;/a&gt;    link/ether aa:bb:cc:dd:ee:ff brd ff:ff:ff:ff:ff:ff
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-10" name="rest_code_a662cb6323d141aa98e298ac7745f115-10" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-10"&gt;&lt;/a&gt;    inet &lt;span class="m"&gt;192&lt;/span&gt;.168.0.102/24 brd &lt;span class="m"&gt;192&lt;/span&gt;.168.0.255 scope global wlan0
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-11" name="rest_code_a662cb6323d141aa98e298ac7745f115-11" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-11"&gt;&lt;/a&gt;       valid_lft forever preferred_lft forever
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-12" name="rest_code_a662cb6323d141aa98e298ac7745f115-12" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-12"&gt;&lt;/a&gt;    inet6 fe80::14a9:aabb:ccdd:eeff/64 scope link
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-13" name="rest_code_a662cb6323d141aa98e298ac7745f115-13" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-13"&gt;&lt;/a&gt;       valid_lft forever preferred_lft forever
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-14" name="rest_code_a662cb6323d141aa98e298ac7745f115-14" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-14"&gt;&lt;/a&gt;
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-15" name="rest_code_a662cb6323d141aa98e298ac7745f115-15" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-15"&gt;&lt;/a&gt;$ pkg upgrade
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-16" name="rest_code_a662cb6323d141aa98e298ac7745f115-16" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-16"&gt;&lt;/a&gt;$ pkg install openssh
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-17" name="rest_code_a662cb6323d141aa98e298ac7745f115-17" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-17"&gt;&lt;/a&gt;
+&lt;a id="rest_code_a662cb6323d141aa98e298ac7745f115-18" name="rest_code_a662cb6323d141aa98e298ac7745f115-18" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-18"&gt;&lt;/a&gt;$ sshd
+&lt;/pre&gt;&lt;p&gt;At this point you have &lt;cite&gt;sshd&lt;/cite&gt; running on the tablet, but of course you need
+to send your public key so that you can log on securely in the future. Note
+the IP_ADDRESS that your tablet is using and do the following on your
+computer:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-1" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-1" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-1"&gt;&lt;/a&gt;ssh-copy-id -p &lt;span class="m"&gt;8022&lt;/span&gt; -i path/to/id_rsa.pub IP_ADDRESS
+&lt;a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-2" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-2" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-3" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-3" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-3"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Test out the ssh access&lt;/span&gt;
+&lt;a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-4" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-4" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-4"&gt;&lt;/a&gt;
+&lt;a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-5" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-5" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-5"&gt;&lt;/a&gt;ssh -p &lt;span class="m"&gt;8022&lt;/span&gt; IP_ADDRESS
+&lt;/pre&gt;&lt;p&gt;For complete details refer to &lt;a class="reference external" href="https://wiki.termux.com/wiki/Remote_Access"&gt;Termux Wiki - Remote Access&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="grant-storage-permissions-to-termux"&gt;
+&lt;h2&gt;Grant Storage Permissions to Termux&lt;/h2&gt;
+&lt;p&gt;By default and in compliance with Android's SELinux policies, Termux keeps
+its file separate from other apps, and has limited access to your tablet's
+files. This will limit your ability to access Termux files over &lt;cite&gt;ssh&lt;/cite&gt; and
+make it harder to make useful scripts that access data outside of Termux.&lt;/p&gt;
+&lt;p&gt;For a detailed description of how Termux handles storage, how to set it up,
+and how to trigger the Android file picker to get any file it has access
+to, refer to &lt;a class="reference external" href="https://wiki.termux.com/wiki/Internal_and_external_storage"&gt;Termux Wiki - Internal and External Storage&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Enabling acccess to the shared files is as easy as:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_5e2cbebbbd884197971b9b159bd6b14a-1" name="rest_code_5e2cbebbbd884197971b9b159bd6b14a-1" href="https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/#rest_code_5e2cbebbbd884197971b9b159bd6b14a-1"&gt;&lt;/a&gt;termux-setup-storage
+&lt;/pre&gt;&lt;p&gt;That's it for now - next step is getting a few useful Termux packages installed.&lt;/p&gt;
+&lt;/section&gt;</description><category>android</category><category>samsung</category><category>termux</category><guid>https://fixitinfirmware.com/posts/samsung-tab-s6-lite-first-impressions/</guid><pubDate>Sat, 20 Feb 2021 17:00:00 GMT</pubDate></item></channel></rss>

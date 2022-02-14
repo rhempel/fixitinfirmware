@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="A site dedicated to care and feeding of embedded systems">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fix It In Firmware (old posts, page 2) | Fix It In Firmware</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://fixitinfirmware.com/index-2.html">
+<link rel="prev" href="index-3.html" type="text/html">
+<link rel="next" href="index-1.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<!-- <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> -->
+
+<!-- Menubar -->
+
+<div class="bg-image mb-4" style="background-image: url('images/headers/resistors.jpg');">
+<div class="mask" style="background-color: rgba(0,0,0,0.5); height: 100%; width: 100%;">
+
+<nav class="navbar navbar-expand-md static-top
+navbar-dark
+style=" background-color: transparent><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" style="font-size: 250%" href=".">
+
+            <span id="blog-title">Fix It In Firmware</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto" style="font-size: 120%">
+<li class="nav-item">
+<a href="index.html" class="nav-link text-white">Home</a>
+                </li>
+<li class="nav-item">
+<a href="pages/about/" class="nav-link text-white">About</a>
+                </li>
+<li class="nav-item">
+<a href="archive.html" class="nav-link text-white">Archives</a>
+                </li>
+<li class="nav-item">
+<a href="categories/index.html" class="nav-link text-white">Tags</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav>
+</div>
+</div>
+
+<!-- End of Menubar -->
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+    
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/installing-python-on-termux/" class="u-url">Installing Python on Termux</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Ralph Hempel
+            </span></p>
+            <p class="dateline">
+            <a href="posts/installing-python-on-termux/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-02-20T12:00:00-05:00" itemprop="datePublished" title="2021-02-20">2021-02-20</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>As mentioned in a previous post, I'm really liking my Samsung Galaxy
+Tab S6 Lite. Now it's time to turn it into a device capable of
+lightweight programming - and the pleasant surprise is that it might
+be good enough for even more.</p>
+<p>Let's get started with installing Python 3.x from the Termux package
+repository. To find packages matching Python in the name:</p>
+<pre class="code bash"><a id="rest_code_6182d28aa5c845f3b80725861391d449-1" name="rest_code_6182d28aa5c845f3b80725861391d449-1" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-1"></a>$ pkg search python
+<a id="rest_code_6182d28aa5c845f3b80725861391d449-2" name="rest_code_6182d28aa5c845f3b80725861391d449-2" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-2"></a>
+<a id="rest_code_6182d28aa5c845f3b80725861391d449-3" name="rest_code_6182d28aa5c845f3b80725861391d449-3" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-3"></a>Checking availability of current mirror: ok
+<a id="rest_code_6182d28aa5c845f3b80725861391d449-4" name="rest_code_6182d28aa5c845f3b80725861391d449-4" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-4"></a>
+<a id="rest_code_6182d28aa5c845f3b80725861391d449-5" name="rest_code_6182d28aa5c845f3b80725861391d449-5" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-5"></a>Sorting... Done
+<a id="rest_code_6182d28aa5c845f3b80725861391d449-6" name="rest_code_6182d28aa5c845f3b80725861391d449-6" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-6"></a>Full Text Search... Done
+<a id="rest_code_6182d28aa5c845f3b80725861391d449-7" name="rest_code_6182d28aa5c845f3b80725861391d449-7" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-7"></a>python/stable <span class="m">3</span>.9.7 aarch64
+<a id="rest_code_6182d28aa5c845f3b80725861391d449-8" name="rest_code_6182d28aa5c845f3b80725861391d449-8" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-8"></a>  Python <span class="m">3</span> programming language intended to <span class="nb">enable</span> clear programs
+<a id="rest_code_6182d28aa5c845f3b80725861391d449-9" name="rest_code_6182d28aa5c845f3b80725861391d449-9" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-9"></a>...
+</pre>
+<p>That's good enough - we get Python 3.9.7 which is quite up to date. Note
+that Termux uses a rolling release model - that means you get the most
+up to date packages, but you can't mix and match or downgrade to older
+versions without a LOT of work.</p>
+<pre class="code bash"><a id="rest_code_d4451545119d409096e163af917fd221-1" name="rest_code_d4451545119d409096e163af917fd221-1" href="posts/installing-python-on-termux/#rest_code_d4451545119d409096e163af917fd221-1"></a>$ pkg install python
+</pre>
+<p>This will take a few minutes, so be patient. Once that's done you can
+fire up Python and test out the console. Next we'll install iPython
+and some useful packages like numpy and matplotlib - maybe we can do
+a little more than lightweight work on this tablet!</p>
+<p>in subsequent articles I'll add git, Python, matplotlib, and a few other
+packages. In fact, this website is generated on the Galaxy Tab S6 Lite
+using <a class="reference external" href="https://getnikola.com/">Nikola</a> , a static website generator.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/termux-install-vim-and-set-up-profile/" class="u-url">Installing vim and Setting Up Profile</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Ralph Hempel
+            </span></p>
+            <p class="dateline">
+            <a href="posts/termux-install-vim-and-set-up-profile/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-02-20T12:00:00-05:00" itemprop="datePublished" title="2021-02-20">2021-02-20</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Setting up vim and profile</p>
+<pre class="code bash"><a id="rest_code_bd53017aa2494846874e356c5ef2ba06-1" name="rest_code_bd53017aa2494846874e356c5ef2ba06-1" href="posts/termux-install-vim-and-set-up-profile/#rest_code_bd53017aa2494846874e356c5ef2ba06-1"></a>$ pkg install x11-repo
+<a id="rest_code_bd53017aa2494846874e356c5ef2ba06-2" name="rest_code_bd53017aa2494846874e356c5ef2ba06-2" href="posts/termux-install-vim-and-set-up-profile/#rest_code_bd53017aa2494846874e356c5ef2ba06-2"></a>$ pkg install vim-gtk
+</pre>
+    </div>
+    </article>
+</div>
+        <ul class="pager postindexpager clearfix">
+<li class="previous"><a href="index-3.html" rel="prev">Newer posts</a></li>
+            <li class="next"><a href="index-1.html" rel="next">Older posts</a></li>
+        </ul>
+<!--End of body content--><footer class="container px-3 py-2" id="footer">
+            Contents © 2022         <a href="mailto:rhempel@fixitinfirmware.com">Ralph Hempel</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+        <script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>
