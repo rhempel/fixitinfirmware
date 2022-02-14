@@ -1,0 +1,25 @@
+# Install required packages on base msys2
+
+pacman -Sy mingw-w64-x86_64-libxml2
+pacman -Sy mingw-w64-x86_64-libxslt
+
+pacman -Sy mingw-w64-x86_64-python-pip
+pacman -Sy mingw-w64-x86_64-python-pillow
+pacman -Sy mingw-w64-x86_64-python-lxml
+pacman -Sy mingw-w64-x86_64-python-build
+pacman -Sy mingw-w64-x86_64-python-setuptools
+pacman -Sy mingw-w64-x86_64-python-wheel
+pacman -Sy mingw-w64-x86_64-python-yarl
+pacman -Sy mingw-w64-x86_64-python-multidict
+pacman -Sy mingw-w64-x86_64-python-aiohttp
+
+# Create the virtualenv
+
+cd path/to/fixitinfirmware
+python -m venv --system-site-packages nikola-venv
+
+source nikola-venv/bin/activate
+pip install nikola jinja2 watchdog
+
+# Now get a list of requirements
+pip freeze > requirements.txt
