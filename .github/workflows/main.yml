@@ -1,7 +1,5 @@
 on: [push]
 
-on: [workflow_dispatch]
-
 jobs:
   nikola_build:
     runs-on: ubuntu-latest
