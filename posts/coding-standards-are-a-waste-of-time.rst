@@ -16,8 +16,8 @@ only fails very occasionally. When you get good bug reports that show it takes
 about 25 days of continuous run time for the failure to occur, and it's
 happened at 4 different sites now, you get a spidey sense that it might be
 related to a timer. You pull out your phone and fire up Free-42_ (because you
-like RPN calculators) and do the math for a 1 msec timer interval and figure
-out that a 32 bit unsigned int should be good for about 50 days ...
+like RPN calculators) and do the math for a 1 msec timer interval and determine
+that a 32 bit unsigned int should be good for about 50 days ...
 
 When you find the place where someone did a bit of math with the clock using
 signed instead of unsigned values, you say "I wish that we had a coding
@@ -69,7 +69,9 @@ neatly in Part 1 of `Things You Should Never Do`_:
 
   - Joel Spolsky
 
-Let's explore this a bit further ...
+Let's explore these magic bullet points a bit further and I'll try to convince
+you to minimize the effort on picking a coding standard and focus instead on
+making a Developer's Guide that will help the team on yuor next project.
 
 But Coding Standards Make Reading Code Easier
 ---------------------------------------------
