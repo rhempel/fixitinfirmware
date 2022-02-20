@@ -76,6 +76,7 @@ install method that gives us pre-built binaries:
     pip install sphinx
 
     # nikola has some prerequisites - but they are mostly already there
+    pip install webp
     pip install nikola
 
     # ipython has some prerequisites
