@@ -16,9 +16,10 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta property="og:site_name" content="Fix It In Firmware">
 <meta property="og:title" content="Coding Standards Are A Waste Of Time ">
 <meta property="og:url" content="https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/">
-<meta property="og:description" content="You've been working for hours to figure out why the system you are debugging
-only fails very occasionally. When you get good bug reports that show it takes
-about 25 days of continuous run time for the">
+<meta property="og:description" content="You've been working for hours to figure out why the system you have delivered
+fails very occasionally.
+You have good bug reports that show it takes
+about 25 days of continuous run time for the failure">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2021-11-27T12:00:00-05:00">
 <meta property="article:tag" content="code">
@@ -90,20 +91,21 @@ style=" background-color: transparent><div class="container">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <img alt="https://history.nasa.gov/SP-4223/p118.jpg" class="align-right" src="../../images/accent/GeneKranzAtConsole.thumbnail.jpg"><p>You've been working for hours to figure out why the system you are debugging
-only fails very occasionally. When you get good bug reports that show it takes
+    <img alt="MargaretHamiltonCodeStack" class="align-right" src="../../images/accent/MargaretHamiltonCodeStack.thumbnail.jpg"><p>You've been working for hours to figure out why the system you have delivered
+fails very occasionally.</p>
+<p>You have good bug reports that show it takes
 about 25 days of continuous run time for the failure to occur, and it's
-happened at 4 different sites now, you get a spidey sense that it might be
-related to a timer. You pull out your phone and fire up <a class="reference external" href="https://thomasokken.com/free42/">Free-42</a> (because you
-like RPN calculators) and do the math for a 1 msec timer interval and figure
-out that a 32 bit unsigned int should be good for about 50 days ...</p>
-<p>When you find the place where someone did a bit of math with the clock using
-signed instead of unsigned values, you say "I wish that we had a coding
+happened at 4 different sites now. You get a spidey sense that it might be
+related to a timer and pull out your phone and fire up <a class="reference external" href="https://thomasokken.com/free42/">Free-42</a> (because you
+like RPN calculators). The math for a 1 msec timer interval says
+that a 32 bit unsigned int should be good for about 50 days ...</p>
+<p>You find the place where someone did a calculation with the clock using
+signed instead of unsigned values, and mumble "I wish that we had a coding
 standard to catch this".</p>
 <p>Said nobody. Ever.</p>
-<p>What you really needed was a developers guide for this project, a test-driven
-development mindset, and a review process that could work together to have a
-better chance at catching the problem.</p>
+<p>What you really needed was a Developer's Guide for this project, a test-driven
+development mindset, and a review process that could work together with continuous
+integration to have a better chance at catching the problem.</p>
 <p>If you take a few minutes and Google "are coding standards useful" you will get
 many articles and blog posts promoting the same basic benefits:</p>
 <ul class="simple">
@@ -115,8 +117,8 @@ many articles and blog posts promoting the same basic benefits:</p>
 <p>This is exactly the kind of fluff that management likes to read after yet
 another difficult project delivery. Sometimes consultants are brought in to
 review the development process and they comment on the lack of a coding standard
-(among other things). If only we stuck to a coding standard our problems would
-go away.</p>
+(among other things).</p>
+<p>If only we had a coding standard our problems would go away.</p>
 <p>The thing is, a coding standard is the easiest document to write and to have
 meetings about. Everyone has an opinion about how to write pretty code, how
 variables and functions should be named, and whether to use camel-case or
@@ -139,12 +141,15 @@ figuring out how the old function works.</p>
 <li><p>Joel Spolsky</p></li>
 </ul>
 </blockquote>
-<p>Let's explore this a bit further ...</p>
+<p>Let's explore these magic bullet points a bit further and I'll try to convince
+you to minimize the effort on picking a coding standard and focus instead on
+making a Developer's Guide that will help the team on your next project.</p>
 <section id="but-coding-standards-make-reading-code-easier"><h2>But Coding Standards Make Reading Code Easier</h2>
 <p>To be fair, it <em>is</em> actually a little easier to read well-formed code, but
 that's something you can fix in a few minutes with any number of code
-formatting utilities. You can fix up most naming problems with a decent editor.
-But you can't make a more complex module easier to understand, maintain, or
+formatting utilities. You can fix up most naming problems with a decent editor
+and a few miunutes of extra time to choose (or change to) a meanginful name.</p>
+<p>But you can't make a complex module easier to understand, maintain, or
 debug just by having a coding standard.</p>
 <p>It feels good to write and read a nicely formatted block of code where the
 names all make sense, the flow is clear, and the comments explain the thinking
@@ -153,7 +158,7 @@ behind the hard parts.</p>
 kloc range - here's where the time you and your team discussed the number of
 spaces to indent a block or enforcing only one exit point per function was
 wasted. You would have been better off working on a project level design and
-developers guide.</p>
+a Developers Guide.</p>
 </section><section id="but-coding-standards-make-understanding-code-easier"><h2>But Coding Standards Make Understanding Code Easier</h2>
 <p>Sure. For projects with a hundred or so lines of code. Do you really think that
 your coding standard is the one thing that is keeping new team members from
@@ -169,7 +174,8 @@ well as a Developer's Guide that explains how those challenges are solved.</p>
 <p>But wait. Isn't writing a Design Guide and Developer's Guide exactly what we
 are <em>not</em> supposed to do anymore? Doesn't Agile prefer working code over
 documentation? Shouldn't we avoid doing Big Up Front Design (BUFD)?</p>
-<p>Maybe, yes, and yes. I'm no fan of BUFD - unless it's for a relatively small
+<p>Maybe, yes, and yes.</p>
+<p>I'm no fan of BUFD - unless it's for a relatively small
 piece of code where you know all the design constraints and requirements and
 you have good acceptance criteria and your team has written some variant of
 this code more than once or twice.</p>
@@ -232,9 +238,10 @@ principles, like <a class="reference external" href="https://blog.cleancoder.com
 assigned tasks for a while. Let them float in a couple of teams and ask them
 to coach developers in TDD. Make sure that your developers know the difference
 between code <em>coverage</em> and code <em>correctness</em> - it's usually easy to write
-tests after the code is done that prove code coverage. It takes a little
-longer (at the beginning) to write code that makes failing tests pass, but
-pretty soon the rhythm of writing a test, breaking your program, and then
+tests after the code is done that prove code coverage. That doesn't mean its
+correct - and I've been bitten by that more than once.</p>
+<p>It takes a little longer (at the beginning) to write code that makes failing tests
+pass, but pretty soon the rhythm of writing a test, breaking your program, and then
 writing code to make the test pass becomes natural.</p>
 <p>Your new developers will be <em>much</em> more productive on your complex system
 if they have read a good Developers Guide and understand the workflow for
@@ -243,6 +250,13 @@ Standard because you'll have a senior staff member coaching them for the
 first few months, they will have a safety net of tests, and they will develop
 a mindset that drives quality, attention to detail, and testability that a
 coding standard simply cannot help with.</p>
+</section><section id="conclusion"><h2>Conclusion</h2>
+<p>I encourage you to press for Design and Developer's Guides for your projects, and
+to focus on becoming great at TDD and using your CI pipeline to run tests
+automatically. Learn to build decoupled systems and to work in pairs or close
+knit groups to keep each other thinking about how to write great code.</p>
+<p>The end result should be an awesome project and nobody will care about which
+Coding Standard you used ...</p>
 </section>
 </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">

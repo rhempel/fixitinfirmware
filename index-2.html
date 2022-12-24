@@ -88,22 +88,22 @@ lightweight programming - and the pleasant surprise is that it might
 be good enough for even more.</p>
 <p>Let's get started with installing Python 3.x from the Termux package
 repository. To find packages matching Python in the name:</p>
-<pre class="code bash"><a id="rest_code_6182d28aa5c845f3b80725861391d449-1" name="rest_code_6182d28aa5c845f3b80725861391d449-1" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-1"></a>$ pkg search python
-<a id="rest_code_6182d28aa5c845f3b80725861391d449-2" name="rest_code_6182d28aa5c845f3b80725861391d449-2" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-2"></a>
-<a id="rest_code_6182d28aa5c845f3b80725861391d449-3" name="rest_code_6182d28aa5c845f3b80725861391d449-3" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-3"></a>Checking availability of current mirror: ok
-<a id="rest_code_6182d28aa5c845f3b80725861391d449-4" name="rest_code_6182d28aa5c845f3b80725861391d449-4" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-4"></a>
-<a id="rest_code_6182d28aa5c845f3b80725861391d449-5" name="rest_code_6182d28aa5c845f3b80725861391d449-5" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-5"></a>Sorting... Done
-<a id="rest_code_6182d28aa5c845f3b80725861391d449-6" name="rest_code_6182d28aa5c845f3b80725861391d449-6" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-6"></a>Full Text Search... Done
-<a id="rest_code_6182d28aa5c845f3b80725861391d449-7" name="rest_code_6182d28aa5c845f3b80725861391d449-7" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-7"></a>python/stable <span class="m">3</span>.9.7 aarch64
-<a id="rest_code_6182d28aa5c845f3b80725861391d449-8" name="rest_code_6182d28aa5c845f3b80725861391d449-8" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-8"></a>  Python <span class="m">3</span> programming language intended to <span class="nb">enable</span> clear programs
-<a id="rest_code_6182d28aa5c845f3b80725861391d449-9" name="rest_code_6182d28aa5c845f3b80725861391d449-9" href="posts/installing-python-on-termux/#rest_code_6182d28aa5c845f3b80725861391d449-9"></a>...
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_160432ff0165420db9868864469b3bfa-1" name="rest_code_160432ff0165420db9868864469b3bfa-1" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-1"></a>$ pkg search python
+<a id="rest_code_160432ff0165420db9868864469b3bfa-2" name="rest_code_160432ff0165420db9868864469b3bfa-2" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-2"></a>
+<a id="rest_code_160432ff0165420db9868864469b3bfa-3" name="rest_code_160432ff0165420db9868864469b3bfa-3" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-3"></a>Checking availability of current mirror: ok
+<a id="rest_code_160432ff0165420db9868864469b3bfa-4" name="rest_code_160432ff0165420db9868864469b3bfa-4" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-4"></a>
+<a id="rest_code_160432ff0165420db9868864469b3bfa-5" name="rest_code_160432ff0165420db9868864469b3bfa-5" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-5"></a>Sorting... Done
+<a id="rest_code_160432ff0165420db9868864469b3bfa-6" name="rest_code_160432ff0165420db9868864469b3bfa-6" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-6"></a>Full Text Search... Done
+<a id="rest_code_160432ff0165420db9868864469b3bfa-7" name="rest_code_160432ff0165420db9868864469b3bfa-7" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-7"></a>python/stable <span class="m">3</span>.9.7 aarch64
+<a id="rest_code_160432ff0165420db9868864469b3bfa-8" name="rest_code_160432ff0165420db9868864469b3bfa-8" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-8"></a>  Python <span class="m">3</span> programming language intended to <span class="nb">enable</span> clear programs
+<a id="rest_code_160432ff0165420db9868864469b3bfa-9" name="rest_code_160432ff0165420db9868864469b3bfa-9" href="posts/installing-python-on-termux/#rest_code_160432ff0165420db9868864469b3bfa-9"></a>...
+</pre></div>
 <p>That's good enough - we get Python 3.9.7 which is quite up to date. Note
 that Termux uses a rolling release model - that means you get the most
 up to date packages, but you can't mix and match or downgrade to older
 versions without a LOT of work.</p>
-<pre class="code bash"><a id="rest_code_d4451545119d409096e163af917fd221-1" name="rest_code_d4451545119d409096e163af917fd221-1" href="posts/installing-python-on-termux/#rest_code_d4451545119d409096e163af917fd221-1"></a>$ pkg install python
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_8d3c582e38e14bc581cf4a642dab210e-1" name="rest_code_8d3c582e38e14bc581cf4a642dab210e-1" href="posts/installing-python-on-termux/#rest_code_8d3c582e38e14bc581cf4a642dab210e-1"></a>$ pkg install python
+</pre></div>
 <p>This will take a few minutes, so be patient. Once that's done you can
 fire up Python and test out the console. Next we'll install iPython
 and some useful packages like numpy and matplotlib - maybe we can do
@@ -124,9 +124,9 @@ using <a class="reference external" href="https://getnikola.com/">Nikola</a> , a
         </div>
     </header><div class="e-content entry-content">
     <p>Setting up vim and profile</p>
-<pre class="code bash"><a id="rest_code_bd53017aa2494846874e356c5ef2ba06-1" name="rest_code_bd53017aa2494846874e356c5ef2ba06-1" href="posts/termux-install-vim-and-set-up-profile/#rest_code_bd53017aa2494846874e356c5ef2ba06-1"></a>$ pkg install x11-repo
-<a id="rest_code_bd53017aa2494846874e356c5ef2ba06-2" name="rest_code_bd53017aa2494846874e356c5ef2ba06-2" href="posts/termux-install-vim-and-set-up-profile/#rest_code_bd53017aa2494846874e356c5ef2ba06-2"></a>$ pkg install vim-gtk
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_aff8ed76984d4e1ea93905ef5408d919-1" name="rest_code_aff8ed76984d4e1ea93905ef5408d919-1" href="posts/termux-install-vim-and-set-up-profile/#rest_code_aff8ed76984d4e1ea93905ef5408d919-1"></a>$ pkg install x11-repo
+<a id="rest_code_aff8ed76984d4e1ea93905ef5408d919-2" name="rest_code_aff8ed76984d4e1ea93905ef5408d919-2" href="posts/termux-install-vim-and-set-up-profile/#rest_code_aff8ed76984d4e1ea93905ef5408d919-2"></a>$ pkg install vim-gtk
+</pre></div>
     </div>
     </article>
 </div>

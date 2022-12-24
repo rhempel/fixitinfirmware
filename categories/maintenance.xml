@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about maintenance)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/maintenance.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Mon, 14 Feb 2022 23:25:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Coding Standards Are A Waste Of Time </title><link>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="https://history.nasa.gov/SP-4223/p118.jpg" class="align-right" src="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg"&gt;
-&lt;p&gt;You've been working for hours to figure out why the system you are debugging
-only fails very occasionally. When you get good bug reports that show it takes
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about maintenance)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/maintenance.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Sat, 24 Dec 2022 19:41:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Coding Standards Are A Waste Of Time </title><link>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="MargaretHamiltonCodeStack" class="align-right" src="https://fixitinfirmware.com/images/accent/MargaretHamiltonCodeStack.thumbnail.jpg"&gt;
+&lt;p&gt;You've been working for hours to figure out why the system you have delivered
+fails very occasionally.&lt;/p&gt;
+&lt;p&gt;You have good bug reports that show it takes
 about 25 days of continuous run time for the failure to occur, and it's
-happened at 4 different sites now, you get a spidey sense that it might be
-related to a timer. You pull out your phone and fire up &lt;a class="reference external" href="https://thomasokken.com/free42/"&gt;Free-42&lt;/a&gt; (because you
-like RPN calculators) and do the math for a 1 msec timer interval and figure
-out that a 32 bit unsigned int should be good for about 50 days ...&lt;/p&gt;
-&lt;p&gt;When you find the place where someone did a bit of math with the clock using
-signed instead of unsigned values, you say "I wish that we had a coding
+happened at 4 different sites now. You get a spidey sense that it might be
+related to a timer and pull out your phone and fire up &lt;a class="reference external" href="https://thomasokken.com/free42/"&gt;Free-42&lt;/a&gt; (because you
+like RPN calculators). The math for a 1 msec timer interval says
+that a 32 bit unsigned int should be good for about 50 days ...&lt;/p&gt;
+&lt;p&gt;You find the place where someone did a calculation with the clock using
+signed instead of unsigned values, and mumble "I wish that we had a coding
 standard to catch this".&lt;/p&gt;
 &lt;p&gt;Said nobody. Ever.&lt;/p&gt;
-&lt;p&gt;What you really needed was a developers guide for this project, a test-driven
-development mindset, and a review process that could work together to have a
-better chance at catching the problem.&lt;/p&gt;
+&lt;p&gt;What you really needed was a Developer's Guide for this project, a test-driven
+development mindset, and a review process that could work together with continuous
+integration to have a better chance at catching the problem.&lt;/p&gt;
 &lt;p&gt;If you take a few minutes and Google "are coding standards useful" you will get
 many articles and blog posts promoting the same basic benefits:&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -25,8 +26,8 @@ many articles and blog posts promoting the same basic benefits:&lt;/p&gt;
 &lt;p&gt;This is exactly the kind of fluff that management likes to read after yet
 another difficult project delivery. Sometimes consultants are brought in to
 review the development process and they comment on the lack of a coding standard
-(among other things). If only we stuck to a coding standard our problems would
-go away.&lt;/p&gt;
+(among other things).&lt;/p&gt;
+&lt;p&gt;If only we had a coding standard our problems would go away.&lt;/p&gt;
 &lt;p&gt;The thing is, a coding standard is the easiest document to write and to have
 meetings about. Everyone has an opinion about how to write pretty code, how
 variables and functions should be named, and whether to use camel-case or
@@ -49,13 +50,16 @@ figuring out how the old function works.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Joel Spolsky&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Let's explore this a bit further ...&lt;/p&gt;
+&lt;p&gt;Let's explore these magic bullet points a bit further and I'll try to convince
+you to minimize the effort on picking a coding standard and focus instead on
+making a Developer's Guide that will help the team on your next project.&lt;/p&gt;
 &lt;section id="but-coding-standards-make-reading-code-easier"&gt;
 &lt;h2&gt;But Coding Standards Make Reading Code Easier&lt;/h2&gt;
 &lt;p&gt;To be fair, it &lt;em&gt;is&lt;/em&gt; actually a little easier to read well-formed code, but
 that's something you can fix in a few minutes with any number of code
-formatting utilities. You can fix up most naming problems with a decent editor.
-But you can't make a more complex module easier to understand, maintain, or
+formatting utilities. You can fix up most naming problems with a decent editor
+and a few miunutes of extra time to choose (or change to) a meanginful name.&lt;/p&gt;
+&lt;p&gt;But you can't make a complex module easier to understand, maintain, or
 debug just by having a coding standard.&lt;/p&gt;
 &lt;p&gt;It feels good to write and read a nicely formatted block of code where the
 names all make sense, the flow is clear, and the comments explain the thinking
@@ -64,7 +68,7 @@ behind the hard parts.&lt;/p&gt;
 kloc range - here's where the time you and your team discussed the number of
 spaces to indent a block or enforcing only one exit point per function was
 wasted. You would have been better off working on a project level design and
-developers guide.&lt;/p&gt;
+a Developers Guide.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="but-coding-standards-make-understanding-code-easier"&gt;
 &lt;h2&gt;But Coding Standards Make Understanding Code Easier&lt;/h2&gt;
@@ -82,7 +86,8 @@ well as a Developer's Guide that explains how those challenges are solved.&lt;/p
 &lt;p&gt;But wait. Isn't writing a Design Guide and Developer's Guide exactly what we
 are &lt;em&gt;not&lt;/em&gt; supposed to do anymore? Doesn't Agile prefer working code over
 documentation? Shouldn't we avoid doing Big Up Front Design (BUFD)?&lt;/p&gt;
-&lt;p&gt;Maybe, yes, and yes. I'm no fan of BUFD - unless it's for a relatively small
+&lt;p&gt;Maybe, yes, and yes.&lt;/p&gt;
+&lt;p&gt;I'm no fan of BUFD - unless it's for a relatively small
 piece of code where you know all the design constraints and requirements and
 you have good acceptance criteria and your team has written some variant of
 this code more than once or twice.&lt;/p&gt;
@@ -149,9 +154,10 @@ principles, like &lt;a class="reference external" href="https://blog.cleancoder.
 assigned tasks for a while. Let them float in a couple of teams and ask them
 to coach developers in TDD. Make sure that your developers know the difference
 between code &lt;em&gt;coverage&lt;/em&gt; and code &lt;em&gt;correctness&lt;/em&gt; - it's usually easy to write
-tests after the code is done that prove code coverage. It takes a little
-longer (at the beginning) to write code that makes failing tests pass, but
-pretty soon the rhythm of writing a test, breaking your program, and then
+tests after the code is done that prove code coverage. That doesn't mean its
+correct - and I've been bitten by that more than once.&lt;/p&gt;
+&lt;p&gt;It takes a little longer (at the beginning) to write code that makes failing tests
+pass, but pretty soon the rhythm of writing a test, breaking your program, and then
 writing code to make the test pass becomes natural.&lt;/p&gt;
 &lt;p&gt;Your new developers will be &lt;em&gt;much&lt;/em&gt; more productive on your complex system
 if they have read a good Developers Guide and understand the workflow for
@@ -160,6 +166,15 @@ Standard because you'll have a senior staff member coaching them for the
 first few months, they will have a safety net of tests, and they will develop
 a mindset that drives quality, attention to detail, and testability that a
 coding standard simply cannot help with.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I encourage you to press for Design and Developer's Guides for your projects, and
+to focus on becoming great at TDD and using your CI pipeline to run tests
+automatically. Learn to build decoupled systems and to work in pairs or close
+knit groups to keep each other thinking about how to write great code.&lt;/p&gt;
+&lt;p&gt;The end result should be an awesome project and nobody will care about which
+Coding Standard you used ...&lt;/p&gt;
 &lt;/section&gt;</description><category>code</category><category>maintenance</category><guid>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</guid><pubDate>Sat, 27 Nov 2021 17:00:00 GMT</pubDate></item><item><title>Mission Statements</title><link>https://fixitinfirmware.com/posts/mission-statements/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="https://history.nasa.gov/SP-4223/p118.jpg" class="align-right" src="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg"&gt;
 &lt;p&gt;Misson statements. Hands up for anyone who loves their company
 mission statement.&lt;/p&gt;

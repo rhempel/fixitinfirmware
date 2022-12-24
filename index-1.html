@@ -123,35 +123,35 @@ to the tablet so that we can log in over a secure connection. If you don't
 have an <cite>ssh</cite> keypair yet go ahead and generate one on your regular computer
 now. You probably already have one if you use <cite>git</cite>.</p>
 <p>On the tablet do the following:</p>
-<pre class="code bash"><a id="rest_code_a662cb6323d141aa98e298ac7745f115-1" name="rest_code_a662cb6323d141aa98e298ac7745f115-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-1"></a>$ pkg install termux-auth
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-2" name="rest_code_a662cb6323d141aa98e298ac7745f115-2" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-2"></a>$ passwd
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-3" name="rest_code_a662cb6323d141aa98e298ac7745f115-3" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-3"></a>New password:
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-4" name="rest_code_a662cb6323d141aa98e298ac7745f115-4" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-4"></a>Retype new password:
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-5" name="rest_code_a662cb6323d141aa98e298ac7745f115-5" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-5"></a>New password was successfully set.
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-6" name="rest_code_a662cb6323d141aa98e298ac7745f115-6" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-6"></a>
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-7" name="rest_code_a662cb6323d141aa98e298ac7745f115-7" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-7"></a>$ ip a show wlan0
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-8" name="rest_code_a662cb6323d141aa98e298ac7745f115-8" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-8"></a><span class="m">2</span>: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="m">1500</span> qdisc mq state UP group default qlen <span class="m">1000</span>
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-9" name="rest_code_a662cb6323d141aa98e298ac7745f115-9" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-9"></a>    link/ether aa:bb:cc:dd:ee:ff brd ff:ff:ff:ff:ff:ff
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-10" name="rest_code_a662cb6323d141aa98e298ac7745f115-10" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-10"></a>    inet <span class="m">192</span>.168.0.102/24 brd <span class="m">192</span>.168.0.255 scope global wlan0
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-11" name="rest_code_a662cb6323d141aa98e298ac7745f115-11" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-11"></a>       valid_lft forever preferred_lft forever
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-12" name="rest_code_a662cb6323d141aa98e298ac7745f115-12" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-12"></a>    inet6 fe80::14a9:aabb:ccdd:eeff/64 scope link
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-13" name="rest_code_a662cb6323d141aa98e298ac7745f115-13" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-13"></a>       valid_lft forever preferred_lft forever
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-14" name="rest_code_a662cb6323d141aa98e298ac7745f115-14" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-14"></a>
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-15" name="rest_code_a662cb6323d141aa98e298ac7745f115-15" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-15"></a>$ pkg upgrade
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-16" name="rest_code_a662cb6323d141aa98e298ac7745f115-16" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-16"></a>$ pkg install openssh
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-17" name="rest_code_a662cb6323d141aa98e298ac7745f115-17" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-17"></a>
-<a id="rest_code_a662cb6323d141aa98e298ac7745f115-18" name="rest_code_a662cb6323d141aa98e298ac7745f115-18" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_a662cb6323d141aa98e298ac7745f115-18"></a>$ sshd
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-1" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-1"></a>$ pkg install termux-auth
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-2" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-2" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-2"></a>$ passwd
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-3" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-3" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-3"></a>New password:
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-4" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-4" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-4"></a>Retype new password:
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-5" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-5" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-5"></a>New password was successfully set.
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-6" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-6" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-6"></a>
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-7" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-7" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-7"></a>$ ip a show wlan0
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-8" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-8" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-8"></a><span class="m">2</span>: wlan0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span class="m">1500</span> qdisc mq state UP group default qlen <span class="m">1000</span>
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-9" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-9" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-9"></a>    link/ether aa:bb:cc:dd:ee:ff brd ff:ff:ff:ff:ff:ff
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-10" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-10" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-10"></a>    inet <span class="m">192</span>.168.0.102/24 brd <span class="m">192</span>.168.0.255 scope global wlan0
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-11" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-11" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-11"></a>       valid_lft forever preferred_lft forever
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-12" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-12" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-12"></a>    inet6 fe80::14a9:aabb:ccdd:eeff/64 scope link
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-13" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-13" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-13"></a>       valid_lft forever preferred_lft forever
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-14" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-14" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-14"></a>
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-15" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-15" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-15"></a>$ pkg upgrade
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-16" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-16" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-16"></a>$ pkg install openssh
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-17" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-17" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-17"></a>
+<a id="rest_code_4714fb6572ed4187b2c9b7f19959af7d-18" name="rest_code_4714fb6572ed4187b2c9b7f19959af7d-18" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_4714fb6572ed4187b2c9b7f19959af7d-18"></a>$ sshd
+</pre></div>
 <p>At this point you have <cite>sshd</cite> running on the tablet, but of course you need
 to send your public key so that you can log on securely in the future. Note
 the IP_ADDRESS that your tablet is using and do the following on your
 computer:</p>
-<pre class="code bash"><a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-1" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-1"></a>ssh-copy-id -p <span class="m">8022</span> -i path/to/id_rsa.pub IP_ADDRESS
-<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-2" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-2" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-2"></a>
-<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-3" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-3" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-3"></a><span class="c1"># Test out the ssh access</span>
-<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-4" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-4" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-4"></a>
-<a id="rest_code_357deafbb4584b6fab5352c6fa34c5aa-5" name="rest_code_357deafbb4584b6fab5352c6fa34c5aa-5" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_357deafbb4584b6fab5352c6fa34c5aa-5"></a>ssh -p <span class="m">8022</span> IP_ADDRESS
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-1" name="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_b08c8c04d00e45ae86254e9f8fc472ba-1"></a>ssh-copy-id -p <span class="m">8022</span> -i path/to/id_rsa.pub IP_ADDRESS
+<a id="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-2" name="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-2" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_b08c8c04d00e45ae86254e9f8fc472ba-2"></a>
+<a id="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-3" name="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-3" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_b08c8c04d00e45ae86254e9f8fc472ba-3"></a><span class="c1"># Test out the ssh access</span>
+<a id="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-4" name="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-4" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_b08c8c04d00e45ae86254e9f8fc472ba-4"></a>
+<a id="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-5" name="rest_code_b08c8c04d00e45ae86254e9f8fc472ba-5" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_b08c8c04d00e45ae86254e9f8fc472ba-5"></a>ssh -p <span class="m">8022</span> IP_ADDRESS
+</pre></div>
 <p>For complete details refer to <a class="reference external" href="https://wiki.termux.com/wiki/Remote_Access">Termux Wiki - Remote Access</a>.</p>
 </section><section id="grant-storage-permissions-to-termux"><h2>Grant Storage Permissions to Termux</h2>
 <p>By default and in compliance with Android's SELinux policies, Termux keeps
@@ -162,8 +162,8 @@ make it harder to make useful scripts that access data outside of Termux.</p>
 and how to trigger the Android file picker to get any file it has access
 to, refer to <a class="reference external" href="https://wiki.termux.com/wiki/Internal_and_external_storage">Termux Wiki - Internal and External Storage</a>.</p>
 <p>Enabling acccess to the shared files is as easy as:</p>
-<pre class="code bash"><a id="rest_code_5e2cbebbbd884197971b9b159bd6b14a-1" name="rest_code_5e2cbebbbd884197971b9b159bd6b14a-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_5e2cbebbbd884197971b9b159bd6b14a-1"></a>termux-setup-storage
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_ffd54431ebf24223bb92cd8721ada39c-1" name="rest_code_ffd54431ebf24223bb92cd8721ada39c-1" href="posts/samsung-tab-s6-lite-first-impressions/#rest_code_ffd54431ebf24223bb92cd8721ada39c-1"></a>termux-setup-storage
+</pre></div>
 <p>That's it for now - next step is getting a few useful Termux packages installed.</p>
 </section>
 </div>
