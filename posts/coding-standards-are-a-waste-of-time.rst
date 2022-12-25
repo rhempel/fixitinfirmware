@@ -32,6 +32,13 @@ What you really needed was a Developer's Guide for this project, a test-driven
 development mindset, and a review process that could work together with continuous
 integration to have a better chance at catching the problem.
 
+Of course the title is designed to catch your eye, and a coding standard is
+not a bad thing. Just pick one that's already out there like the Linux Kernel
+or MicroPython coding standard.
+
+Why Management Likes Coding Standards
+------------------------------------- 
+
 If you take a few minutes and Google "are coding standards useful" you will get
 many articles and blog posts promoting the same basic benefits:
 
