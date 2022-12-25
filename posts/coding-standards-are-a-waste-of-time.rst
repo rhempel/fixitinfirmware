@@ -1,6 +1,7 @@
 .. title: Coding Standards Are A Waste Of Time 
 .. slug: coding-standards-are-a-waste-of-time
-.. date: 2021-11-27 12:00:00 UTC-05:00
+.. date: 2022-12-22 12:00:00 UTC-05:00
+.. status: published
 .. tags: maintenance, code
 .. category: Roles
 .. link: 

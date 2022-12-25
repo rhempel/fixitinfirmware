@@ -1,6 +1,7 @@
 .. title: Installing Python on Termux
 .. slug: installing-python-on-termux
 .. date: 2021-02-20 12:00:00 UTC-05:00
+.. status: draft
 .. tags: samsung, android, termux, python
 .. category: Tools
 .. link: 

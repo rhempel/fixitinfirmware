@@ -1,6 +1,7 @@
 .. title: Installing vim and Setting Up Profile
 .. slug: termux-install-vim-and-set-up-profile
 .. date: 2021-02-20 12:00:00 UTC-05:00
+.. status: draft
 .. tags: samsung, android, termux, python
 .. category: Tools
 .. link: 
