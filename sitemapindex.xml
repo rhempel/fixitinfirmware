@@ -6,51 +6,23 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://fixitinfirmware.com/categories/android.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://fixitinfirmware.com/categories/cat_roles.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://fixitinfirmware.com/categories/cat_tools.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
+  <lastmod>2022-12-25T02:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fixitinfirmware.com/categories/code.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
+  <lastmod>2022-12-25T02:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fixitinfirmware.com/categories/maintenance.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://fixitinfirmware.com/categories/opportunity.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://fixitinfirmware.com/categories/python.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://fixitinfirmware.com/categories/resources.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://fixitinfirmware.com/categories/samsung.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://fixitinfirmware.com/categories/termux.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
+  <lastmod>2022-12-25T02:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fixitinfirmware.com/rss.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
+  <lastmod>2022-12-25T02:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fixitinfirmware.com/sitemap.xml</loc>
-  <lastmod>2022-12-24T19:41:00Z</lastmod>
+  <lastmod>2022-12-25T02:16:00Z</lastmod>
  </sitemap>
 </sitemapindex>
