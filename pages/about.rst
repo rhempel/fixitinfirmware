@@ -7,7 +7,7 @@
 .. description: 
 .. type: text
 
-.. image:: /images/blackbox.png
+.. image:: /images/RalphHempelAbout.jpg
     :align: right
     :width: 240px
 
