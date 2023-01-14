@@ -3,7 +3,7 @@
 .. date: 2022-12-22 12:00:00 UTC-05:00
 .. status: published
 .. tags: maintenance, code
-.. category: Roles
+.. category: Management
 .. link: 
 .. description: 
 .. type: text
@@ -20,7 +20,8 @@ about 25 days of continuous run time for the failure to occur, and it's
 happened at 4 different sites now. You get a spidey sense that it might be
 related to a timer and pull out your phone and fire up Free-42_ (because you
 like RPN calculators). The math for a 1 msec timer interval says 
-that a 32 bit unsigned int should be good for about 50 days ...
+that a 32 bit unsigned int should be good for about 50 days ... wait a
+minute. The restarts happen about 25 days apart!
 
 You find the place where someone did a calculation with the clock using
 signed instead of unsigned values, and mumble "I wish that we had a coding
@@ -34,7 +35,7 @@ integration to have a better chance at catching the problem.
 
 Of course the title is designed to catch your eye, and a coding standard is
 not a bad thing. Just pick one that's already out there like the Linux Kernel
-or MicroPython coding standard.
+or MicroPython coding standard and call it a day.
 
 Why Management Likes Coding Standards
 ------------------------------------- 
@@ -232,7 +233,7 @@ to focus on becoming great at TDD and using your CI pipeline to run tests
 automatically. Learn to build decoupled systems and to work in pairs or close
 knit groups to keep each other thinking about how to write great code.
 
-The end result should be an awesome project and nobody will care about which
+The end result should be an awesome project. Nobody will care about which
 Coding Standard you used ...
 
 .. _Free-42: https://thomasokken.com/free42/
