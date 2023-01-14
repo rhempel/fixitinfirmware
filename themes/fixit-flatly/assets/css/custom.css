@@ -1,0 +1,69 @@
+/* Customizations go here! */
+
+a.u-url {
+    font-size: 2.0rem;
+    color:black;
+    font-weight: bold;
+}
+
+a {
+    color: slateblue
+}
+
+a:hover {
+    color: darkslateblue;
+}
+
+a.nav-link {
+    font-family: 'Fredericka the Great';
+    font-size: 150%;
+}
+
+a.navbar-brand {
+    font-family: 'Fredericka the Great';
+    font-size: 325%;
+    font-variant: small-caps;
+}
+
+.navbar .container {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div.footerbox {
+    border-top: 1px solid lightgrey;
+    padding-top: 0.5rem!important;
+    padding-left: 1rem!important;
+    padding-bottom: .5rem!important;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+blockquote.epigraph {
+    font-size: 0.8em; 
+    font-style: italic;
+    color: darkslategray
+}
+
+/*
+<a class="navbar-brand" style="font-family: 'Fredericka the Great', cursive; font-size: 325%; font-variant: small-caps;" href=".">
+
+            <span id="blog-title">Fix It In Firmware</span>
+        </a>
+*/
+
+h1 {
+    font-size: 2.0rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
