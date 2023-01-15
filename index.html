@@ -8,6 +8,9 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fix It In Firmware</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;display=swap">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
@@ -15,18 +18,18 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/coding-standards-are-a-waste-of-time/" type="text/html">
 </head>
 <body>
-<!-- <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> -->
-
-<!-- Menubar -->
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
 <div class="bg-image mb-4" style="background-image: url('images/headers/resistors.jpg');">
 <div class="mask" style="background-color: rgba(0,0,0,0.5); height: 100%; width: 100%;">
+<!-- Menubar -->
 
-<nav class="navbar navbar-expand-md static-top
+<nav class="navbar navbar-expand-sm static-top mb-4
 navbar-dark
-style=" background-color: transparent><div class="container">
+bg-transparent
+"><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" style="font-size: 250%" href=".">
+        <a class="navbar-brand" href=".">
 
             <span id="blog-title">Fix It In Firmware</span>
         </a>
@@ -35,7 +38,7 @@ style=" background-color: transparent><div class="container">
         </button>
 
         <div class="collapse navbar-collapse" id="bs-navbar">
-            <ul class="navbar-nav mr-auto" style="font-size: 120%">
+            <ul class="navbar-nav mr-auto">
 <li class="nav-item">
 <a href="#" class="nav-link text-white">Home</a>
                 </li>
@@ -56,11 +59,9 @@ style=" background-color: transparent><div class="container">
 <!-- /.navbar-collapse -->
     </div>
 <!-- /.container -->
-</nav>
+</nav><!-- End of Menubar -->
 </div>
 </div>
-
-<!-- End of Menubar -->
 
 <div class="container" id="content" role="main">
     <div class="body-content">
@@ -87,7 +88,8 @@ about 25 days of continuous run time for the failure to occur, and it's
 happened at 4 different sites now. You get a spidey sense that it might be
 related to a timer and pull out your phone and fire up <a class="reference external" href="https://thomasokken.com/free42/">Free-42</a> (because you
 like RPN calculators). The math for a 1 msec timer interval says
-that a 32 bit unsigned int should be good for about 50 days ...</p>
+that a 32 bit unsigned int should be good for about 50 days ... wait a
+minute. The restarts happen about 25 days apart!</p>
 <p>You find the place where someone did a calculation with the clock using
 signed instead of unsigned values, and mumble "I wish that we had a coding
 standard to catch this".</p>
@@ -97,7 +99,7 @@ development mindset, and a review process that could work together with continuo
 integration to have a better chance at catching the problem.</p>
 <p>Of course the title is designed to catch your eye, and a coding standard is
 not a bad thing. Just pick one that's already out there like the Linux Kernel
-or MicroPython coding standard.</p>
+or MicroPython coding standard and call it a day.</p>
 <section id="why-management-likes-coding-standards"><h2>Why Management Likes Coding Standards</h2>
 <p>If you take a few minutes and Google "are coding standards useful" you will get
 many articles and blog posts promoting the same basic benefits:</p>
@@ -130,9 +132,7 @@ programming:</p>
 different function they like to use for splitting strings into arrays of
 strings. They write their own function because it’s easier and more fun than
 figuring out how the old function works.</p>
-<ul class="simple">
-<li><p>Joel Spolsky</p></li>
-</ul>
+<p class="attribution">—Joel Spolsky</p>
 </blockquote>
 <p>Let's explore these magic bullet points a bit further and I'll try to convince
 you to minimize the effort on picking a coding standard and focus instead on
@@ -248,7 +248,7 @@ coding standard simply cannot help with.</p>
 to focus on becoming great at TDD and using your CI pipeline to run tests
 automatically. Learn to build decoupled systems and to work in pairs or close
 knit groups to keep each other thinking about how to write great code.</p>
-<p>The end result should be an awesome project and nobody will care about which
+<p>The end result should be an awesome project. Nobody will care about which
 Coding Standard you used ...</p>
 </section>
 </div>
@@ -260,8 +260,8 @@ Coding Standard you used ...</p>
 
         <!--End of body content-->
 
-        <footer class="container px-3 py-2" id="footer">
-            Contents © 2022         <a href="mailto:rhempel@fixitinfirmware.com">Ralph Hempel</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+        <footer id="footer">
+            Contents © 2023         <a href="mailto:rhempel@fixitinfirmware.com">Ralph Hempel</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

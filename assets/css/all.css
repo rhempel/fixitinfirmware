@@ -883,3 +883,69 @@ html[dir="rtl"] body {
     min-height: 25px;
 }
 
+/* Customizations go here! */
+
+a.u-url {
+    font-size: 2.0rem;
+    color:black;
+    font-weight: bold;
+}
+
+a {
+    color: slateblue
+}
+
+a:hover {
+    color: darkslateblue;
+}
+
+a.nav-link {
+    font-family: 'Fredericka the Great';
+    font-size: 150%;
+}
+
+a.navbar-brand {
+    font-family: 'Fredericka the Great';
+    font-size: 325%;
+    font-variant: small-caps;
+}
+
+.navbar .container {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+blockquote.epigraph {
+    font-size: 0.8em; 
+    font-style: italic;
+    color: darkslategray
+}
+
+caption {
+    color: #95a5a6;
+    caption-side: top;
+}
+
+blockquote p.attribution {
+    text-align: left;
+    margin-left: 10%;
+}
+
+h1 {
+    font-size: 2.0rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
