@@ -31,17 +31,11 @@ a.navbar-brand {
     align-items: flex-start;
 }
 
-div.footerbox {
-    border-top: 1px solid lightgrey;
-    padding-top: 0.5rem!important;
-    padding-left: 1rem!important;
-    padding-bottom: .5rem!important;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+#footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
 
 blockquote.epigraph {
     font-size: 0.8em; 
@@ -49,12 +43,15 @@ blockquote.epigraph {
     color: darkslategray
 }
 
-/*
-<a class="navbar-brand" style="font-family: 'Fredericka the Great', cursive; font-size: 325%; font-variant: small-caps;" href=".">
+caption {
+    color: #95a5a6;
+    caption-side: top;
+}
 
-            <span id="blog-title">Fix It In Firmware</span>
-        </a>
-*/
+blockquote p.attribution {
+    text-align: left;
+    margin-left: 10%;
+}
 
 h1 {
     font-size: 2.0rem;

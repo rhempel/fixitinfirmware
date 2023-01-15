@@ -79,7 +79,7 @@ neatly in Part 1 of `Things You Should Never Do`_:
   strings. They write their own function because it’s easier and more fun than
   figuring out how the old function works.
 
-  - Joel Spolsky
+  -- Joel Spolsky
 
 Let's explore these magic bullet points a bit further and I'll try to convince
 you to minimize the effort on picking a coding standard and focus instead on

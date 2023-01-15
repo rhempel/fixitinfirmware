@@ -1,9 +1,9 @@
 .. title: Mission Statements
 .. slug: mission-statements
-.. date: 2021-07-01 12:00:00 UTC-05:00
+.. date: 2023-01-22 12:00:00 UTC-05:00
 .. status: draft
 .. tags: maintenance, resources, opportunity
-.. category: Roles
+.. category: Management
 .. link: 
 .. description: 
 .. type: text
@@ -56,8 +56,9 @@ to be relevant for your team?
 
 Two of my personal favorites are:
 
-    - "Tough and competent"
-    - "Failure is not an option"
+.. epigraph::
+    - Tough and competent
+    - Failure is not an option
 
     -- Gene Kranz (Apollo Flight Director)
 
