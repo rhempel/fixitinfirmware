@@ -8,7 +8,7 @@ on:
 
 jobs:
   nikola_build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     name: Deploy Nikola to GitHub Pages
     steps:
     - name: Check out
@@ -16,6 +16,6 @@ jobs:
 #   - name: Cache things
 #     uses: actions/cache@v2
     - name: Build and Deploy Nikola
-      uses: getnikola/nikola-action@v5
+      uses: getnikola/nikola-action@v8
       with:
         dry_run: false
