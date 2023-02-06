@@ -13,7 +13,7 @@
     :align: right
 
 Your department has undergone another re-organization because ... actually
-is doesn't matter. One of the reasons for the change is to step-change
+it doesn't matter. One of the reasons for the change was to step-change
 the innovation culture so that your company can quickly deliver world-class
 experiences that delight your customers and exceed their expectations.
 
@@ -25,11 +25,11 @@ on how to make things worse. There is a genuine desire to
 make things better - what's missing sometimes is asking the right questions
 that drive change in the right direction.
 
-Let's have a look at why innovation is so hard to acheive in some
+Let's have a look at why innovation is so hard to achieve in some
 business environments, and what we can do to turn things around. This
 is definitely not a list of "5 Easy Ways To Innovate" - it's more
 about taking stock of where your organization is today, and deciding on
-th first steps towards where you want it to be.
+the first steps towards where you want it to be.
 
 What is Innovation?
 -------------------
@@ -49,20 +49,20 @@ Before a company can improve its innovation capabilities, it's a good
 idea to understand how innovative it is right now. Here's a little
 table that can be used as inspiration:
 
-.. list-table:: Are We Innovating or Guessing?
-    :header-rows: 0
-    :widths: 20 80
+.. topic:: Risk
 
-    * - Risk
-      - How are we managing risk - is there a process to mature new
-        ideas or are we hoping for success by doing research while we
-        are developing the product?
-    * - Focus
-      - Are we assuming innovation is something everyone is supposed to do
-        or is there a more formal innovation process or team?
-    * - Profile
-      - Are we rotating people into innovation projects based only on their
-        skills or are we also ensuring they have an innovation mindset?
+    How are we managing risk - is there a process to mature new
+    ideas or are we hoping for success by doing research while we
+    are developing the product?
+
+.. topic:: Focus
+
+    Are we assuming innovation is something everyone is supposed to do
+    or is there a more formal innovation process or team?
+    
+.. topic:: Profile
+    Are we rotating people into innovation projects based only on their
+    skills or are we also ensuring they have an innovation mindset?
 
 One of the biggest sources of failure for companies that want to be
 innovative is to ignore the difference between research and development.
@@ -74,7 +74,7 @@ Putting a focused team on innovation might seem like a bad idea - after all
 who doesn't want to be innovative? If innovation is one of your KPIs or OKRs
 across multiple functions, it can set your teams up for intense competition
 for budget, people, and recognition. That's why it's a good idea to rotate
-people into the innovation team beased on their profile and interest in
+people into an innovation team beased on their profile and also their interest in
 the problem being researched.  
 
 I often hear leaders talk about the Apollo program (they usually mean all
@@ -111,9 +111,10 @@ can quickly change the heat reaching the food by adjusting the flame.
 
 Electric burners have not changed very much either. They are electric coils that
 basically heat up your pot from underneath. The knobs on the stove
-regulate the temperature by turning the supply of electricity fully on and off.
-The coils are easy to remove and replace but hard to clean and require
-an opening in the stove top which makes spills really messy.
+regulate the temperature by turning the supply of electricity fully on and off
+as needed to maintain a temperature. The coils are easy to remove and replace
+but hard to clean and require an opening in the stove top which can make spills
+really messy.
 
 For a while solid electric elements were popular because they looked easy to clean
 but they had so much thermal mass that it was almost impossible to control the
@@ -138,7 +139,7 @@ iron, and some types of stainless steel pots.
 What does this have to do with innovation? Both technologies had been
 around for a long time but induction remained a very expensive option
 that only a few could afford. As late as 2012 less than 5% of homes in
-the US had an inducition cooktop, but the number is changing rapidly - the
+the US had an induction cooktop, but the number is changing rapidly - the
 acceptance has hit an inflection point.
 
 The innovation was a combination of detailed market analysis, relentless
