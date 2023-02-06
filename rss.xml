@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware</title><link>https://fixitinfirmware.com/</link><description>A site dedicated to care and feeding of embedded systems</description><atom:link href="https://fixitinfirmware.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Mon, 06 Feb 2023 14:39:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Let's Be Innovative!</title><link>https://fixitinfirmware.com/posts/lets-be-innovative/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="Lunar Lander Research Vehicle Pilot - Kluever" class="align-right" src="https://fixitinfirmware.com/images/accent/LLRV-pilot-kluever.thumbnail.jpg"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware</title><link>https://fixitinfirmware.com/</link><description>A site dedicated to care and feeding of embedded systems</description><atom:link href="https://fixitinfirmware.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Mon, 06 Feb 2023 14:55:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Let's Be Innovative!</title><link>https://fixitinfirmware.com/posts/lets-be-innovative/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="Lunar Lander Research Vehicle Pilot - Kluever" class="align-right" src="https://fixitinfirmware.com/images/accent/LLRV-pilot-kluever.thumbnail.jpg"&gt;
 &lt;p&gt;Your department has undergone another re-organization because ... actually
-is doesn't matter. One of the reasons for the change is to step-change
+it doesn't matter. One of the reasons for the change was to step-change
 the innovation culture so that your company can quickly deliver world-class
 experiences that delight your customers and exceed their expectations.&lt;/p&gt;
 &lt;p&gt;Sound familiar? Depressingly familiar? Wasn't this supposed to be one
@@ -10,11 +10,11 @@ of the outcomes of the last reorganization? What happened?&lt;/p&gt;
 on how to make things worse. There is a genuine desire to
 make things better - what's missing sometimes is asking the right questions
 that drive change in the right direction.&lt;/p&gt;
-&lt;p&gt;Let's have a look at why innovation is so hard to acheive in some
+&lt;p&gt;Let's have a look at why innovation is so hard to achieve in some
 business environments, and what we can do to turn things around. This
 is definitely not a list of "5 Easy Ways To Innovate" - it's more
 about taking stock of where your organization is today, and deciding on
-th first steps towards where you want it to be.&lt;/p&gt;
+the first steps towards where you want it to be.&lt;/p&gt;
 &lt;section id="what-is-innovation"&gt;
 &lt;h2&gt;What is Innovation?&lt;/h2&gt;
 &lt;p&gt;One way to think about innovation is the combination of two or
@@ -29,28 +29,25 @@ this distinction in another article.&lt;/p&gt;
 &lt;p&gt;Before a company can improve its innovation capabilities, it's a good
 idea to understand how innovative it is right now. Here's a little
 table that can be used as inspiration:&lt;/p&gt;
-&lt;table&gt;
-&lt;caption&gt;Are We Innovating or Guessing?&lt;/caption&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 20.0%"&gt;
-&lt;col style="width: 80.0%"&gt;
-&lt;/colgroup&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;p&gt;Risk&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;How are we managing risk - is there a process to mature new
+&lt;aside class="topic"&gt;
+&lt;p class="topic-title"&gt;Risk&lt;/p&gt;
+&lt;p&gt;How are we managing risk - is there a process to mature new
 ideas or are we hoping for success by doing research while we
-are developing the product?&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;p&gt;Focus&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Are we assuming innovation is something everyone is supposed to do
-or is there a more formal innovation process or team?&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;p&gt;Profile&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Are we rotating people into innovation projects based only on their
-skills or are we also ensuring they have an innovation mindset?&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+are developing the product?&lt;/p&gt;
+&lt;/aside&gt;
+&lt;aside class="topic"&gt;
+&lt;p class="topic-title"&gt;Focus&lt;/p&gt;
+&lt;p&gt;Are we assuming innovation is something everyone is supposed to do
+or is there a more formal innovation process or team?&lt;/p&gt;
+&lt;/aside&gt;
+&lt;aside class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 53)&lt;/p&gt;
+&lt;p&gt;Content block expected for the "topic" directive; none found.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;.. topic:: Profile
+    Are we rotating people into innovation projects based only on their
+    skills or are we also ensuring they have an innovation mindset?
+&lt;/pre&gt;
+&lt;/aside&gt;
 &lt;p&gt;One of the biggest sources of failure for companies that want to be
 innovative is to ignore the difference between research and development.
 Innovation is not about taking risks and hoping for a good outcome - it's
@@ -60,7 +57,7 @@ more about your product and its market.&lt;/p&gt;
 who doesn't want to be innovative? If innovation is one of your KPIs or OKRs
 across multiple functions, it can set your teams up for intense competition
 for budget, people, and recognition. That's why it's a good idea to rotate
-people into the innovation team beased on their profile and interest in
+people into an innovation team beased on their profile and also their interest in
 the problem being researched.&lt;/p&gt;
 &lt;p&gt;I often hear leaders talk about the Apollo program (they usually mean all
 the programs leading up to putting a human on the moon). You will often
@@ -89,9 +86,10 @@ the flame to escape around the side of the pot. Chefs love gas because they
 can quickly change the heat reaching the food by adjusting the flame.&lt;/p&gt;
 &lt;p&gt;Electric burners have not changed very much either. They are electric coils that
 basically heat up your pot from underneath. The knobs on the stove
-regulate the temperature by turning the supply of electricity fully on and off.
-The coils are easy to remove and replace but hard to clean and require
-an opening in the stove top which makes spills really messy.&lt;/p&gt;
+regulate the temperature by turning the supply of electricity fully on and off
+as needed to maintain a temperature. The coils are easy to remove and replace
+but hard to clean and require an opening in the stove top which can make spills
+really messy.&lt;/p&gt;
 &lt;p&gt;For a while solid electric elements were popular because they looked easy to clean
 but they had so much thermal mass that it was almost impossible to control the
 heat quickly - plus they looked ugly and stayed hot for a long time.&lt;/p&gt;
@@ -111,7 +109,7 @@ iron, and some types of stainless steel pots.&lt;/p&gt;
 &lt;p&gt;What does this have to do with innovation? Both technologies had been
 around for a long time but induction remained a very expensive option
 that only a few could afford. As late as 2012 less than 5% of homes in
-the US had an inducition cooktop, but the number is changing rapidly - the
+the US had an induction cooktop, but the number is changing rapidly - the
 acceptance has hit an inflection point.&lt;/p&gt;
 &lt;p&gt;The innovation was a combination of detailed market analysis, relentless
 cost reduction, experimenting with manufacturing processes, and modern touch
