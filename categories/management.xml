@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about management)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/management.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Mon, 06 Feb 2023 14:55:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Let's Be Innovative!</title><link>https://fixitinfirmware.com/posts/lets-be-innovative/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="Lunar Lander Research Vehicle Pilot - Kluever" class="align-right" src="https://fixitinfirmware.com/images/accent/LLRV-pilot-kluever.thumbnail.jpg"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about management)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/management.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Sun, 19 Feb 2023 11:38:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Let's Be Innovative!</title><link>https://fixitinfirmware.com/posts/lets-be-innovative/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="Lunar Lander Research Vehicle Pilot - Kluever" class="align-right" src="https://fixitinfirmware.com/images/accent/LLRV-pilot-kluever.thumbnail.jpg"&gt;
 &lt;p&gt;Your department has undergone another re-organization because ... actually
 it doesn't matter. One of the reasons for the change was to step-change
 the innovation culture so that your company can quickly deliver world-class
@@ -40,13 +40,10 @@ are developing the product?&lt;/p&gt;
 &lt;p&gt;Are we assuming innovation is something everyone is supposed to do
 or is there a more formal innovation process or team?&lt;/p&gt;
 &lt;/aside&gt;
-&lt;aside class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 53)&lt;/p&gt;
-&lt;p&gt;Content block expected for the "topic" directive; none found.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;.. topic:: Profile
-    Are we rotating people into innovation projects based only on their
-    skills or are we also ensuring they have an innovation mindset?
-&lt;/pre&gt;
+&lt;aside class="topic"&gt;
+&lt;p class="topic-title"&gt;Profile&lt;/p&gt;
+&lt;p&gt;Are we rotating people into innovation projects based only on their
+skills or are we also ensuring they have an innovation mindset?&lt;/p&gt;
 &lt;/aside&gt;
 &lt;p&gt;One of the biggest sources of failure for companies that want to be
 innovative is to ignore the difference between research and development.
