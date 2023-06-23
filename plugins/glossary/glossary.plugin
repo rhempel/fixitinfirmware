@@ -1,0 +1,13 @@
+[Core]
+Name = glossary
+Module = glossary
+
+[Nikola]
+PluginCategory = Shortcode
+
+[Documentation]
+Author = Ralph Hempel
+Version = 0.1
+Website = http://plugins.getnikola.com/#glossary
+Description = A directive to allow links to be re-used across content
+

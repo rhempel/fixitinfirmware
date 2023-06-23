@@ -1,7 +1,7 @@
 .. title: Mission Statements
 .. slug: mission-statements
 .. date: 2023-01-22 12:00:00 UTC-05:00
-.. status: draft
+.. status: published
 .. tags: maintenance, resources, opportunity
 .. category: Management
 .. link: 
@@ -24,10 +24,12 @@ to be a general and somewhat fluffy set of words that could apply to
 just about any organization. And that makes most mission statements
 forgettable.
 
-But that doesn't mean your maintenance team should not have a mission
+That doesn't mean your maintenance team should not have a mission
 statement! Your job together with your team is to come up with a
 statement that reflects how you want to be seen and heard within
 the organization moving forward.
+
+.. TEASER_END
 
 One step towards improving your team's visibility is to have a 30-60 minute
 workshop to identify your key responsibilities and accountabilities. Don't

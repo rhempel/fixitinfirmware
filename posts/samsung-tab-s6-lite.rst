@@ -8,7 +8,7 @@
 .. description: 
 .. type: text
 
-.. image:: /images/products/samsung-tab-s6-lite-with-name.webp
+.. image:: /images/products/samsung-tab-s6-lite-with-name.jpg
     :align: right
     :width: 240px
 
