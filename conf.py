@@ -18,7 +18,6 @@ from image_glossary import IMAGE_GLOSSARY
 # ! Option (a) is used when you don't want that setting translated.
 # ! Option (b) is used for settings that are different in different languages.
 
-
 # Data about this site
 BLOG_AUTHOR = "Ralph Hempel"  # (translatable)
 BLOG_TITLE = "Fix It In Firmware"  # (translatable)
@@ -946,10 +945,7 @@ IMAGE_THUMBNAIL_SIZE = 240
 # )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
-<<<<<<< HEAD
-=======
 # INDEX_TEASERS = False
->>>>>>> 7498aee (Allow posts to have teasers)
 INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
