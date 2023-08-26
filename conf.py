@@ -4,6 +4,7 @@
 import time
 
 from local_glossary import LOCAL_GLOSSARY
+from image_glossary import IMAGE_GLOSSARY
 
 # !! This is the configuration of Nikola. !! #
 # !!  You should edit it to your liking.  !! #
