@@ -8,9 +8,7 @@
 .. description: 
 .. type: text
 
-.. image:: /images/accent/LLRV-pilot-kluever.thumbnail.jpg
-    :alt: Lunar Lander Research Vehicle Pilot - Kluever
-    :align: right
+{{% glossary_image "Lunar LRV" %}}
 
 Your department has undergone another re-organization because ... actually
 it doesn't matter. The goal was to step-change
@@ -32,6 +30,8 @@ about taking stock of where your organization is today, and deciding on
 the first steps towards where you want it to be.
 
 .. TEASER_END
+
+.. contents:: In this post ...
 
 What is Innovation?
 -------------------
