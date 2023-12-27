@@ -1,7 +1,7 @@
 //Add details here
 
 {
-  "image": "dragas/nikola:alpine",
+  "image": "dragas/nikola:debian",
   "name" : "nikola-fixitinfirmware",
   "forwardPorts": [8000],
   "customizations": {
