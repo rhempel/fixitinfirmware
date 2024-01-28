@@ -147,7 +147,7 @@ NAVIGATION_LINKS = {
 #       ('/index.html', 'Home'),
         ('/pages/about/', 'About'),
         ('/pages/resources/', 'Resources'),
-        ('/archive.html', 'Archives'),
+        ('/archive.html', 'Archive'),
         ('/categories/index.html', 'Tags'),
 #       ('/rss.xml', 'RSS', 'fa fa-rss'),
 #       ('https://twitter.com/getnikola', 'My Twitter', 'fab fa-twitter'),
@@ -163,12 +163,12 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "fixit-flatly"
+THEME = "fixit-sandstone"
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
 # as an accent color (the default ones don’t). Must be a HEX value.
-THEME_COLOR = '#5670d4'
+# THEME_COLOR = '#5670d4'
 
 # Theme configuration. Fully theme-dependent. (translatable)
 # Samples for bootblog4 (enabled) and bootstrap4 (commented) follow.
