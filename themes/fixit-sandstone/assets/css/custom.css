@@ -60,6 +60,7 @@ a.navbar-brand {
     ), url('/images/headers/resistors.jpg');
   color: #3e3f3a !important;
   border-radius: 0.5rem !important;
+  padding-bottom: 0em !important;
 }
 
 a {
