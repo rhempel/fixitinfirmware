@@ -615,7 +615,6 @@ pre.code .c1, .code .codetable .c1, .highlight pre .c1 { color: #3D7B7B; font-st
 pre.code .cs, .code .codetable .cs, .highlight pre .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 pre.code .gd, .code .codetable .gd, .highlight pre .gd { color: #A00000 } /* Generic.Deleted */
 pre.code .ge, .code .codetable .ge, .highlight pre .ge { font-style: italic } /* Generic.Emph */
-pre.code .ges, .code .codetable .ges, .highlight pre .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 pre.code .gr, .code .codetable .gr, .highlight pre .gr { color: #E40000 } /* Generic.Error */
 pre.code .gh, .code .codetable .gh, .highlight pre .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 pre.code .gi, .code .codetable .gi, .highlight pre .gi { color: #008400 } /* Generic.Inserted */
@@ -723,7 +722,7 @@ div.figure > a > img {
 }
 
 blockquote p, blockquote {
-  font-size: 1.0rem;
+  font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -926,69 +925,132 @@ html[dir="rtl"] body {
     min-height: 25px;
 }
 
-/* Customizations go here! */
+@media (min-width: 576px) {
+  .container, .container-xl, .container-lg, .container-md, .container-sm {
+  max-width: 720px !important;
+}}
 
-a.u-url {
-    font-size: 2.0rem;
-    color:black;
-    font-weight: bold;
+@media (max-width: 767.98px) {
+.navbar-expand-md .navbar-collapse {
+    display: flex!important;
+}
 }
 
-a {
-    color: slateblue
+.navbar-toggler {
+  display: none !important;
 }
 
-a:hover {
-    color: darkslateblue;
-}
-
-a.nav-link {
-    font-family: 'Fredericka the Great';
-    font-size: 150%;
-}
-
-a.navbar-brand {
-    font-family: 'Fredericka the Great';
-    font-size: 250%;
-    font-variant: small-caps;
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row !important;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 
 .navbar .container {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
+  flex-direction: column !important;
+  align-items: flex-start !important;
 }
 
-#footer {
-    padding-top: 10px;
-    padding-bottom: 10px;
+nav.mb-4 {
+    margin-bottom: 0rem!important;
 }
 
-
-blockquote.epigraph {
-    font-size: 0.8em; 
-    font-style: italic;
-    color: darkslategray
+#bs-navbar {
+  width: 100% !important;
 }
 
-caption {
-    color: #95a5a6;
-    caption-side: top;
+.nav-link {
+  font-family: 'Acme', sans-serif !important;
+  font-size: 125% !important;
+  color: #3e3f3a !important;
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
 }
 
-blockquote p.attribution {
-    text-align: left;
-    margin-left: 10%;
+a.navbar-brand {
+  display: flex !important;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100% !important;
+  height: 150px !important;
+  margin-left: 0 !important;
+  margin-top: auto !important;
+  padding-left: 0.5rem;
+  background-image: linear-gradient( to bottom,
+  rgba(255, 255, 255, 0.0)   50%,
+  rgba(255, 255, 255, 0.5)   60%,
+  rgba(255, 255, 255, 1.0) 100%
+    ), url('/images/headers/resistors.jpg');
+  color: #3e3f3a !important;
+  border-radius: 0.5rem !important;
+  padding-bottom: 0em !important;
 }
 
-h1 {
-    font-size: 2.0rem;
+a {
+  color: #325d88 !important;
 }
 
-h2 {
-    font-size: 1.6rem;
+span#blog-title {
+  font-family: 'Acme', sans-serif !important;
+  font-size: 250%;
 }
 
-h3 {
-    font-size: 1.3rem;
+div article.h-entry:not(:first-child) {
+  padding-top: 1rem !important;
+  border-color: #3e3f3a !important;
+  border-top: 1px solid !important;
+}
+
+.tags > li a
+, a.badge {
+  margin-right: .4em;
+  margin-bottom: .4em;
+  font-size: unset;
+  font-weight: unset;
+  line-height: 1.2;
+  border-color: #3e3f3a !important;
+  border: 1px solid !important;
+  background-color: #cccccc;
+}
+
+.entry-content > section {
+  padding-top: 1rem !important;
+}
+
+.entry-content > section > section {
+  padding-top: 0.5rem !important;
+}
+
+div.body-content {
+  padding-top: 1rem !important;
+  border-color: #3e3f3a !important;
+  border-top: 1px solid !important;
+  border-bottom: 1px solid !important;
+}
+
+blockquote p, blockquote{
+  font-size: 110% !important;
+  font-style: italic !important; 
+  font-weight: 300 !important;
+  line-height: 1.25 !important;
+}
+
+footer {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  border-color: #3e3f3a !important;
+}
+
+img {
+  margin: 0.5rem;
+  border-color: #3e3f3a !important;
+  border: 1px solid !important;
+}
+
+.h3, h3 {
+    font-size: 1.25rem;
 }
