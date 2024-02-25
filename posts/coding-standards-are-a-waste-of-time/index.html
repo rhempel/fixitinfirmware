@@ -51,10 +51,10 @@ bg-transparent
         <div class="collapse navbar-collapse" id="bs-navbar">
             <ul class="navbar-nav mr-auto">
 <li class="nav-item">
-<a href="../../index.html" class="nav-link text-white">Home</a>
+<a href="../../pages/about/" class="nav-link text-white">About</a>
                 </li>
 <li class="nav-item">
-<a href="../../pages/about/" class="nav-link text-white">About</a>
+<a href="../../pages/resources/" class="nav-link text-white">Resources</a>
                 </li>
 <li class="nav-item">
 <a href="../../archive.html" class="nav-link text-white">Archives</a>
@@ -92,7 +92,8 @@ bg-transparent
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <img alt="MargaretHamiltonCodeStack" class="align-right" src="../../images/accent/MargaretHamiltonCodeStack.thumbnail.jpg"><p>You've been working for hours to figure out why the system you have delivered
+    <p><a href="../../images/accent/MargaretHamiltonCodeStack.thumbnail.jpg" class="image-reference" title="foo"><img src="../../images/accent/MargaretHamiltonCodeStack.thumbnail.jpg" alt="A picture of Margaret Hamilton standing next to a tall stack of printouts for the Apollo Lunar Lander" title="Margater Hamilton - Code Stack" class=" align-right"></a></p>
+<p>You've been working for hours to figure out why the system you have delivered
 fails very occasionally.</p>
 <p>You have good bug reports that show it takes
 about 25 days of continuous run time for the failure to occur, and it's
@@ -111,7 +112,16 @@ integration to have a better chance at catching the problem.</p>
 <p>Of course the title is designed to catch your eye, and a coding standard is
 not a bad thing. Just pick one that's already out there like the Linux Kernel
 or MicroPython coding standard and call it a day.</p>
-<section id="why-management-likes-coding-standards"><h2>Why Management Likes Coding Standards</h2>
+<!-- TEASER_END -->
+<nav class="contents" id="in-this-post" role="doc-toc"><p class="topic-title">In this post ...</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#why-management-likes-coding-standards" id="toc-entry-1">Why Management Likes Coding Standards</a></p></li>
+<li><p><a class="reference internal" href="#but-coding-standards-make-reading-code-easier" id="toc-entry-2">But Coding Standards Make Reading Code Easier</a></p></li>
+<li><p><a class="reference internal" href="#but-coding-standards-make-understanding-code-easier" id="toc-entry-3">But Coding Standards Make Understanding Code Easier</a></p></li>
+<li><p><a class="reference internal" href="#but-coding-standards-make-maintanance-and-debugging-easier" id="toc-entry-4">But Coding Standards Make Maintanance and Debugging Easier</a></p></li>
+<li><p><a class="reference internal" href="#what-can-we-do-to-improve-outcomes" id="toc-entry-5">What Can We Do To Improve Outcomes?</a></p></li>
+<li><p><a class="reference internal" href="#conclusion" id="toc-entry-6">Conclusion</a></p></li>
+</ul></nav><section id="why-management-likes-coding-standards"><h2><a class="toc-backref" href="#toc-entry-1" role="doc-backlink">Why Management Likes Coding Standards</a></h2>
 <p>If you take a few minutes and Google "are coding standards useful" you will get
 many articles and blog posts promoting the same basic benefits:</p>
 <ul class="simple">
@@ -148,11 +158,11 @@ figuring out how the old function works.</p>
 <p>Let's explore these magic bullet points a bit further and I'll try to convince
 you to minimize the effort on picking a coding standard and focus instead on
 making a Developer's Guide that will help the team on your next project.</p>
-</section><section id="but-coding-standards-make-reading-code-easier"><h2>But Coding Standards Make Reading Code Easier</h2>
+</section><section id="but-coding-standards-make-reading-code-easier"><h2><a class="toc-backref" href="#toc-entry-2" role="doc-backlink">But Coding Standards Make Reading Code Easier</a></h2>
 <p>To be fair, it <em>is</em> actually a little easier to read well-formed code, but
 that's something you can fix in a few minutes with any number of code
 formatting utilities. You can fix up most naming problems with a decent editor
-and a few miunutes of extra time to choose (or change to) a meanginful name.</p>
+and a few minutes of extra time to choose (or change to) a meanginful name.</p>
 <p>But you can't make a complex module easier to understand, maintain, or
 debug just by having a coding standard.</p>
 <p>It feels good to write and read a nicely formatted block of code where the
@@ -163,7 +173,7 @@ kloc range - here's where the time you and your team discussed the number of
 spaces to indent a block or enforcing only one exit point per function was
 wasted. You would have been better off working on a project level design and
 a Developers Guide.</p>
-</section><section id="but-coding-standards-make-understanding-code-easier"><h2>But Coding Standards Make Understanding Code Easier</h2>
+</section><section id="but-coding-standards-make-understanding-code-easier"><h2><a class="toc-backref" href="#toc-entry-3" role="doc-backlink">But Coding Standards Make Understanding Code Easier</a></h2>
 <p>Sure. For projects with a hundred or so lines of code. Do you really think that
 your coding standard is the one thing that is keeping new team members from
 understanding how your interrupt domain functions buffer data so the background
@@ -192,8 +202,9 @@ these guides with new knowledge for the project.</p>
 coding standards. It's staff turnover and adding more developers to the
 project. The loss of tribal knowledge and the friction of onboarding new
 developers is what's going to be the root cause of many issues that can be
-avoided if you spend time writing great guides.</p>
-</section><section id="but-coding-standards-make-maintanance-and-debugging-easier"><h2>But Coding Standards Make Maintanance and Debugging Easier</h2>
+avoided if you spend time writing and maintaining great guides. More on that
+in another post.</p>
+</section><section id="but-coding-standards-make-maintanance-and-debugging-easier"><h2><a class="toc-backref" href="#toc-entry-4" role="doc-backlink">But Coding Standards Make Maintanance and Debugging Easier</a></h2>
 <p>A coding standard might make the <em>mechanics</em> of maintaining code easier, but
 they sure don't help you find <em>where</em> to make the changes to add features or
 fix bugs.</p>
@@ -216,12 +227,12 @@ our development process I realized that <em>I never had to use the debugger</em>
 <p>Long story short, the bit about debugging being easier when you have a coding
 standard is simply untrue. Easier maintenance is also a myth - you still have
 to know where to change the code, or how to plug a new feature in.</p>
-</section><section id="what-can-we-do-to-improve-outcomes"><h2>What Can We Do To Improve Outcomes?</h2>
+</section><section id="what-can-we-do-to-improve-outcomes"><h2><a class="toc-backref" href="#toc-entry-5" role="doc-backlink">What Can We Do To Improve Outcomes?</a></h2>
 <p>The first thing we can do is take a look around us and have some hard
 conversations about <em>why</em> we think a coding standard is so important, and
 if so, does it need to apply uniformly to each and every project?</p>
 <p>I'm going to argue that a coding standard is not nearly as important as a project level
-Developers Guide - unless your department only works on variants of the same
+Developers Guide - even if your department only works on variants of the same
 codebase for all projects. I'll also ask you to recall all the hours you have
 spent getting to a semi-done coding standard, giving up in the end because
 you cannot get an agreement on something like allowing an early return out
@@ -254,7 +265,7 @@ Standard because you'll have a senior staff member coaching them for the
 first few months, they will have a safety net of tests, and they will develop
 a mindset that drives quality, attention to detail, and testability that a
 coding standard simply cannot help with.</p>
-</section><section id="conclusion"><h2>Conclusion</h2>
+</section><section id="conclusion"><h2><a class="toc-backref" href="#toc-entry-6" role="doc-backlink">Conclusion</a></h2>
 <p>I encourage you to press for Design and Developer's Guides for your projects, and
 to focus on becoming great at TDD and using your CI pipeline to run tests
 automatically. Learn to build decoupled systems and to work in pairs or close
@@ -272,7 +283,7 @@ Coding Standard you used ...</p>
                 <a href="../lets-be-innovative/" rel="next" title="Let's Be Innovative!">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2023         <a href="mailto:rhempel@fixitinfirmware.com">Ralph Hempel</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2024         <a href="mailto:rhempel@fixitinfirmware.com">Ralph Hempel</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

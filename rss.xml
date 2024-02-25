@@ -1,151 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware</title><link>https://fixitinfirmware.com/</link><description>A site dedicated to care and feeding of embedded systems</description><atom:link href="https://fixitinfirmware.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Sun, 19 Feb 2023 11:38:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Let's Be Innovative!</title><link>https://fixitinfirmware.com/posts/lets-be-innovative/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="Lunar Lander Research Vehicle Pilot - Kluever" class="align-right" src="https://fixitinfirmware.com/images/accent/LLRV-pilot-kluever.thumbnail.jpg"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware</title><link>https://fixitinfirmware.com/</link><description>A site dedicated to care and feeding of embedded systems</description><atom:link href="https://fixitinfirmware.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Sun, 25 Feb 2024 03:48:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Mission Statements</title><link>https://fixitinfirmware.com/posts/mission-statements/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg" alt="A picture of Gene Kranz looking intently at a console in NASA Mission Control" title="Gene Kranz - At Console" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Misson statements. Hands up for anyone who loves their company
+mission statement.&lt;/p&gt;
+&lt;p&gt;Hands up for anyone who &lt;em&gt;knows&lt;/em&gt; their company mission statement.&lt;/p&gt;
+&lt;p&gt;In many organizations, the mission statement is laid out by top level
+leadership, sometimes with input from departments or individuals. It tends
+to be a general and somewhat fluffy set of words that could apply to
+just about any organization. And that makes most mission statements
+forgettable.&lt;/p&gt;
+&lt;p&gt;That doesn't mean your maintenance team should not have a mission
+statement! Your job together with your team is to come up with a
+statement that reflects how you want to be seen and heard within
+the organization moving forward.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://fixitinfirmware.com/posts/mission-statements/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>maintenance</category><category>opportunity</category><category>resources</category><guid>https://fixitinfirmware.com/posts/mission-statements/</guid><pubDate>Sun, 22 Jan 2023 17:00:00 GMT</pubDate></item><item><title>Let's Be Innovative!</title><link>https://fixitinfirmware.com/posts/lets-be-innovative/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/LLRV-pilot-kluever.thumbnail.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/LLRV-pilot-kluever.thumbnail.jpg" alt="A picture of the NASA Lunar Research Vehice with the pilot (Kleuver) standing beside it" title="Lunar Lander Research Vehicle Pilot - Kluever" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Your department has undergone another re-organization because ... actually
-it doesn't matter. One of the reasons for the change was to step-change
+it doesn't matter. The goal was to step-change
 the innovation culture so that your company can quickly deliver world-class
 experiences that delight your customers and exceed their expectations.&lt;/p&gt;
 &lt;p&gt;Sound familiar? Depressingly familiar? Wasn't this supposed to be one
 of the outcomes of the last reorganization? What happened?&lt;/p&gt;
 &lt;p&gt;First, take heart. Leadership doesn't wake up one morning and decide
 on how to make things worse. There is a genuine desire to
-make things better - what's missing sometimes is asking the right questions
+make things better - what's missing sometimes is asking the hard questions
 that drive change in the right direction.&lt;/p&gt;
 &lt;p&gt;Let's have a look at why innovation is so hard to achieve in some
 business environments, and what we can do to turn things around. This
 is definitely not a list of "5 Easy Ways To Innovate" - it's more
 about taking stock of where your organization is today, and deciding on
 the first steps towards where you want it to be.&lt;/p&gt;
-&lt;section id="what-is-innovation"&gt;
-&lt;h2&gt;What is Innovation?&lt;/h2&gt;
-&lt;p&gt;One way to think about innovation is the combination of two or
-more well known ideas into something new. Notice that I used
-ideas - not technologies, or applications, or processes, or even
-customer requests. An idea can be any of these things and more.&lt;/p&gt;
-&lt;p&gt;Innovation is hybrid of research and development. It's a
-place where you need to be able to test if two or more ideas can
-be combined (research) and then convert that into a product or a
-component that can be used in a product (development). More on
-this distinction in another article.&lt;/p&gt;
-&lt;p&gt;Before a company can improve its innovation capabilities, it's a good
-idea to understand how innovative it is right now. Here's a little
-table that can be used as inspiration:&lt;/p&gt;
-&lt;aside class="topic"&gt;
-&lt;p class="topic-title"&gt;Risk&lt;/p&gt;
-&lt;p&gt;How are we managing risk - is there a process to mature new
-ideas or are we hoping for success by doing research while we
-are developing the product?&lt;/p&gt;
-&lt;/aside&gt;
-&lt;aside class="topic"&gt;
-&lt;p class="topic-title"&gt;Focus&lt;/p&gt;
-&lt;p&gt;Are we assuming innovation is something everyone is supposed to do
-or is there a more formal innovation process or team?&lt;/p&gt;
-&lt;/aside&gt;
-&lt;aside class="topic"&gt;
-&lt;p class="topic-title"&gt;Profile&lt;/p&gt;
-&lt;p&gt;Are we rotating people into innovation projects based only on their
-skills or are we also ensuring they have an innovation mindset?&lt;/p&gt;
-&lt;/aside&gt;
-&lt;p&gt;One of the biggest sources of failure for companies that want to be
-innovative is to ignore the difference between research and development.
-Innovation is not about taking risks and hoping for a good outcome - it's
-about evaluating and being realistic about risks and rewards as you learn
-more about your product and its market.&lt;/p&gt;
-&lt;p&gt;Putting a focused team on innovation might seem like a bad idea - after all
-who doesn't want to be innovative? If innovation is one of your KPIs or OKRs
-across multiple functions, it can set your teams up for intense competition
-for budget, people, and recognition. That's why it's a good idea to rotate
-people into an innovation team beased on their profile and also their interest in
-the problem being researched.&lt;/p&gt;
-&lt;p&gt;I often hear leaders talk about the Apollo program (they usually mean all
-the programs leading up to putting a human on the moon). You will often
-hear about "moonshot" programs, or "reach for the stars and you will get to
-the moon". The Apollo program was not built on hopes and dreams. It was
-accomplished with the help of great leadership, separating financial from
-technical decisions, building risky components in parallel using different
-technologies to minimize dependencies, and instilling a sense of a common
-goal with joint responsibility for the very clear outcome of the program.&lt;/p&gt;
-&lt;p&gt;The Apollo program was an extremely expensive way to get things done and
-is a perfect example of the iron triangle of project management. Delivering
-a high quality product in a very short time will cost a lot of money. The
-program also had its share of failure and disappointment along the way, but
-it also had at its core a shared vision and motivated, dedicated staff.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="innovation-is-steady-progress"&gt;
-&lt;h2&gt;Innovation Is Steady Progress&lt;/h2&gt;
-&lt;img alt="GE Kitchn Hub Microwave" class="align-right" src="https://fixitinfirmware.com/images/products/ge_kitchen_hub_microwave.thumbnail.jpg"&gt;
-&lt;p&gt;Innovation can be risky, it's just common business sense to not put all
-your eggs in one basket. This story might make the point clear.&lt;/p&gt;
-&lt;p&gt;Let's say your business is consumer goods, specifically cooking appliances
-like residential stoves. For years families cooked on two main types of
-heat - gas or electric. Gas burners have not changed much over the years. They
-are hard to keep clean and waste a lot of energy by allowing the heat of
-the flame to escape around the side of the pot. Chefs love gas because they
-can quickly change the heat reaching the food by adjusting the flame.&lt;/p&gt;
-&lt;p&gt;Electric burners have not changed very much either. They are electric coils that
-basically heat up your pot from underneath. The knobs on the stove
-regulate the temperature by turning the supply of electricity fully on and off
-as needed to maintain a temperature. The coils are easy to remove and replace
-but hard to clean and require an opening in the stove top which can make spills
-really messy.&lt;/p&gt;
-&lt;p&gt;For a while solid electric elements were popular because they looked easy to clean
-but they had so much thermal mass that it was almost impossible to control the
-heat quickly - plus they looked ugly and stayed hot for a long time.&lt;/p&gt;
-&lt;p&gt;Then came &lt;a class="reference external" href="https://schott-ceran.com"&gt;Schott Ceran&lt;/a&gt; - a miracle material that allows extreme heat under
-the glass, and magically keeps most of the heat from spreading to the entire
-surface. It's also very strong and durable and is easy to clean.&lt;/p&gt;
-&lt;p&gt;So far, so good. The other half of this story is &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Induction_heating"&gt;induction heating&lt;/a&gt; which has
-been around since Michael Faraday's time. The first patents for induction cooking
-were issued around 1909, and Frigidaire had a practical demonstration stove
-as early as the 1950's. Westinghouse produced the "Cool Top 2" induction stove
-for about 2 years in the 1970's, and it cost about USD 8,260 in 2017 dollars!&lt;/p&gt;
-&lt;p&gt;The idea of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Induction_cooking"&gt;induction cooking&lt;/a&gt; has a number of really big advantages including
-a one-piece spill-proof top, easy cleanup if something does spill or boil over,
-amazingly low heat transfer through the glass material, and high energy
-efficiency. The disavantage is that it really only works well with steel,
-iron, and some types of stainless steel pots.&lt;/p&gt;
-&lt;p&gt;What does this have to do with innovation? Both technologies had been
-around for a long time but induction remained a very expensive option
-that only a few could afford. As late as 2012 less than 5% of homes in
-the US had an induction cooktop, but the number is changing rapidly - the
-acceptance has hit an inflection point.&lt;/p&gt;
-&lt;p&gt;The innovation was a combination of detailed market analysis, relentless
-cost reduction, experimenting with manufacturing processes, and modern touch
-sensitive controls that further reduced the visual complexity of the cooktop.
-It used very powerful word-of-mouth endorsements as fuel for the marketing
-engine, and appealed to families that were trying to take advantage of
-a more streamlined look in their new or renovated kitchen.&lt;/p&gt;
-&lt;p&gt;Here's the point of the story - no appliance manufacturer decided to be super
-"innovative" and bet the farm on induction cook tops. That's gambling. Instead
-a few industry leaders that had effective research and development areas
-built a limited number of units for sale knowing that they had to educate
-users and appliance service people, knowing that they would most likely accept
-lower (hopefully not negative) net revenue, and knowing that going all in
-and putting too many early production cooktops in homes could lead to a
-PR nightmare.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="conclusion"&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Innovation in a company that has a well-understood business model and product
-assortment respects that existing sales fund the research and development
-needed to drive innovation. These companies continue to innovate
-on the existing products in terms of features, cost reduction of components,
-improving reliability, and simplifying the production and serviceability of
-their products. They continue to market innovations on existing products by
-doing experiments on financing, service agreements, providing incentive
-programs to their sales channels, and so on.&lt;/p&gt;
-&lt;p&gt;Remember the Westinghouse Cool Top 2? It was only produced for 2 years in the 70's.
-It was expensive and ahead of its time. Westinghouse continued to sell their
-conventional appliances because they knew that they could not bet the business
-on an appliance that only a few people could ever afford.&lt;/p&gt;
-&lt;p&gt;But eventually market conditions changed, some of the electronic components
-became more cost effective, and eventually there were enough induction cooktops
-in the maret to hit a point where they were not unusual or exclusive.&lt;/p&gt;
-&lt;p&gt;Long story short, don't ignore your core business when striving to be
-innovative. Respect your existing product line and remember that innovation
-comes after your research department has matured an idea to the point
-where your development teams can muture the idea into a new or existing
-product.&lt;/p&gt;
-&lt;/section&gt;</description><category>development</category><category>innovation</category><category>management</category><category>research</category><guid>https://fixitinfirmware.com/posts/lets-be-innovative/</guid><pubDate>Sun, 15 Jan 2023 17:00:00 GMT</pubDate></item><item><title>Coding Standards Are A Waste Of Time </title><link>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;img alt="MargaretHamiltonCodeStack" class="align-right" src="https://fixitinfirmware.com/images/accent/MargaretHamiltonCodeStack.thumbnail.jpg"&gt;
+&lt;p&gt;&lt;a href="https://fixitinfirmware.com/posts/lets-be-innovative/"&gt;Read more…&lt;/a&gt; (7 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>development</category><category>innovation</category><category>management</category><category>research</category><guid>https://fixitinfirmware.com/posts/lets-be-innovative/</guid><pubDate>Sun, 15 Jan 2023 17:00:00 GMT</pubDate></item><item><title>Coding Standards Are A Waste Of Time </title><link>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/MargaretHamiltonCodeStack.thumbnail.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/MargaretHamiltonCodeStack.thumbnail.jpg" alt="A picture of Margaret Hamilton standing next to a tall stack of printouts for the Apollo Lunar Lander" title="Margater Hamilton - Code Stack" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;You've been working for hours to figure out why the system you have delivered
 fails very occasionally.&lt;/p&gt;
 &lt;p&gt;You have good bug reports that show it takes
@@ -165,165 +48,4 @@ integration to have a better chance at catching the problem.&lt;/p&gt;
 &lt;p&gt;Of course the title is designed to catch your eye, and a coding standard is
 not a bad thing. Just pick one that's already out there like the Linux Kernel
 or MicroPython coding standard and call it a day.&lt;/p&gt;
-&lt;section id="why-management-likes-coding-standards"&gt;
-&lt;h2&gt;Why Management Likes Coding Standards&lt;/h2&gt;
-&lt;p&gt;If you take a few minutes and Google "are coding standards useful" you will get
-many articles and blog posts promoting the same basic benefits:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;The code will be easy to read&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The code will be easy to understand&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The code will be easy to maintain&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The code will be easy to debug&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is exactly the kind of fluff that management likes to read after yet
-another difficult project delivery. Sometimes consultants are brought in to
-review the development process and they comment on the lack of a coding standard
-(among other things).&lt;/p&gt;
-&lt;p&gt;If only we had a coding standard our problems would go away.&lt;/p&gt;
-&lt;p&gt;The thing is, a coding standard is the easiest document to write and to have
-meetings about. Everyone has an opinion about how to write pretty code, how
-variables and functions should be named, and whether to use camel-case or
-underlines to separate words.&lt;/p&gt;
-&lt;p&gt;But is the coding standard really going to fix things? There is a hard truth in
-software engineering that is often forgotten. Joel Spolsky summarized it very
-neatly in Part 1 of &lt;a class="reference external" href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/"&gt;Things You Should Never Do&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote class="epigraph"&gt;
-&lt;p&gt;There’s a subtle reason that programmers always want to throw away the code
-and start over. The reason is that they think the old code is a mess. And
-here is the interesting observation: they are probably wrong. The reason that
-they think the old code is a mess is because of a cardinal, fundamental law of
-programming:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;It’s harder to read code than to write it.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This is why code reuse is so hard. This is why everybody on your team has a
-different function they like to use for splitting strings into arrays of
-strings. They write their own function because it’s easier and more fun than
-figuring out how the old function works.&lt;/p&gt;
-&lt;p class="attribution"&gt;—Joel Spolsky&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Let's explore these magic bullet points a bit further and I'll try to convince
-you to minimize the effort on picking a coding standard and focus instead on
-making a Developer's Guide that will help the team on your next project.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="but-coding-standards-make-reading-code-easier"&gt;
-&lt;h2&gt;But Coding Standards Make Reading Code Easier&lt;/h2&gt;
-&lt;p&gt;To be fair, it &lt;em&gt;is&lt;/em&gt; actually a little easier to read well-formed code, but
-that's something you can fix in a few minutes with any number of code
-formatting utilities. You can fix up most naming problems with a decent editor
-and a few miunutes of extra time to choose (or change to) a meanginful name.&lt;/p&gt;
-&lt;p&gt;But you can't make a complex module easier to understand, maintain, or
-debug just by having a coding standard.&lt;/p&gt;
-&lt;p&gt;It feels good to write and read a nicely formatted block of code where the
-names all make sense, the flow is clear, and the comments explain the thinking
-behind the hard parts.&lt;/p&gt;
-&lt;p&gt;Now multiply that by a few hundred files and pretty soon you are in the 20-50
-kloc range - here's where the time you and your team discussed the number of
-spaces to indent a block or enforcing only one exit point per function was
-wasted. You would have been better off working on a project level design and
-a Developers Guide.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="but-coding-standards-make-understanding-code-easier"&gt;
-&lt;h2&gt;But Coding Standards Make Understanding Code Easier&lt;/h2&gt;
-&lt;p&gt;Sure. For projects with a hundred or so lines of code. Do you really think that
-your coding standard is the one thing that is keeping new team members from
-understanding how your interrupt domain functions buffer data so the background
-task can process it when it's needed? Or how you guarantee that time critical
-hardware updates can run during garbage collection cycles?&lt;/p&gt;
-&lt;p&gt;It doesn't matter if the code is easy to read if the system is hard to
-understand. That's why there are &lt;a class="reference external" href="https://www.cliffsnotes.com/"&gt;Cliff's Notes&lt;/a&gt; for topics like The Great Gatsby
-and Differential Equations.&lt;/p&gt;
-&lt;p&gt;It's very helpful to have a relatively short document to give you and your team
-a detailed guide to the technical challenges the system is designed to solve as
-well as a Developer's Guide that explains how those challenges are solved.&lt;/p&gt;
-&lt;p&gt;But wait. Isn't writing a Design Guide and Developer's Guide exactly what we
-are &lt;em&gt;not&lt;/em&gt; supposed to do anymore? Doesn't Agile prefer working code over
-documentation? Shouldn't we avoid doing Big Up Front Design (BUFD)?&lt;/p&gt;
-&lt;p&gt;Maybe, yes, and yes.&lt;/p&gt;
-&lt;p&gt;I'm no fan of BUFD - unless it's for a relatively small
-piece of code where you know all the design constraints and requirements and
-you have good acceptance criteria and your team has written some variant of
-this code more than once or twice.&lt;/p&gt;
-&lt;p&gt;For any complex project that's going to run for a few quarters or years there
-is no way to think ahead to all the problems or to find a process to eliminate
-risk. And that's why you and your team should spend your time writing Design
-Guides and Developer's Guides as you go. Take time in each sprint to update
-these guides with new knowledge for the project.&lt;/p&gt;
-&lt;p&gt;For long-running and complex projects, your biggest enemy is not the lack of
-coding standards. It's staff turnover and adding more developers to the
-project. The loss of tribal knowledge and the friction of onboarding new
-developers is what's going to be the root cause of many issues that can be
-avoided if you spend time writing great guides.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="but-coding-standards-make-maintanance-and-debugging-easier"&gt;
-&lt;h2&gt;But Coding Standards Make Maintanance and Debugging Easier&lt;/h2&gt;
-&lt;p&gt;A coding standard might make the &lt;em&gt;mechanics&lt;/em&gt; of maintaining code easier, but
-they sure don't help you find &lt;em&gt;where&lt;/em&gt; to make the changes to add features or
-fix bugs.&lt;/p&gt;
-&lt;p&gt;Debugging code is one of the hardest activities there is, and a coding standard
-is not going to help with that either. There are of course a few general rules
-that can be used to make it easier for the compiler to tell you about a
-potential bug. And there are static and dynamic code analyzers that can point
-you to dangerous constructs.&lt;/p&gt;
-&lt;p&gt;In my experience, this is completely backwards. For full disclosure I was a
-strong advocate for compile time and code analyzers to find potential bugs. I
-changed my mind when I discovered Test-Driven Development (TDD).&lt;/p&gt;
-&lt;p&gt;Actually I discovered the &lt;a class="reference external" href="https://www.amazon.com/Driven-Development-Embedded-Pragmatic-Programmers/dp/193435662X"&gt;TDD For Embedded Systems&lt;/a&gt; book by James Grenning back
-in 2011, but I didn't really dig in and &lt;em&gt;do&lt;/em&gt; TDD until I refactored my
-&lt;a class="reference external" href="https://github.com/rhempel/umm_malloc"&gt;umm_malloc&lt;/a&gt; project using TDD in about 2018.&lt;/p&gt;
-&lt;p&gt;Then I wrote a non-trivial (2000 loc) feature extension for another project
-using TDD. It worked pretty much the first time it was integrated it into the
-codebase running on our embedded target.  When I reflected on how TDD improved
-our development process I realized that &lt;em&gt;I never had to use the debugger&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Ever. Not even once.&lt;/p&gt;
-&lt;p&gt;Long story short, the bit about debugging being easier when you have a coding
-standard is simply untrue. Easier maintenance is also a myth - you still have
-to know where to change the code, or how to plug a new feature in.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="what-can-we-do-to-improve-outcomes"&gt;
-&lt;h2&gt;What Can We Do To Improve Outcomes?&lt;/h2&gt;
-&lt;p&gt;The first thing we can do is take a look around us and have some hard
-conversations about &lt;em&gt;why&lt;/em&gt; we think a coding standard is so important, and
-if so, does it need to apply uniformly to each and every project?&lt;/p&gt;
-&lt;p&gt;I'm going to argue that a coding standard is not nearly as important as a project level
-Developers Guide - unless your department only works on variants of the same
-codebase for all projects. I'll also ask you to recall all the hours you have
-spent getting to a semi-done coding standard, giving up in the end because
-you cannot get an agreement on something like allowing an early return out
-of a function.&lt;/p&gt;
-&lt;p&gt;Next we can do a literature survey looking for actual (not anecdotal)
-evidence of the benefit of a coding standard - even an industry standard one
-like MISRA-C. Guess what? A &lt;a class="reference external" href="http://resolver.tudelft.nl/uuid:646de5ba-eee8-4ec8-8bbc-2c188e1847ea"&gt;study at TU Delft&lt;/a&gt; (a very well respected CS school)
-and Les Hatton's paper on &lt;a class="reference external" href="https://www.leshatton.org/Documents/MISRA_comp_1105.pdf"&gt;Language Subsetting&lt;/a&gt; using MISRA-C have shown that
-the standard is not much better than random chance at catching faults. To make
-matters worse, Hatton's earlier paper shows that there is a non-trivial chance
-that fixing code to be MISRA-C compliant actually &lt;em&gt;increases&lt;/em&gt; the risk of
-introducing new and subtle bugs.&lt;/p&gt;
-&lt;p&gt;The third thing you and your team can do is start working in pairs or small
-groups to break down your functional components into pieces that are
-decoupled from the rest of the system, and that follow good software engineering
-principles, like &lt;a class="reference external" href="https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html"&gt;Uncle Bob's SOLID&lt;/a&gt; response to a reader's letter.&lt;/p&gt;
-&lt;p&gt;Finally, find a TDD evangelist in your team and take them off their
-assigned tasks for a while. Let them float in a couple of teams and ask them
-to coach developers in TDD. Make sure that your developers know the difference
-between code &lt;em&gt;coverage&lt;/em&gt; and code &lt;em&gt;correctness&lt;/em&gt; - it's usually easy to write
-tests after the code is done that prove code coverage. That doesn't mean its
-correct - and I've been bitten by that more than once.&lt;/p&gt;
-&lt;p&gt;It takes a little longer (at the beginning) to write code that makes failing tests
-pass, but pretty soon the rhythm of writing a test, breaking your program, and then
-writing code to make the test pass becomes natural.&lt;/p&gt;
-&lt;p&gt;Your new developers will be &lt;em&gt;much&lt;/em&gt; more productive on your complex system
-if they have read a good Developers Guide and understand the workflow for
-adding features or fixing (hopefully rare) bugs. They won't need a Coding
-Standard because you'll have a senior staff member coaching them for the
-first few months, they will have a safety net of tests, and they will develop
-a mindset that drives quality, attention to detail, and testability that a
-coding standard simply cannot help with.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="conclusion"&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;I encourage you to press for Design and Developer's Guides for your projects, and
-to focus on becoming great at TDD and using your CI pipeline to run tests
-automatically. Learn to build decoupled systems and to work in pairs or close
-knit groups to keep each other thinking about how to write great code.&lt;/p&gt;
-&lt;p&gt;The end result should be an awesome project. Nobody will care about which
-Coding Standard you used ...&lt;/p&gt;
-&lt;/section&gt;</description><category>code</category><category>maintenance</category><guid>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</guid><pubDate>Thu, 22 Dec 2022 17:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/"&gt;Read more…&lt;/a&gt; (9 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>code</category><category>maintenance</category><guid>https://fixitinfirmware.com/posts/coding-standards-are-a-waste-of-time/</guid><pubDate>Thu, 22 Dec 2022 17:00:00 GMT</pubDate></item></channel></rss>
