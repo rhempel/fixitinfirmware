@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about Management)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/cat_management.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Sun, 25 Feb 2024 04:38:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Mission Statements</title><link>https://fixitinfirmware.com/posts/mission-statements/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg" alt="A picture of Gene Kranz looking intently at a console in NASA Mission Control" title="Gene Kranz - At Console" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about Management)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/cat_management.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Sun, 10 Mar 2024 18:55:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Open The Pod Bay Door, HAL</title><link>https://fixitinfirmware.com/posts/open-the-pod-bay-door-hal/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/Hal_9000_Panel.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/Hal_9000_Panel.jpg" alt="A picture of the Hal-9000 Front Panel From 2001: A Space Odyssey" title="Hal-9000 Front Panel" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;!-- .. image:: /images/accent/Hal_9000_Panel.jpg
+:alt: HAL 9000 Front Panel
+:align: right
+:width: 200 px --&gt;
+&lt;p&gt;Even if you haven't seen "2001: A Space Odyssey", you have probably heard
+someone say "Open the pod bay door, HAL". It's usually part of a engineering
+joke where HAL-9000 stubbornly refuses to open the door. "I can't do that, Dave"
+is a familiar feeling for embedded systems developers when your hardware
+isn't doing what you think it should.&lt;/p&gt;
+&lt;p&gt;By now you might have guessed that this article is about how having a HAL
+(Hardware Abstraction Layer) for your embedded system makes your life easy,
+and the kids all get ballons when your port takes only minutes because of
+your awesome platform approach.&lt;/p&gt;
+&lt;p&gt;The reality is always different - what started as a simple port is now a
+bit more complicated because a different RTOS is now mandated, and there
+are new security requirements, and the interface to expander boards is
+different, and so on.&lt;/p&gt;
+&lt;p&gt;All of a sudden, the HAL is the least of your problems because on top
+of the architectural changes, you don't have any kind of unit test framework
+or continuous integration system to help you move forward with confidence.&lt;/p&gt;
+&lt;p&gt;Take heart - this is the perfect time to get all of that stuff in place
+with a small and focused team. And you can take advantage of the fact that
+you don't have any hardware yet to get these critical building blocks in
+place.&lt;/p&gt;
+&lt;p&gt;Let's find out how to approach this starting with the HAL ...&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://fixitinfirmware.com/posts/open-the-pod-bay-door-hal/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>agile</category><category>development</category><category>management</category><guid>https://fixitinfirmware.com/posts/open-the-pod-bay-door-hal/</guid><pubDate>Sun, 10 Mar 2024 17:00:00 GMT</pubDate></item><item><title>Mission Statements</title><link>https://fixitinfirmware.com/posts/mission-statements/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/GeneKranzAtConsole.thumbnail.jpg" alt="A picture of Gene Kranz looking intently at a console in NASA Mission Control" title="Gene Kranz - At Console" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Misson statements. Hands up for anyone who loves their company
 mission statement.&lt;/p&gt;
 &lt;p&gt;Hands up for anyone who &lt;em&gt;knows&lt;/em&gt; their company mission statement.&lt;/p&gt;
