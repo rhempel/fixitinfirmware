@@ -53,11 +53,11 @@ a.navbar-brand {
   margin-left: 0 !important;
   margin-top: auto !important;
   padding-left: 0.5rem;
-  background-image: linear-gradient( to bottom,
+  background-image: /* linear-gradient( to bottom,
   rgba(255, 255, 255, 0.0)   50%,
   rgba(255, 255, 255, 0.5)   60%,
   rgba(255, 255, 255, 1.0) 100%
-    ), url('/images/headers/resistors.jpg');
+    ), */ url('/images/headers/resistors.jpg');
   color: #3e3f3a !important;
   border-radius: 0.5rem !important;
   padding-bottom: 0em !important;
@@ -70,6 +70,11 @@ a {
 span#blog-title {
   font-family: 'Acme', sans-serif !important;
   font-size: 250%;
+  backdrop-filter: blur(8px);
+  border-radius: 0.25rem !important;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  color: #eeeeee;
 }
 
 div article.h-entry:not(:first-child) {
