@@ -9,18 +9,20 @@
 {{ template_hooks['extra_head']() }}
 </head>
 <body>
-<a href="#content" class="sr-only sr-only-focusable">{{ messages("Skip to main content") }}</a>
+<!-- <a href="#content" class="sr-only sr-only-focusable">{{ messages("Skip to main content") }}</a> -->
 
-<div class="bg-image mb-4" style="background-image: url('/images/headers/resistors.jpg');">
-<div class="mask" style="background-color: rgba(0,0,0,0.5); height: 100%; width: 100%;">
 <!-- Menubar -->
 
-<nav class="navbar navbar-expand-sm static-top mb-4
+<div class="bg-image mb-4" style="background-image: url('/images/headers/resistors.jpg');">
+<div class="mask" style="background-color: rgba(0,0,0,0.3); height: 100%; width: 100%;">
+
+<nav class="navbar navbar-expand-md static-top
 {% if theme_config.get('navbar_light') %}
 navbar-light
 {% else %}
 navbar-dark
 {% endif %}
+{#
 {% if theme_config.get('navbar_custom_bg') %}
 {{ theme_config['navbar_custom_bg'] }}
 {% elif theme_config.get('navbar_light') %}
@@ -28,13 +30,14 @@ bg-light
 {% else %}
 bg-dark
 {% endif %}
+#}
+style="background-color: transparent
 ">
     <div class="container"><!-- This keeps the margins nice -->
         <a class="navbar-brand" href="{{ _link("root", None, lang) }}">
         {% if logo_url %}
             <img src="{{ logo_url }}" alt="{{ blog_title|e }}" id="logo" class="d-inline-block align-top">
         {% endif %}
-
         {% if show_blog_title %}
             <span id="blog-title">{{ blog_title|e }}</span>
         {% endif %}
@@ -42,9 +45,8 @@ bg-dark
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="bs-navbar">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto" style="font-size: 120%">
                 {{ base.html_navigation_links_entries(navigation_links) }}
                 {{ template_hooks['menu']() }}
             </ul>
@@ -67,10 +69,10 @@ bg-dark
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container -->
 </nav>
+</div>
+</div>
 
 <!-- End of Menubar -->
-</div>
-</div>
 
 <div class="container" id="content" role="main">
     <div class="body-content">
@@ -80,7 +82,7 @@ bg-dark
         {% block content %}{% endblock %}
         <!--End of body content-->
 
-        <footer id="footer">
+        <footer class="container px-3 py-2" id="footer">
             {{ content_footer }}
             {{ template_hooks['page_footer']() }}
             {% block extra_footer %}{% endblock %}
