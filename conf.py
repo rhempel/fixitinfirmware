@@ -945,6 +945,10 @@ IMAGE_THUMBNAIL_SIZE = 240
 # )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
+<<<<<<< HEAD
+=======
+# INDEX_TEASERS = False
+>>>>>>> 7498aee (Allow posts to have teasers)
 INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
