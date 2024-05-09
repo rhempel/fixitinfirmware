@@ -1,8 +1,8 @@
 //Add details here
 
 {
-  "image": "dragas/nikola:debian",
-  "name" : "nikola-fixitinfirmware",
+  "image": "registry.gitlab.com/paddy-hack/nikola:8.2.4",
+  "name" : "paddy-nikola-fixitinfirmware",
   "forwardPorts": [8000],
   "customizations": {
     // Configure properties specific to VS Code.
