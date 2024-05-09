@@ -105,11 +105,12 @@ div.body-content {
   border-bottom: 1px solid !important;
 }
 
-blockquote p, blockquote{
+blockquote.epigraph p, blockquote.epigraph {
   font-size: 110% !important;
   font-style: italic !important; 
   font-weight: 300 !important;
   line-height: 1.25 !important;
+  padding-left: 1em !important;
 }
 
 footer {
