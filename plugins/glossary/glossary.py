@@ -38,53 +38,18 @@ class Plugin(ShortcodePlugin):
 
     def set_site(self, site):
         self.site = site
-        self._glossary = self.site.config['LOCAL_GLOSSARY']
-#       self.inject_dependency('render_posts', 'render_galleries')
-#        site.register_shortcode("glossary", self.handler)
+        self._local_glossary = self.site.config['LOCAL_GLOSSARY']
+        self._image_glossary = self.site.config['IMAGE_GLOSSARY']
         site.register_shortcode("glossary_link", self.link_handler)
+        site.register_shortcode("glossary_image", self.image_handler)
         return super().set_site(site)
 
     def handler(self, entry, *args, **kwargs):
-        return self.site.config['DEFAULT_LANG'], []
+        return self.link_handler(entry, *args, **kwargs)
 
     def link_handler(self, entry, *args, **kwargs):
-         
-#       kw = {
-#           'output_folder': self.site.config['OUTPUT_FOLDER'],
-#           'thumbnail_size': self.site.config['THUMBNAIL_SIZE'],
-#       }
-#       gallery_index_file = os.path.join(kw['output_folder'], self.site.path('gallery', gallery_name))
-#       gallery_index_path = self.site.path('gallery', gallery_name)
-#       gallery_folder = os.path.dirname(gallery_index_path)
-#       deps = [gallery_index_file]
-#       with open(gallery_index_file, 'r') as inf:
-#           data = inf.read()
-#       dom = lxml.html.fromstring(data)
-#       text = [e.text for e in dom.xpath('//script') if e.text and 'jsonContent = ' in e.text][0]
-#       photo_array = json.loads(text.split(' = ', 1)[1].split(';', 1)[0])
-#       for img in photo_array:
-#           img['url'] = '/' + '/'.join([gallery_folder, img['url']])
-#           img['url_thumb'] = '/' + '/'.join([gallery_folder, img['url_thumb']])
-#       photo_array_json = json.dumps(photo_array)
-#       context = {}
-#       context['description'] = ''
-#       context['title'] = ''
-#       context['lang'] = LocaleBorg().current_lang
-#       context['crumbs'] = []
-#       context['folders'] = []
-#       context['photo_array'] = photo_array
-#       context['photo_array_json'] = photo_array_json
-#       context['permalink'] = '#'
-#       context.update(self.site.GLOBAL_CONTEXT)
-#       context.update(kw)
-#       output = self.site.template_system.render_template(
-#           'gallery_shortcode.tmpl',
-#           None,
-#           context
-#       )
-
         try:
-            definition = self._glossary[entry]
+            definition = self._local_glossary[entry]
         except KeyError:
             definition = 'oops'
 
@@ -98,3 +63,78 @@ class Plugin(ShortcodePlugin):
 
         return output, deps
 
+    def image_handler(self, entry, *args, **kwargs):
+        try:
+            definition = self._image_glossary[entry]
+        except KeyError:
+            definition = 'oops'
+
+        try:
+            uri = definition['uri']
+        except KeyError:
+            uri = ''
+
+        imgclass = ''
+        try:
+            imgclass += ' align-{0}'.format(kwargs['align'])
+        except KeyError:
+            imgclass += ' align-right'
+                                                   
+        output = '<a href="{0}" class="image-reference"'.format(uri)
+
+        try:
+            output += ' title="{0}"'.format(kwargs['linktitle'])
+        except KeyError:
+            output += ' title="foo"'
+
+        output += '><img src="{0}"'.format(uri)
+
+        alt = ''
+        title = ''
+
+        for name,value in (('alt', alt), ('title', title), ('class',imgclass)):
+            try:
+                output += ' {0}="{1}"'.format(name, definition[name])                       
+            except KeyError:
+                if value == '':
+                    pass
+                else:
+                    output += ' {0}="{1}"'.format(name, value)                       
+                              
+        output += '></a>'                                                                                                                              
+
+        deps = ["image_glossary.py"]
+
+        return output, deps
+
+#    def handler(self, uri, alt=None, align=None, linktitle=None, title=None, imgclass=None, figclass=None, site=None, data=None, lang=None, post=None):
+#        """Create HTML for thumbnail."""                               
+#        if uri.endswith('.svg'):                                                                                                                       
+#            # the ? at the end makes docutil output an <img> instead of an object for the svg, which lightboxes may require                            
+#            src = '.thumbnail'.join(os.path.splitext(uri)) + '?'                                                                                       
+#        else:                                                                                                                                          
+#            src = '.thumbnail'.join(os.path.splitext(uri))                                                                                             
+#                                                                                                                                                       
+#        if imgclass is None:                                                                                                                           
+#            imgclass = ''                                                                                                                              
+#        if figclass is None:                                                                                                                           
+#            figclass = ''                                                                                                  
+#                                                                                                                                                       
+#        if align and data:                                                                                                                             
+#            figclass += ' align-{0}'.format(align)                                                                                                     
+#        elif align:                                                                                                                                    
+#            imgclass += ' align-{0}'.format(align)                                                                                                     
+#                                                                                                                                                       
+#        output = '<a href="{0}" class="image-reference"'.format(uri)                                                                                   
+#        if linktitle:                                                                                                                                  
+#            output += ' title="{0}"'.format(linktitle)                                                                     
+#        output += '><img src="{0}"'.format(src)                                                                                                        
+#        for item, name in ((alt, 'alt'), (title, 'title'), (imgclass, 'class')):                                           
+#            if item:                                                   
+#                output += ' {0}="{1}"'.format(name, item)                                                                  
+#        output += '></a>'                                                                                                                              
+#                                                                                
+#        if data:                                                                
+#            output = '<div class="figure {0}">{1}{2}</div>'.format(figclass, output, data)                                                             
+#                                                                                
+#        return output, []  
