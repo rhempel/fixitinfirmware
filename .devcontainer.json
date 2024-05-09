@@ -1,7 +1,7 @@
 //Add details here
 
 {
-  "image": "registry.gitlab.com/paddy-hack/nikola:8.2.4",
+  "image": "registry.gitlab.com/paddy-hack/nikola:8.3.0",
   "name" : "paddy-nikola-fixitinfirmware",
   "forwardPorts": [8000],
   "customizations": {
