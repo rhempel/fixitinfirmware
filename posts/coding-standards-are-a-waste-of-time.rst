@@ -216,5 +216,3 @@ coding standard simply cannot help with.
 
 .. _`Big MISRA study`: https://arxiv.org/pdf/2007.08978.pdf
 .. _`Coding Standard JAVA`: https://www.jstage.jst.go.jp/article/transinf/E98.D/7/E98.D_2014EDP7327/_article
-
-
