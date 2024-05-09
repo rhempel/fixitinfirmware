@@ -7,27 +7,29 @@
 .. description: 
 .. type: text
 
-.. image:: /images/accent/GeneKranzAtConsole.thumbnail.jpg
-    :alt: https://history.nasa.gov/SP-4223/p118.jpg
+.. image:: /images/accent/MargaretHamiltonCodeStack.thumbnail.jpg
+    :alt: MargaretHamiltonCodeStack
     :align: right
 
-You've been working for hours to figure out why the system you are debugging
-only fails very occasionally. When you get good bug reports that show it takes
+You've been working for hours to figure out why the system you have delivered
+fails very occasionally.
+
+You have good bug reports that show it takes
 about 25 days of continuous run time for the failure to occur, and it's
-happened at 4 different sites now, you get a spidey sense that it might be
-related to a timer. You pull out your phone and fire up Free-42_ (because you
-like RPN calculators) and do the math for a 1 msec timer interval and determine
+happened at 4 different sites now. You get a spidey sense that it might be
+related to a timer and pull out your phone and fire up Free-42_ (because you
+like RPN calculators). The math for a 1 msec timer interval says 
 that a 32 bit unsigned int should be good for about 50 days ...
 
-When you find the place where someone did a bit of math with the clock using
-signed instead of unsigned values, you say "I wish that we had a coding
+You find the place where someone did a calculation with the clock using
+signed instead of unsigned values, and mumble "I wish that we had a coding
 standard to catch this".
 
 Said nobody. Ever.
 
-What you really needed was a developers guide for this project, a test-driven
-development mindset, and a review process that could work together to have a
-better chance at catching the problem.
+What you really needed was a Developer's Guide for this project, a test-driven
+development mindset, and a review process that could work together with continuous
+integration to have a better chance at catching the problem.
 
 If you take a few minutes and Google "are coding standards useful" you will get
 many articles and blog posts promoting the same basic benefits:
@@ -40,8 +42,9 @@ many articles and blog posts promoting the same basic benefits:
 This is exactly the kind of fluff that management likes to read after yet
 another difficult project delivery. Sometimes consultants are brought in to
 review the development process and they comment on the lack of a coding standard
-(among other things). If only we stuck to a coding standard our problems would
-go away.
+(among other things).
+
+If only we had a coding standard our problems would go away.
 
 The thing is, a coding standard is the easiest document to write and to have
 meetings about. Everyone has an opinion about how to write pretty code, how
@@ -71,15 +74,17 @@ neatly in Part 1 of `Things You Should Never Do`_:
 
 Let's explore these magic bullet points a bit further and I'll try to convince
 you to minimize the effort on picking a coding standard and focus instead on
-making a Developer's Guide that will help the team on yuor next project.
+making a Developer's Guide that will help the team on your next project.
 
 But Coding Standards Make Reading Code Easier
 ---------------------------------------------
 
 To be fair, it *is* actually a little easier to read well-formed code, but
 that's something you can fix in a few minutes with any number of code
-formatting utilities. You can fix up most naming problems with a decent editor.
-But you can't make a more complex module easier to understand, maintain, or
+formatting utilities. You can fix up most naming problems with a decent editor
+and a few miunutes of extra time to choose (or change to) a meanginful name.
+
+But you can't make a complex module easier to understand, maintain, or
 debug just by having a coding standard.
 
 It feels good to write and read a nicely formatted block of code where the
@@ -90,7 +95,7 @@ Now multiply that by a few hundred files and pretty soon you are in the 20-50
 kloc range - here's where the time you and your team discussed the number of
 spaces to indent a block or enforcing only one exit point per function was
 wasted. You would have been better off working on a project level design and
-developers guide.
+a Developers Guide.
 
 But Coding Standards Make Understanding Code Easier
 ---------------------------------------------------
@@ -113,7 +118,9 @@ But wait. Isn't writing a Design Guide and Developer's Guide exactly what we
 are *not* supposed to do anymore? Doesn't Agile prefer working code over
 documentation? Shouldn't we avoid doing Big Up Front Design (BUFD)?
 
-Maybe, yes, and yes. I'm no fan of BUFD - unless it's for a relatively small
+Maybe, yes, and yes.
+
+I'm no fan of BUFD - unless it's for a relatively small
 piece of code where you know all the design constraints and requirements and
 you have good acceptance criteria and your team has written some variant of
 this code more than once or twice.
@@ -194,9 +201,11 @@ Finally, find a TDD evangelist in your team and take them off their
 assigned tasks for a while. Let them float in a couple of teams and ask them
 to coach developers in TDD. Make sure that your developers know the difference
 between code *coverage* and code *correctness* - it's usually easy to write
-tests after the code is done that prove code coverage. It takes a little
-longer (at the beginning) to write code that makes failing tests pass, but
-pretty soon the rhythm of writing a test, breaking your program, and then
+tests after the code is done that prove code coverage. That doesn't mean its
+correct - and I've been bitten by that more than once.
+
+It takes a little longer (at the beginning) to write code that makes failing tests
+pass, but pretty soon the rhythm of writing a test, breaking your program, and then
 writing code to make the test pass becomes natural.
 
 Your new developers will be *much* more productive on your complex system
@@ -206,6 +215,17 @@ Standard because you'll have a senior staff member coaching them for the
 first few months, they will have a safety net of tests, and they will develop
 a mindset that drives quality, attention to detail, and testability that a
 coding standard simply cannot help with.
+
+Conclusion
+----------
+
+I encourage you to press for Design and Developer's Guides for your projects, and
+to focus on becoming great at TDD and using your CI pipeline to run tests
+automatically. Learn to build decoupled systems and to work in pairs or close
+knit groups to keep each other thinking about how to write great code.
+
+The end result should be an awesome project and nobody will care about which
+Coding Standard you used ...
 
 .. _Free-42: https://thomasokken.com/free42/
 .. _Things You Should Never Do: https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/
