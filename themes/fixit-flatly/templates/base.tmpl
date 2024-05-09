@@ -11,8 +11,13 @@
 <body>
 <a href="#content" class="sr-only sr-only-focusable">{{ messages("Skip to main content") }}</a>
 
-<div class="bg-image mb-4" style="background-image: url('/images/headers/resistors.jpg');">
-<div class="mask" style="background-color: rgba(0,0,0,0.5); height: 100%; width: 100%;">
+<div class="bg-image" style="background-image: url('/images/headers/resistors.jpg');">
+<!-- <div class="bg-image" style="background-image:     linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.0) 80%,
+      rgba(0, 0, 0, 0.6)
+    ), url('/images/headers/resistors.jpg');"> -->
+<!-- <div class="mask" style="background-color: rgba(0,0,0,0.5); height: 100%; width: 100%;"> -->
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-sm static-top mb-4
@@ -29,7 +34,12 @@ bg-light
 bg-dark
 {% endif %}
 ">
-    <div class="container"><!-- This keeps the margins nice -->
+    <div class="container" style="border-radius: 5px; background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.0)   0%,
+      rgba(0, 0, 0, 0.0)  30%,
+      rgba(0, 0, 0, 0.5)  35%,
+      rgba(0, 0, 0, 0.9) 100%);"><!-- This keeps the margins nice -->
         <a class="navbar-brand" href="{{ _link("root", None, lang) }}">
         {% if logo_url %}
             <img src="{{ logo_url }}" alt="{{ blog_title|e }}" id="logo" class="d-inline-block align-top">

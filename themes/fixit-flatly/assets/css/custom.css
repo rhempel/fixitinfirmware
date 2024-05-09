@@ -15,14 +15,16 @@ a:hover {
 }
 
 a.nav-link {
-    font-family: 'Fredericka the Great';
-    font-size: 150%;
+    font-family: 'Acme';
+    font-size: 200%;
 }
 
 a.navbar-brand {
-    font-family: 'Fredericka the Great';
-    font-size: 250%;
+    font-family: 'Acme';
+    font-size: 300%;
     font-variant: small-caps;
+    margin-left: 0.5rem;
+    padding-top: 100px;
 }
 
 .navbar .container {
