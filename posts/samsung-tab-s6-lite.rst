@@ -1,6 +1,7 @@
 .. title: Samsung Tab S6 Lite First Impressions
 .. slug: samsung-tab-s6-lite-first-impressions
 .. date: 2021-02-20 12:00:00 UTC-05:00
+.. status: draft
 .. tags: samsung, android, termux
 .. category: Tools
 .. link: 

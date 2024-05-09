@@ -1,6 +1,7 @@
 .. title: Mission Statements
 .. slug: mission-statements
 .. date: 2021-07-01 12:00:00 UTC-05:00
+.. status: draft
 .. tags: maintenance, resources, opportunity
 .. category: Roles
 .. link: 
@@ -33,7 +34,7 @@ workshop to identify your key responsibilities and accountabilities. Don't
 work on your misison statement yet - just keep that list up on a
 whiteboard and make sure that it accurately reflects the team's
 purpose. As you do your work, feel free to update the whiteboard by
-adding, consolidating, or removing items. Within 2-4 weeks the lists will
+adding, consolidating, or removing items. Within 1-2 weeks the lists will
 be boiled down to a few items that will represent your team's "reason
 for being" - that's the core of your mission.
 
