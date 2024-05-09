@@ -16,6 +16,6 @@ jobs:
 #   - name: Cache things
 #     uses: actions/cache@v2
     - name: Build and Deploy Nikola
-      uses: registry.gitlab.com/paddy-hack/nikola:8.3.0
+      uses: getnikola/nikola-action@v8
       with:
         dry_run: false
