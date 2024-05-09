@@ -3,5 +3,7 @@
 /.doit.db.*
 /__pycache__
 /cache
-/output
+
+# /output is now a submodule that syncs to GitHub pages for
+#         servig up the site
 
