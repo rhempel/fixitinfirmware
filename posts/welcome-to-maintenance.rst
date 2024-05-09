@@ -1,6 +1,6 @@
 .. title: Welcome to Maintenance
 .. slug: welcome-to-maintenance
-.. date: 2021-01-05 12:00:00 UTC-05:00
+.. date: 2022-02-19 12:00:00 UTC-05:00
 .. status: draft
 .. tags: maintenance, resources, opportunity
 .. category: Roles
@@ -9,15 +9,15 @@
 .. type: text
 
 Great news - the company you work for is doing relatively well considering the
-global pandemic of 2020-2021 and you still have a job. Your team has made a
+global pandemic of 2020-2022 and you still have a job. Your team has made a
 final release of your flagship product and the engineers are being assigned to
 new projects. Just before the monthly all-hands, your manager schedules a 1:1
 where he tells you that you are now going to be on the maintenance crew for the
 project that your team has released.
 
-Maintenance, sustaining, support - no matter what the word is, this is not
-where you thought you would end up. Fixing bugs and adding features that were
-dropped to meet the schedule is no fun and a dead-end.
+Maintenance, sustaining, continuity, support - no matter what the word is, this
+is not where you thought you would end up. Fixing bugs and adding features that
+were dropped to meet the schedule is no fun and a dead-end.
 
 Or is it?
 

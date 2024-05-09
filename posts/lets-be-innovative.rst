@@ -61,6 +61,7 @@ table that can be used as inspiration:
     or is there a more formal innovation process or team?
     
 .. topic:: Profile
+  
     Are we rotating people into innovation projects based only on their
     skills or are we also ensuring they have an innovation mindset?
 
