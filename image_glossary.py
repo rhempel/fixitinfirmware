@@ -17,7 +17,7 @@ IMAGE_GLOSSARY = {
     , "alt" : "A picture of Gene Kranz looking intently at a console in NASA Mission Control"
     , "source" : "" },
 
- "Hal-9000 Front Panel":
+ "HAL 9000 Front Panel":
    { "uri" : "/images/accent/Hal_9000_Panel.jpg"
     , "title" : "Hal-9000 Front Panel"
     , "alt" : "A picture of the Hal-9000 Front Panel From 2001: A Space Odyssey"

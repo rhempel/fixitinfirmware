@@ -8,7 +8,7 @@
 .. description: 
 .. type: text
 
-{{% glossary_image "HAL-9000 Front Panel" %}}
+{{% glossary_image "HAL 9000 Front Panel" %}}
 
 .. .. image:: /images/accent/Hal_9000_Panel.jpg
     :alt: HAL 9000 Front Panel
