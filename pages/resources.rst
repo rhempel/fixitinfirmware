@@ -19,8 +19,10 @@ Development Tools
 
 {{% glossary "Schott Ceran" "Schott Ceran is the shit" %}}!
 
-You all know what {{% glossary_link "foobar" "\"it's really fubar\"" %}} means!
+You all  know what {{% glossary_link "foobar" "\"it's really fubar\"" %}} means!
 
+{{% glossary_image  "Lunar LRV" align='right' %}}
+ 
 Ways of Working
 ===============
 

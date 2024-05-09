@@ -9,9 +9,7 @@
 .. type: text
 
 
-.. image:: /images/accent/GeneKranzAtConsole.thumbnail.jpg
-    :alt: https://history.nasa.gov/SP-4223/p118.jpg
-    :align: right
+{{% glossary_image "Gene Kranz At Console" %}}
 
 Misson statements. Hands up for anyone who loves their company
 mission statement.
@@ -30,6 +28,11 @@ statement that reflects how you want to be seen and heard within
 the organization moving forward.
 
 .. TEASER_END
+
+.. contents:: In this post ...
+
+Why Your Team Needs a Mission Statement
+---------------------------------------
 
 One step towards improving your team's visibility is to have a 30-60 minute
 workshop to identify your key responsibilities and accountabilities. Don't
@@ -78,7 +81,7 @@ that makes them feel proud of what they are doing.
 -------------------------------
 
 I just said that *Failure is not an option* is one of my guiding star
-statements. At LEGO we have a similar one - *Only the best is good enough*.
+statements. The LEGO Group has a similar one - *Only the best is good enough*.
 
 As much as I admire these statements, they come with a downside. They
 may set up the organization to believe that failures will not happen, or

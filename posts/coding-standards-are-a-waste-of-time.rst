@@ -8,9 +8,7 @@
 .. description: 
 .. type: text
 
-.. image:: /images/accent/MargaretHamiltonCodeStack.thumbnail.jpg
-    :alt: MargaretHamiltonCodeStack
-    :align: right
+{{% glossary_image "Margaret Hamilton Code Stack" %}}
 
 You've been working for hours to figure out why the system you have delivered
 fails very occasionally.
@@ -38,6 +36,8 @@ not a bad thing. Just pick one that's already out there like the Linux Kernel
 or MicroPython coding standard and call it a day.
 
 .. TEASER_END
+
+.. contents:: In this post ...
 
 Why Management Likes Coding Standards
 ------------------------------------- 
@@ -93,7 +93,7 @@ But Coding Standards Make Reading Code Easier
 To be fair, it *is* actually a little easier to read well-formed code, but
 that's something you can fix in a few minutes with any number of code
 formatting utilities. You can fix up most naming problems with a decent editor
-and a few miunutes of extra time to choose (or change to) a meanginful name.
+and a few minutes of extra time to choose (or change to) a meanginful name.
 
 But you can't make a complex module easier to understand, maintain, or
 debug just by having a coding standard.
@@ -146,7 +146,8 @@ For long-running and complex projects, your biggest enemy is not the lack of
 coding standards. It's staff turnover and adding more developers to the
 project. The loss of tribal knowledge and the friction of onboarding new
 developers is what's going to be the root cause of many issues that can be
-avoided if you spend time writing great guides.
+avoided if you spend time writing and maintaining great guides. More on that
+in another post.
 
 But Coding Standards Make Maintanance and Debugging Easier
 ----------------------------------------------------------
@@ -188,7 +189,7 @@ conversations about *why* we think a coding standard is so important, and
 if so, does it need to apply uniformly to each and every project?
 
 I'm going to argue that a coding standard is not nearly as important as a project level
-Developers Guide - unless your department only works on variants of the same
+Developers Guide - even if your department only works on variants of the same
 codebase for all projects. I'll also ask you to recall all the hours you have
 spent getting to a semi-done coding standard, giving up in the end because
 you cannot get an agreement on something like allowing an early return out
