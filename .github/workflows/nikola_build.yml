@@ -15,5 +15,5 @@ jobs:
       uses: actions/cache@v2
     - name: Build and Deploy Nikola
       uses: getnikola/nikola-action@v3
-        with:
-          dry_run: false
+      with:
+        dry_run: false
