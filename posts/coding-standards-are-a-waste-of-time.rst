@@ -37,6 +37,8 @@ Of course the title is designed to catch your eye, and a coding standard is
 not a bad thing. Just pick one that's already out there like the Linux Kernel
 or MicroPython coding standard and call it a day.
 
+.. TEASER_END
+
 Why Management Likes Coding Standards
 ------------------------------------- 
 

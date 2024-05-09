@@ -3,6 +3,8 @@
 
 import time
 
+from local_glossary import LOCAL_GLOSSARY
+
 # !! This is the configuration of Nikola. !! #
 # !!  You should edit it to your liking.  !! #
 
@@ -142,8 +144,9 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ('/index.html', 'Home'),
+#       ('/index.html', 'Home'),
         ('/pages/about/', 'About'),
+        ('/pages/resources/', 'Resources'),
         ('/archive.html', 'Archives'),
         ('/categories/index.html', 'Tags'),
 #       ('/rss.xml', 'RSS', 'fa fa-rss'),
@@ -942,7 +945,7 @@ IMAGE_THUMBNAIL_SIZE = 240
 # )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
-# INDEX_TEASERS = False
+INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
@@ -1178,7 +1181,7 @@ COPY_SOURCES = False
 
 # Modify the number of Post per Index Page
 # Defaults to 10
-INDEX_DISPLAY_POST_COUNT = 2
+INDEX_DISPLAY_POST_COUNT = 5
 
 # By default, Nikola generates RSS files for the website and for tags, and
 # links to it.  Set this to False to disable everything RSS-related.
@@ -1195,7 +1198,7 @@ INDEX_DISPLAY_POST_COUNT = 2
 
 # Only include teasers in Atom and RSS feeds. Disabling include the full
 # content. Defaults to True.
-# FEED_TEASERS = True
+FEED_TEASERS = True
 
 # Strip HTML from Atom and RSS feed summaries and content. Defaults to False.
 # FEED_PLAIN = False

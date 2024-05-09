@@ -1,9 +1,9 @@
-// Add details here
+//Add details here
 
 {
-  "image": "dragas/nikola:debian",
+  "image": "dragas/nikola:alpine",
   "name" : "nikola-fixitinfirmware",
-  "forwardPorts": [],
+  "forwardPorts": [8000],
   "customizations": {
     // Configure properties specific to VS Code.
 	"vscode": {
@@ -14,7 +14,7 @@
   },
 
   "mounts": [
-      "source=${localWorkspaceFolder},target=/nikola,type=bind,consistency=cached",
-      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+//     "source=${localWorkspaceFolder},target=/nikola,type=bind,consistency=cached",
+//     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
     ]
 }

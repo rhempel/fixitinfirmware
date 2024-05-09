@@ -13,7 +13,7 @@
     :align: right
 
 Your department has undergone another re-organization because ... actually
-it doesn't matter. One of the reasons for the change was to step-change
+it doesn't matter. The goal was to step-change
 the innovation culture so that your company can quickly deliver world-class
 experiences that delight your customers and exceed their expectations.
 
@@ -22,7 +22,7 @@ of the outcomes of the last reorganization? What happened?
 
 First, take heart. Leadership doesn't wake up one morning and decide
 on how to make things worse. There is a genuine desire to
-make things better - what's missing sometimes is asking the right questions
+make things better - what's missing sometimes is asking the hard questions
 that drive change in the right direction.
 
 Let's have a look at why innovation is so hard to achieve in some
@@ -30,6 +30,8 @@ business environments, and what we can do to turn things around. This
 is definitely not a list of "5 Easy Ways To Innovate" - it's more
 about taking stock of where your organization is today, and deciding on
 the first steps towards where you want it to be.
+
+.. TEASER_END
 
 What is Innovation?
 -------------------
