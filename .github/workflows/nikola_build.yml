@@ -16,6 +16,6 @@ jobs:
 #   - name: Cache things
 #     uses: actions/cache@v2
     - name: Build and Deploy Nikola
-      uses: getnikola/nikola-action@v8
+      uses: paddy-hack/nikola:8.3.0
       with:
         dry_run: false
