@@ -16,18 +16,19 @@
     :width: 200 px
 
 Even if you haven't seen "2001: A Space Odyssey", you have probably heard
-someone say "Open the pod bay door, HAL". It's usually part of a engineering
-joke where HAL-9000 stubbornly refuses to open the door. "I can't do that, Dave"
-is a familiar feeling for embedded systems developers when your hardware
-isn't doing what you think it should.
+someone say "Open the pod bay door, HAL".
+
+"I can't do that, Dave" is a familiar feeling for embedded systems developers
+when your hardware isn't doing what you think it should.
 
 By now you might have guessed that this article is about how having a HAL
 (Hardware Abstraction Layer) for your embedded system makes your life easy,
-and the kids all get ballons when your port takes only minutes because of
-your awesome platform approach.
+changing to a new CPU is fast and painless, and the kids all get ballons
+and ice cream when your port takes only hours because of your awesome
+platform approach.
 
 The reality is always different - what started as a simple port is now a
-bit more complicated because a different RTOS is now mandated, and there
+bit more complicated because a new RTOS is mandated, and there
 are new security requirements, and the interface to expander boards is
 different, and so on.
 
@@ -85,7 +86,7 @@ A Different Approach to HAL
 
 It took me almost 40 years and many frustrated project managers to
 realize that we are better off thinking about embedded systems in terms
-of their functional systems - the GPIO and LED interfaces are just
+of their functional blocks - the GPIO and LED interfaces are just
 how *this* version of the hardware implements the functionality.
 
 Why were there frustrated project managers?
@@ -95,7 +96,7 @@ had a good HAL so it should be easy. And someone made an optimistic
 guess so that the project could get approved and funded. The true
 complexity of the work wasn't obvious until we started to
 do more detailed design and discovered hidden dependencies. I'll stop
-here and leave that for another article.
+here and leave that for another article on `humble planning`_.
 
 In a recent project, we had to implement similar functionality on two
 different MCU families. Instead of abstracting the MCU hardware in yet
@@ -112,14 +113,14 @@ another general HAL, we abstracted the functionality like this:
 
 We then implemented these 4 functions twice, once for each vendor supplied
 HAL interface. This turned out to be good because the door status on one
-system was a simple GPIO read, and the other was a remote Hall sensor on
-a serial interface.
+system was a simple GPIO read, and the other was a remote Hall-effect sensor
+on a serial interface.
 
 It wasn't really that much more work - and the secret weapon is that with
 this level of abstraction, we were able to implement all of the logic around
 the door opening conditions without real hardware. To make things even better
 we used a unit test framework and TDD (Test Driven Development) to make
-sure we only wrote code neede to implement the desired functionality.
+sure we only wrote code the needed to implement the desired functionality.
 
 You might think we had to wait until we had real hardware to integrate
 everything, but again, the answer is no. Our chosen MCUs had inexpensive
@@ -130,7 +131,7 @@ boards things would work.
 In fact, because we wrote things with testability in mind, we were able to get
 the the door opener subsystem working in isolation on the development board.
 When the real hardware arrived, we were able to quickly get the door hardware
-subsystem running on the development board.
+subsystem running.
 
 Lessons for Your Next HAL
 -------------------------
@@ -141,9 +142,9 @@ figure out all the *other* dependencies that you will discover along the
 way.
 
 On your next project, consider doing a small scale experiment that should
-take no more than a 1 week timebox. Try to
-break one part of the project down into its key functions, and then
-implement any hardware dependencies using the vendor supplied HAL directly.
+take no more than a 1 week timebox. Try to break one part of the project
+down into its key functions, and then implement any hardware dependencies
+using the vendor supplied HAL directly.
 
 For example, I have made an Arduino project called `Serial9`_ to
 exchange data on a 9 bit physical serial bus using an 8 bit USB serial
@@ -157,3 +158,4 @@ add a Cpputest suite and the supporting Python library to the repo.
 I'll be curious to hear any feedback on this approach to a HAL.
 
 .. _Serial9: https://github.com/rhempel/serial9
+.. _humble planning: https://mdalmijn.com/p/breaking-the-planning-cycle-of-madness
