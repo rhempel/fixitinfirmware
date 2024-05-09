@@ -61,7 +61,7 @@ a.navbar-brand {
   rgba(255, 255, 255, 1.0) 100%
     ), */ url('/images/headers/resistors.jpg');
   color: #3e3f3a !important;
-  border-radius: 0.5rem !important;
+  border-radius: 0.5rem  0.50rem 0.00rem 0.00rem !important;
   padding-bottom: 0em !important;
 }
 
@@ -73,9 +73,9 @@ span#blog-title {
   font-family: 'Acme', sans-serif !important;
   font-size: 250%;
   backdrop-filter: blur(8px);
-  border-radius: 0.00rem 0.50rem 0.00rem 0.50rem !important;
-  padding-left: 0.50em ;
-  padding-right: 0.50em ;
+  border-radius: 0.00rem 0.50rem 0.00rem 0.00rem !important;
+  padding-left: 0.250em ;
+  padding-right: 0.250em ;
   color: #ffffff;
   text-shadow:
    2px  2px 2px #000,
