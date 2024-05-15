@@ -12,7 +12,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fixitinfirmware.com/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/open-the-pod-bay-door-hal/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/how-can-i-convince/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -61,7 +61,35 @@ bg-transparent
     
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/open-the-pod-bay-door-hal/" class="u-url">Open The Pod Bay Door, HAL</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/how-can-i-convince/" class="u-url">How Can I Convince ...</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Ralph Hempel
+            </span></p>
+            <p class="dateline">
+            <a href="posts/how-can-i-convince/" rel="bookmark">
+            <time class="published dt-published" datetime="2024-03-10T12:00:00-05:00" itemprop="datePublished" title="2024-03-10">2024-03-10</time></a>
+            </p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p><a href="images/accent/CalatravaArtsAndSciences.thumbnail.jpg" class="image-reference" title="foo"><img src="images/accent/CalatravaArtsAndSciences.thumbnail.jpg" alt="The City of Arts and Sciences in Valencia - Santiago Calatrava" title="Valencia - City of Arts and Sciences" class=" align-right"></a></p>
+<p>From time to time, a developer asks me "How can I convince my
+team/manager/organization to ..." - and after a brief discussion
+with followup questions, I often answer "you can't convince them".</p>
+<p>Let's let that sink in.</p>
+<p>There are many reasons why convincing someone that your awesome
+idea is worth pusuing is harder that you might think. It often
+has less to do with your idea, or your presentation, and more to do
+with how the folks around you are motivated and measured.</p>
+<p>Let's let that sink in too.</p>
+<p>There are a few basic truths about why it's hard to implement change
+that have almost nothing to do with the quality or substance of the
+idea - so let's dive in.</p>
+<p class="more"><a href="posts/how-can-i-convince/">Read more…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/open-the-pod-bay-door-hal/" class="u-url">Open The Pod Bay Door, HAL</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Ralph Hempel
@@ -79,16 +107,16 @@ bg-transparent
 :align: right
 :width: 200 px -->
 <p>Even if you haven't seen "2001: A Space Odyssey", you have probably heard
-someone say "Open the pod bay door, HAL". It's usually part of a engineering
-joke where HAL-9000 stubbornly refuses to open the door. "I can't do that, Dave"
-is a familiar feeling for embedded systems developers when your hardware
-isn't doing what you think it should.</p>
+someone say "Open the pod bay door, HAL".</p>
+<p>"I can't do that, Dave" is a familiar feeling for embedded systems developers
+when your hardware isn't doing what you think it should.</p>
 <p>By now you might have guessed that this article is about how having a HAL
 (Hardware Abstraction Layer) for your embedded system makes your life easy,
-and the kids all get ballons when your port takes only minutes because of
-your awesome platform approach.</p>
+changing to a new CPU is fast and painless, and the kids all get ballons
+and ice cream when your port takes only hours because of your awesome
+platform approach.</p>
 <p>The reality is always different - what started as a simple port is now a
-bit more complicated because a different RTOS is now mandated, and there
+bit more complicated because a new RTOS is mandated, and there
 are new security requirements, and the interface to expander boards is
 different, and so on.</p>
 <p>All of a sudden, the HAL is the least of your problems because on top

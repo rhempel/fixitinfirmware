@@ -13,12 +13,14 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link rel="canonical" href="https://fixitinfirmware.com/posts/open-the-pod-bay-door-hal/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Ralph Hempel">
 <link rel="prev" href="../mission-statements/" title="Mission Statements" type="text/html">
+<link rel="next" href="../how-can-i-convince/" title="How Can I Convince ..." type="text/html">
 <meta property="og:site_name" content="Fix It In Firmware">
 <meta property="og:title" content="Open The Pod Bay Door, HAL">
 <meta property="og:url" content="https://fixitinfirmware.com/posts/open-the-pod-bay-door-hal/">
 <meta property="og:description" content="Even if you haven't seen &quot;2001: A Space Odyssey&quot;, you have probably heard
-someone say &quot;Open the pod bay door, HAL&quot;. It's usually part of a engineering
-joke where HAL-9000 stubbornly refuses to open th">
+someone say &quot;Open the pod bay door, HAL&quot;.
+&quot;I can't do that, Dave&quot; is a familiar feeling for embedded systems developers
+when y">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2024-03-10T12:00:00-05:00">
 <meta property="article:tag" content="agile">
@@ -89,16 +91,16 @@ bg-transparent
 :align: right
 :width: 200 px -->
 <p>Even if you haven't seen "2001: A Space Odyssey", you have probably heard
-someone say "Open the pod bay door, HAL". It's usually part of a engineering
-joke where HAL-9000 stubbornly refuses to open the door. "I can't do that, Dave"
-is a familiar feeling for embedded systems developers when your hardware
-isn't doing what you think it should.</p>
+someone say "Open the pod bay door, HAL".</p>
+<p>"I can't do that, Dave" is a familiar feeling for embedded systems developers
+when your hardware isn't doing what you think it should.</p>
 <p>By now you might have guessed that this article is about how having a HAL
 (Hardware Abstraction Layer) for your embedded system makes your life easy,
-and the kids all get ballons when your port takes only minutes because of
-your awesome platform approach.</p>
+changing to a new CPU is fast and painless, and the kids all get ballons
+and ice cream when your port takes only hours because of your awesome
+platform approach.</p>
 <p>The reality is always different - what started as a simple port is now a
-bit more complicated because a different RTOS is now mandated, and there
+bit more complicated because a new RTOS is mandated, and there
 are new security requirements, and the interface to expander boards is
 different, and so on.</p>
 <p>All of a sudden, the HAL is the least of your problems because on top
@@ -110,7 +112,12 @@ you don't have any hardware yet to get these critical building blocks in
 place.</p>
 <p>Let's find out how to approach this starting with the HAL ...</p>
 <!-- TEASER_END -->
-<section id="your-hal-might-not-be-helping"><h2>Your HAL Might Not Be Helping</h2>
+<nav class="contents" id="in-this-post" role="doc-toc"><p class="topic-title">In this post ...</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#your-hal-might-not-be-helping" id="toc-entry-1">Your HAL Might Not Be Helping</a></p></li>
+<li><p><a class="reference internal" href="#a-different-approach-to-hal" id="toc-entry-2">A Different Approach to HAL</a></p></li>
+<li><p><a class="reference internal" href="#lessons-for-your-next-hal" id="toc-entry-3">Lessons for Your Next HAL</a></p></li>
+</ul></nav><section id="your-hal-might-not-be-helping"><h2><a class="toc-backref" href="#toc-entry-1" role="doc-backlink">Your HAL Might Not Be Helping</a></h2>
 <p>If you are still worrying about generalizing your hardware in terms of GPIOs
 and serial ports, you are probably abstracting too close to the hardware. This
 isn't obvious until you start thinking about testabiity and interfaces.</p>
@@ -120,25 +127,25 @@ simple port just got a bit more complex because even if the message contents
 haven't changed much, having a HAL at the hardware later doesn't help at all.</p>
 <p>That's why we are going to switch gears and think about an approach to a HAL
 that looks at systems. In other words, we don't do:</p>
-<div class="code"><pre class="code c"><a id="rest_code_973b673a11324a569ddc78167f67b98c-1" name="rest_code_973b673a11324a569ddc78167f67b98c-1" href="#rest_code_973b673a11324a569ddc78167f67b98c-1"></a><span class="c1">// Open the pod bay door</span>
-<a id="rest_code_973b673a11324a569ddc78167f67b98c-2" name="rest_code_973b673a11324a569ddc78167f67b98c-2" href="#rest_code_973b673a11324a569ddc78167f67b98c-2"></a>
-<a id="rest_code_973b673a11324a569ddc78167f67b98c-3" name="rest_code_973b673a11324a569ddc78167f67b98c-3" href="#rest_code_973b673a11324a569ddc78167f67b98c-3"></a><span class="n">set_gpio</span><span class="p">(</span><span class="n">PORT_DOOR</span><span class="p">,</span><span class="w"> </span><span class="n">PORT_UNLOCK_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_HIGH</span><span class="p">);</span>
-<a id="rest_code_973b673a11324a569ddc78167f67b98c-4" name="rest_code_973b673a11324a569ddc78167f67b98c-4" href="#rest_code_973b673a11324a569ddc78167f67b98c-4"></a><span class="n">set_gpio</span><span class="p">(</span><span class="n">PORT_DOOR</span><span class="p">,</span><span class="w"> </span><span class="n">PORT_DOOR_MOTOR</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_HIGH</span><span class="p">);</span>
-<a id="rest_code_973b673a11324a569ddc78167f67b98c-5" name="rest_code_973b673a11324a569ddc78167f67b98c-5" href="#rest_code_973b673a11324a569ddc78167f67b98c-5"></a><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">GPIO_LOW</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">get_gpio</span><span class="p">(</span><span class="n">PORT_DOOR</span><span class="p">,</span><span class="w"> </span><span class="n">PORT_DOOR_OPEN_CONTACT</span><span class="p">)</span>
-<a id="rest_code_973b673a11324a569ddc78167f67b98c-6" name="rest_code_973b673a11324a569ddc78167f67b98c-6" href="#rest_code_973b673a11324a569ddc78167f67b98c-6"></a><span class="w">  </span><span class="n">wait</span><span class="p">()</span>
-<a id="rest_code_973b673a11324a569ddc78167f67b98c-7" name="rest_code_973b673a11324a569ddc78167f67b98c-7" href="#rest_code_973b673a11324a569ddc78167f67b98c-7"></a><span class="n">set_led</span><span class="p">(</span><span class="n">LED_DOOR_OPEN</span><span class="p">,</span><span class="w"> </span><span class="n">LED_ON</span><span class="p">);</span>
+<div class="code"><pre class="code c"><a id="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-1" name="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-1" href="#rest_code_89cda7ef4d8640179382a1b4eb74fcb4-1"></a><span class="c1">// Open the pod bay door</span>
+<a id="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-2" name="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-2" href="#rest_code_89cda7ef4d8640179382a1b4eb74fcb4-2"></a>
+<a id="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-3" name="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-3" href="#rest_code_89cda7ef4d8640179382a1b4eb74fcb4-3"></a><span class="n">set_gpio</span><span class="p">(</span><span class="n">PORT_DOOR</span><span class="p">,</span><span class="w"> </span><span class="n">PORT_UNLOCK_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_HIGH</span><span class="p">);</span>
+<a id="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-4" name="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-4" href="#rest_code_89cda7ef4d8640179382a1b4eb74fcb4-4"></a><span class="n">set_gpio</span><span class="p">(</span><span class="n">PORT_DOOR</span><span class="p">,</span><span class="w"> </span><span class="n">PORT_DOOR_MOTOR</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_HIGH</span><span class="p">);</span>
+<a id="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-5" name="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-5" href="#rest_code_89cda7ef4d8640179382a1b4eb74fcb4-5"></a><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">GPIO_LOW</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">get_gpio</span><span class="p">(</span><span class="n">PORT_DOOR</span><span class="p">,</span><span class="w"> </span><span class="n">PORT_DOOR_OPEN_CONTACT</span><span class="p">)</span>
+<a id="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-6" name="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-6" href="#rest_code_89cda7ef4d8640179382a1b4eb74fcb4-6"></a><span class="w">  </span><span class="n">wait</span><span class="p">()</span>
+<a id="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-7" name="rest_code_89cda7ef4d8640179382a1b4eb74fcb4-7" href="#rest_code_89cda7ef4d8640179382a1b4eb74fcb4-7"></a><span class="n">set_led</span><span class="p">(</span><span class="n">LED_DOOR_OPEN</span><span class="p">,</span><span class="w"> </span><span class="n">LED_ON</span><span class="p">);</span>
 </pre></div>
 <p>Instead, we do:</p>
-<div class="code"><pre class="code c"><a id="rest_code_5fd1d59915234d8896279be616ddb4bb-1" name="rest_code_5fd1d59915234d8896279be616ddb4bb-1" href="#rest_code_5fd1d59915234d8896279be616ddb4bb-1"></a><span class="n">open_pod_bay_door</span><span class="p">();</span>
+<div class="code"><pre class="code c"><a id="rest_code_1761e69076284d24a04cf36ec62f7253-1" name="rest_code_1761e69076284d24a04cf36ec62f7253-1" href="#rest_code_1761e69076284d24a04cf36ec62f7253-1"></a><span class="n">open_pod_bay_door</span><span class="p">();</span>
 </pre></div>
 <p>And no, we don't use our hand-rolled GPIO and LED HAL inside
 the <cite>open_pod_bay_door()</cite> function, because someday we might
 switch to a CAN interface or disconnect the LED handling from
 the door opening command.</p>
-</section><section id="a-different-approach-to-hal"><h2>A Different Approach to HAL</h2>
+</section><section id="a-different-approach-to-hal"><h2><a class="toc-backref" href="#toc-entry-2" role="doc-backlink">A Different Approach to HAL</a></h2>
 <p>It took me almost 40 years and many frustrated project managers to
 realize that we are better off thinking about embedded systems in terms
-of their functional systems - the GPIO and LED interfaces are just
+of their functional blocks - the GPIO and LED interfaces are just
 how <em>this</em> version of the hardware implements the functionality.</p>
 <p>Why were there frustrated project managers?</p>
 <p>Because they were told that this was going to be a simple port, and we
@@ -146,26 +153,26 @@ had a good HAL so it should be easy. And someone made an optimistic
 guess so that the project could get approved and funded. The true
 complexity of the work wasn't obvious until we started to
 do more detailed design and discovered hidden dependencies. I'll stop
-here and leave that for another article.</p>
+here and leave that for another article on <a class="reference external" href="https://mdalmijn.com/p/breaking-the-planning-cycle-of-madness">humble planning</a>.</p>
 <p>In a recent project, we had to implement similar functionality on two
 different MCU families. Instead of abstracting the MCU hardware in yet
 another general HAL, we abstracted the functionality like this:</p>
-<div class="code"><pre class="code c"><a id="rest_code_aff3d529b8964b25874a2301f36fdd6a-1" name="rest_code_aff3d529b8964b25874a2301f36fdd6a-1" href="#rest_code_aff3d529b8964b25874a2301f36fdd6a-1"></a><span class="c1">// pod_bay_door.h - Pod Bay Door Interface</span>
-<a id="rest_code_aff3d529b8964b25874a2301f36fdd6a-2" name="rest_code_aff3d529b8964b25874a2301f36fdd6a-2" href="#rest_code_aff3d529b8964b25874a2301f36fdd6a-2"></a>
-<a id="rest_code_aff3d529b8964b25874a2301f36fdd6a-3" name="rest_code_aff3d529b8964b25874a2301f36fdd6a-3" href="#rest_code_aff3d529b8964b25874a2301f36fdd6a-3"></a><span class="kt">int32_t</span><span class="w"> </span><span class="nf">init_pod_bay_door</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<a id="rest_code_aff3d529b8964b25874a2301f36fdd6a-4" name="rest_code_aff3d529b8964b25874a2301f36fdd6a-4" href="#rest_code_aff3d529b8964b25874a2301f36fdd6a-4"></a><span class="kt">int32_t</span><span class="w"> </span><span class="nf">open_pod_bay_door</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<a id="rest_code_aff3d529b8964b25874a2301f36fdd6a-5" name="rest_code_aff3d529b8964b25874a2301f36fdd6a-5" href="#rest_code_aff3d529b8964b25874a2301f36fdd6a-5"></a><span class="kt">int32_t</span><span class="w"> </span><span class="nf">close_pod_bay_door</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<a id="rest_code_aff3d529b8964b25874a2301f36fdd6a-6" name="rest_code_aff3d529b8964b25874a2301f36fdd6a-6" href="#rest_code_aff3d529b8964b25874a2301f36fdd6a-6"></a><span class="kt">int32_t</span><span class="w"> </span><span class="nf">get_pod_bay_door_status</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<div class="code"><pre class="code c"><a id="rest_code_515dca6f2dae49279db969bb732453c9-1" name="rest_code_515dca6f2dae49279db969bb732453c9-1" href="#rest_code_515dca6f2dae49279db969bb732453c9-1"></a><span class="c1">// pod_bay_door.h - Pod Bay Door Interface</span>
+<a id="rest_code_515dca6f2dae49279db969bb732453c9-2" name="rest_code_515dca6f2dae49279db969bb732453c9-2" href="#rest_code_515dca6f2dae49279db969bb732453c9-2"></a>
+<a id="rest_code_515dca6f2dae49279db969bb732453c9-3" name="rest_code_515dca6f2dae49279db969bb732453c9-3" href="#rest_code_515dca6f2dae49279db969bb732453c9-3"></a><span class="kt">int32_t</span><span class="w"> </span><span class="nf">init_pod_bay_door</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="rest_code_515dca6f2dae49279db969bb732453c9-4" name="rest_code_515dca6f2dae49279db969bb732453c9-4" href="#rest_code_515dca6f2dae49279db969bb732453c9-4"></a><span class="kt">int32_t</span><span class="w"> </span><span class="nf">open_pod_bay_door</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="rest_code_515dca6f2dae49279db969bb732453c9-5" name="rest_code_515dca6f2dae49279db969bb732453c9-5" href="#rest_code_515dca6f2dae49279db969bb732453c9-5"></a><span class="kt">int32_t</span><span class="w"> </span><span class="nf">close_pod_bay_door</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="rest_code_515dca6f2dae49279db969bb732453c9-6" name="rest_code_515dca6f2dae49279db969bb732453c9-6" href="#rest_code_515dca6f2dae49279db969bb732453c9-6"></a><span class="kt">int32_t</span><span class="w"> </span><span class="nf">get_pod_bay_door_status</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 </pre></div>
 <p>We then implemented these 4 functions twice, once for each vendor supplied
 HAL interface. This turned out to be good because the door status on one
-system was a simple GPIO read, and the other was a remote Hall sensor on
-a serial interface.</p>
+system was a simple GPIO read, and the other was a remote Hall-effect sensor
+on a serial interface.</p>
 <p>It wasn't really that much more work - and the secret weapon is that with
 this level of abstraction, we were able to implement all of the logic around
 the door opening conditions without real hardware. To make things even better
 we used a unit test framework and TDD (Test Driven Development) to make
-sure we only wrote code neede to implement the desired functionality.</p>
+sure we only wrote code the needed to implement the desired functionality.</p>
 <p>You might think we had to wait until we had real hardware to integrate
 everything, but again, the answer is no. Our chosen MCUs had inexpensive
 development boards available, and we were able to get the drivers up and
@@ -174,16 +181,16 @@ boards things would work.</p>
 <p>In fact, because we wrote things with testability in mind, we were able to get
 the the door opener subsystem working in isolation on the development board.
 When the real hardware arrived, we were able to quickly get the door hardware
-subsystem running on the development board.</p>
-</section><section id="lessons-for-your-next-hal"><h2>Lessons for Your Next HAL</h2>
+subsystem running.</p>
+</section><section id="lessons-for-your-next-hal"><h2><a class="toc-backref" href="#toc-entry-3" role="doc-backlink">Lessons for Your Next HAL</a></h2>
 <p>First, accept the fact that a general HAL might help if you your design
 never changes <em>how</em> the MCU accesses perpipherals. But it won't help you
 figure out all the <em>other</em> dependencies that you will discover along the
 way.</p>
 <p>On your next project, consider doing a small scale experiment that should
-take no more than a 1 week timebox. Try to
-break one part of the project down into its key functions, and then
-implement any hardware dependencies using the vendor supplied HAL directly.</p>
+take no more than a 1 week timebox. Try to break one part of the project
+down into its key functions, and then implement any hardware dependencies
+using the vendor supplied HAL directly.</p>
 <p>For example, I have made an Arduino project called <a class="reference external" href="https://github.com/rhempel/serial9">Serial9</a> to
 exchange data on a 9 bit physical serial bus using an 8 bit USB serial
 device.</p>
@@ -202,6 +209,9 @@ add a Cpputest suite and the supporting Python library to the repo.</p>
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../mission-statements/" rel="prev" title="Mission Statements">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../how-can-i-convince/" rel="next" title="How Can I Convince ...">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2024         <a href="mailto:rhempel@fixitinfirmware.com">Ralph Hempel</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         

@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about development)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/development.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Sun, 10 Mar 2024 19:01:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Open The Pod Bay Door, HAL</title><link>https://fixitinfirmware.com/posts/open-the-pod-bay-door-hal/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/Hal_9000_Panel.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/Hal_9000_Panel.jpg" alt="A picture of the Hal-9000 Front Panel From 2001: A Space Odyssey" title="Hal-9000 Front Panel" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fix It In Firmware (Posts about development)</title><link>https://fixitinfirmware.com/</link><description></description><atom:link href="https://fixitinfirmware.com/categories/development.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:rhempel@fixitinfirmware.com"&gt;Ralph Hempel&lt;/a&gt; </copyright><lastBuildDate>Wed, 15 May 2024 02:04:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How Can I Convince ...</title><link>https://fixitinfirmware.com/posts/how-can-i-convince/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/CalatravaArtsAndSciences.thumbnail.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/CalatravaArtsAndSciences.thumbnail.jpg" alt="The City of Arts and Sciences in Valencia - Santiago Calatrava" title="Valencia - City of Arts and Sciences" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;From time to time, a developer asks me "How can I convince my
+team/manager/organization to ..." - and after a brief discussion
+with followup questions, I often answer "you can't convince them".&lt;/p&gt;
+&lt;p&gt;Let's let that sink in.&lt;/p&gt;
+&lt;p&gt;There are many reasons why convincing someone that your awesome
+idea is worth pusuing is harder that you might think. It often
+has less to do with your idea, or your presentation, and more to do
+with how the folks around you are motivated and measured.&lt;/p&gt;
+&lt;p&gt;Let's let that sink in too.&lt;/p&gt;
+&lt;p&gt;There are a few basic truths about why it's hard to implement change
+that have almost nothing to do with the quality or substance of the
+idea - so let's dive in.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://fixitinfirmware.com/posts/how-can-i-convince/"&gt;Read more…&lt;/a&gt; (8 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>agile</category><category>development</category><category>management</category><guid>https://fixitinfirmware.com/posts/how-can-i-convince/</guid><pubDate>Sun, 10 Mar 2024 17:00:00 GMT</pubDate></item><item><title>Open The Pod Bay Door, HAL</title><link>https://fixitinfirmware.com/posts/open-the-pod-bay-door-hal/</link><dc:creator>Ralph Hempel</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://fixitinfirmware.com/images/accent/Hal_9000_Panel.jpg" class="image-reference" title="foo"&gt;&lt;img src="https://fixitinfirmware.com/images/accent/Hal_9000_Panel.jpg" alt="A picture of the Hal-9000 Front Panel From 2001: A Space Odyssey" title="Hal-9000 Front Panel" class=" align-right"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;!-- .. image:: /images/accent/Hal_9000_Panel.jpg
 :alt: HAL 9000 Front Panel
 :align: right
 :width: 200 px --&gt;
 &lt;p&gt;Even if you haven't seen "2001: A Space Odyssey", you have probably heard
-someone say "Open the pod bay door, HAL". It's usually part of a engineering
-joke where HAL-9000 stubbornly refuses to open the door. "I can't do that, Dave"
-is a familiar feeling for embedded systems developers when your hardware
-isn't doing what you think it should.&lt;/p&gt;
+someone say "Open the pod bay door, HAL".&lt;/p&gt;
+&lt;p&gt;"I can't do that, Dave" is a familiar feeling for embedded systems developers
+when your hardware isn't doing what you think it should.&lt;/p&gt;
 &lt;p&gt;By now you might have guessed that this article is about how having a HAL
 (Hardware Abstraction Layer) for your embedded system makes your life easy,
-and the kids all get ballons when your port takes only minutes because of
-your awesome platform approach.&lt;/p&gt;
+changing to a new CPU is fast and painless, and the kids all get ballons
+and ice cream when your port takes only hours because of your awesome
+platform approach.&lt;/p&gt;
 &lt;p&gt;The reality is always different - what started as a simple port is now a
-bit more complicated because a different RTOS is now mandated, and there
+bit more complicated because a new RTOS is mandated, and there
 are new security requirements, and the interface to expander boards is
 different, and so on.&lt;/p&gt;
 &lt;p&gt;All of a sudden, the HAL is the least of your problems because on top
