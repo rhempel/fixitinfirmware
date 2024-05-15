@@ -1,161 +1,215 @@
 .. title: How Can I Convince ...
 .. slug: how-can-i-convince
 .. date: 2024-03-10 12:00:00 UTC-05:00
-.. status: draft
+.. status: published
 .. tags: agile, development, management
 .. category: Management
 .. link: 
 .. description: 
 .. type: text
 
-{{% glossary_image "HAL 9000 Front Panel" %}}
+{{% glossary_image "Calatrava Arts and Sciences" %}}
 
-.. .. image:: /images/accent/Hal_9000_Panel.jpg
-    :alt: HAL 9000 Front Panel
-    :align: right
-    :width: 200 px
+From time to time, a developer asks me "How can I convince my
+team/manager/organization to ..." - and after a brief discussion
+with followup questions, I often answer "you can't convince them".
 
-Even if you haven't seen "2001: A Space Odyssey", you have probably heard
-someone say "Open the pod bay door, HAL".
+Let's let that sink in.
 
-"I can't do that, Dave" is a familiar feeling for embedded systems developers
-when your hardware isn't doing what you think it should.
+There are many reasons why convincing someone that your awesome
+idea is worth pusuing is harder that you might think. It often
+has less to do with your idea, or your presentation, and more to do
+with how the folks around you are motivated and measured.
 
-By now you might have guessed that this article is about how having a HAL
-(Hardware Abstraction Layer) for your embedded system makes your life easy,
-changing to a new CPU is fast and painless, and the kids all get ballons
-and ice cream when your port takes only hours because of your awesome
-platform approach.
+Let's let that sink in too.
 
-The reality is always different - what started as a simple port is now a
-bit more complicated because a new RTOS is mandated, and there
-are new security requirements, and the interface to expander boards is
-different, and so on.
-
-All of a sudden, the HAL is the least of your problems because on top
-of the architectural changes, you don't have any kind of unit test framework
-or continuous integration system to help you move forward with confidence.
-
-Take heart - this is the perfect time to get all of that stuff in place
-with a small and focused team. And you can take advantage of the fact that
-you don't have any hardware yet to get these critical building blocks in
-place.
-
-Let's find out how to approach this starting with the HAL ...
+There are a few basic truths about why it's hard to implement change
+that have almost nothing to do with the quality or substance of the
+idea - so let's dive in.
 
 .. TEASER_END
 
-Your HAL Might Not Be Helping
------------------------------
+.. contents:: In this post ...
 
-If you are still worrying about generalizing your hardware in terms of GPIOs
-and serial ports, you are probably abstracting too close to the hardware. This
-isn't obvious until you start thinking about testabiity and interfaces.
+We Don't Have the Budget - Finance 101
+--------------------------------------
 
-For example, your old hardware used a UART to communicate between the MCU and a
-peripheral, and now you want to move up to a higher speed SPI interface. The
-simple port just got a bit more complex because even if the message contents
-haven't changed much, having a HAL at the hardware later doesn't help at all.
+Everything, I mean everything in most companies has to pass through the
+finance department one way or another. Whether it's the building where your
+desk and computer live, or the process for getting prototypes made, or
+how manufacturing partners are selected - finance has a huge influence
+on how or even whether something gets done.
 
-That's why we are going to switch gears and think about an approach to a HAL
-that looks at systems. In other words, we don't do:
+One of the most important metrics as to how well a company is doing
+is the Earnings Before Interest and Taxes (EBIT). In very basic terms
+it represents the difference between sales and the direct cost of producing
+whatever it is you are selling - not including other costs of doing business
+such as interest on debt and taxes owed to the government.
 
-.. code-block:: c
+If you really want to dive in - here is a `Wikipedia article on EBIT`_.
 
-  // Open the pod bay door
+How does this affect your big idea? First, if it costs money to implement
+your idea, then it has to come from someone's budget. This increases cost
+of goods sold, and therefore decreases EBIT. Any money spent
+on your idea is money they don't have for anyone else's idea. Most likely
+the person who owns the budget for your idea is measured on how much money
+they saved (or didn't spend) over the fiscal year. So nobody's great idea
+is going to get funded, unless it's from someone higher up the food chain.
 
-  set_gpio(PORT_DOOR, PORT_UNLOCK_PIN, GPIO_HIGH);
-  set_gpio(PORT_DOOR, PORT_DOOR_MOTOR, GPIO_HIGH);
-  while( GPIO_LOW != get_gpio(PORT_DOOR, PORT_DOOR_OPEN_CONTACT)
-    wait()
-  set_led(LED_DOOR_OPEN, LED_ON);
+On the other hand, if they don't spend all the money they asked for at
+the beginning of the budget cycle, they probably won't get as much for the
+next budget cycle. That explains why the end of the fiscal year is a mad
+scramble to buy equipment and consulting contracts to burn up the budget.
 
-Instead, we do:
+You aren't going to get in front of a finance person to pitch your idea, and
+your manager or their boss is probably not going to ask for it either. Especially
+if it's in the middle of the year.
 
-.. code-block:: c
+Long story short, if your company has an annual budget cycle, wait until
+that starts before pitching your idea to your manager. And don't do that
+until you have the next sections covered.
 
-  open_pod_bay_door();
+We Need To Standardize Ways of Working
+--------------------------------------
 
-And no, we don't use our hand-rolled GPIO and LED HAL inside
-the `open_pod_bay_door()` function, because someday we might
-switch to a CAN interface or disconnect the LED handling from
-the door opening command.
+If you are doing complex work in a medium to large company, then there will
+be a development process - usually some variant of a stage-gate model that
+is essentially a big waterfall.
 
-A Different Approach to HAL
----------------------------
+If your company is following their internal development process, and it
+strikes a nice balance that allows for rapid deployment with just enough
+oversight, and engineers are given some freedom to experiment and learn, then
+you are in a thriving developer culture.
 
-It took me almost 40 years and many frustrated project managers to
-realize that we are better off thinking about embedded systems in terms
-of their functional blocks - the GPIO and LED interfaces are just
-how *this* version of the hardware implements the functionality.
+You are probably not reading this article.
 
-Why were there frustrated project managers?
+Most of you will be working in orgs that have spent a LOT of time selecting
+tools, creating artifacts, and locking down the technology development process
+to the point where making changes requires so much buy-in that it's almost
+impossible to change anything.
 
-Because they were told that this was going to be a simple port, and we
-had a good HAL so it should be easy. And someone made an optimistic
-guess so that the project could get approved and funded. The true
-complexity of the work wasn't obvious until we started to
-do more detailed design and discovered hidden dependencies. I'll stop
-here and leave that for another article on `humble planning`_.
+No matter how awesome your idea is, or how much money it will save, or how many
+escapes it can prevent - your biggest impediment is your organization's (in)ability
+to take in process change. In fact, even experimenting with process change 
+can be difficult - not because the idea is bad, but because of the work
+required to effect a change if it's good!
 
-In a recent project, we had to implement similar functionality on two
-different MCU families. Instead of abstracting the MCU hardware in yet
-another general HAL, we abstracted the functionality like this:
+If this sounds crazy, it can get even worse. Your small idea can't get traction
+but you know what will? A big, sweeping change brought in by a new executive
+eager to make their mark on the organization. They have the ear of finance, and
+they can fix whatever the reason was for the last late and over budget delivery.
+They will revamp the development process and bring in consultants to develop
+and deliver the get-well plan. The plan that will once and for all give them
+the ability to deliver on time, on budget, with no mistakes. This time we
+are going to do it right. Right?
 
-.. code-block:: c
+Your little idea for an experiment can't possibly have the impact of a a much bigger
+change of process, or the cost savings if we all use the same process and tools.
+Well, at least not on paper. Building a culture of small experiments and
+implementing what makes sense based on lessons learned is much more likely to
+work and be sustained.
 
-  // pod_bay_door.h - Pod Bay Door Interface
+We Tried That Before - It Didn't Work
+-------------------------------------
 
-  int32_t init_pod_bay_door(void);
-  int32_t open_pod_bay_door(void);
-  int32_t close_pod_bay_door(void);
-  int32_t get_pod_bay_door_status(void);
+This one is a little harder to break down, partly because it's true - your team
+may have tried something like your idea before and it didn't work. The usual
+suspects like Agile, Test Driven Development, Pair Programming, CI/CD, Rapid
+Prototyping, and many others are often part of The Big Sweeping Change from the
+previous section.
 
-We then implemented these 4 functions twice, once for each vendor supplied
-HAL interface. This turned out to be good because the door status on one
-system was a simple GPIO read, and the other was a remote Hall-effect sensor
-on a serial interface.
+Big sweeping change often comes with a fire and forget mentality. We had
+consultants come in, we gave key people Scrum Master training, and we did
+Agile for a few sprints and nothing really changed. Or we implemented
+pair programming, required developers to sit together and share a keyboard
+and the personality conflicts became unmanageable after a month.
 
-It wasn't really that much more work - and the secret weapon is that with
-this level of abstraction, we were able to implement all of the logic around
-the door opening conditions without real hardware. To make things even better
-we used a unit test framework and TDD (Test Driven Development) to make
-sure we only wrote code the needed to implement the desired functionality.
+The "we tried that before" problem is one of the most difficult to overcome
+because your manager and coworkers will have a pretty bad taste in their mouth
+from the last time the idea was forced on them.
 
-You might think we had to wait until we had real hardware to integrate
-everything, but again, the answer is no. Our chosen MCUs had inexpensive
-development boards available, and we were able to get the drivers up and
-running to the point where we were confident that when we got the real
-boards things would work.
+The fact is, real change is rarely a step change.
 
-In fact, because we wrote things with testability in mind, we were able to get
-the the door opener subsystem working in isolation on the development board.
-When the real hardware arrived, we were able to quickly get the door hardware
-subsystem running.
+Sure, you can get a faster computer and cut your compile time. You can't
+magically change the quality of your code, or your ability to innovate, or
+the happiness of engineering teams with a one-shot training session.
 
-Lessons for Your Next HAL
--------------------------
+Real change takes time - and it takes making mistakes, and learning from them.
 
-First, accept the fact that a general HAL might help if you your design
-never changes *how* the MCU accesses perpipherals. But it won't help you
-figure out all the *other* dependencies that you will discover along the
-way.
+What, So What, Now What?
+------------------------
 
-On your next project, consider doing a small scale experiment that should
-take no more than a 1 week timebox. Try to break one part of the project
-down into its key functions, and then implement any hardware dependencies
-using the vendor supplied HAL directly.
+You have an idea, and you believe it can help to change something for the better.
 
-For example, I have made an Arduino project called `Serial9`_ to
-exchange data on a 9 bit physical serial bus using an 8 bit USB serial
-device.
+Great.
 
-This one was simple enough to not have a test suite, but to be honest the
-Python side of the interface in the host was written using TDD and I *did*
-manage to find a few bugs in the Arduino implementation. I will eventually
-add a Cpputest suite and the supporting Python library to the repo.
+What's working against you is your organization's unwillingness to spend money, their
+inability to change baked-in processes, and their low tolerance of mistakes - even 
+ones that provide valuable lessons.
 
-I'll be curious to hear any feedback on this approach to a HAL.
+Hopefully you are getting the picture that your idea is going to have to overcome
+some serious headwinds to be put forward by anyone but you. Acknowledge that someone
+has to stick their neck out for your idea, and why they might not be ready to spend
+their goodwill capital on you.
 
-.. _Serial9: https://github.com/rhempel/serial9
-.. _humble planning: https://mdalmijn.com/p/breaking-the-planning-cycle-of-madness
+What I'm going to say next might be disappointing to some, but it has started
+to work for me. It is simply this:
+
+- Be Patient
+- Do Good Work
+- Respect the Past
+- Show Initiative
+- Be curious
+
+Knowing that new ideas take time to really get a foothold can make it easier
+to handle the slow pace of change. Remember the Big Sweeping Change, and
+how the results didn't match expectations? Take a slow approach with your idea.
+Don't expect your team or your manager to have a light bulb go on in their head
+and embrace the change. It will take time for them to learn, to understand, and
+to accept that they might have been doing things the hard way for years.
+
+Doing good work means just what it says - be as excellent as you can be
+even if the tools and processes you have to work with are holding you back
+from being awesome. Guess whose ideas for improvement aren't going to be
+taken seriously? The person who is careless with their output or doesn't follow
+the existing process. It's not pretty, but sometimes you have to build
+credibility by just getting stuff done.
+
+Respecting the past is super important when advocating for change. Always
+have the mindset that your manager/team/organization did the best it
+could with the information at hand, under the operating conditions at the time.
+The means that when we ask for change, we also ask about history, and we
+have the grace to understand when change is too hard to do right now.
+
+Im conflicted about the last one, which is showing initiative. I don't mean
+that you should show up early and leave late, and do the work of two people
+to get ahead. That's not a recipe for long term success. What I mean is that
+you might take some time during the week to pursue your idea further, or to
+make a demo, or to duplicate your assigned work using your idea for improvement.
+Just as change is a slow process, your idea needs time to mature and develop.
+Take the time to develop your idea as far as possible before expecting
+others to just take your word for it.
+
+Become the person that is interested in how others approach their problems, learn
+new ways of doing something, and be generally curious and optimistic if you
+can. Your co-workers will most likely reach out for help if they need it. Try
+to model a positive approach to problem solving and ask others if they
+would like to spar when you have a problem you can't solve elegantly.
+
+TL;DR
+-----
+
+Before you ask yourself "How can I convince ..." - consider asking yourself
+"How can I find out why ...?", and be patient while accomplishing that goal.
+
+Given the factors that make it hard to bring new ideas forward, it's more likely
+to be successful if the organization you are trying to change is at least
+curious and open to experimentation. Figure out that before trying to convince
+anyone that your idea is worth pursuing.
+
+Break your idea into small chunks and smuggle it into the organization by
+using the pieces to do good work. Slowly but surely you will bring others
+on board and your efforts will bring about change. Slow, sustainable, positive
+change. 
+
+.. _Wikipedia article on EBIT: https://en.wikipedia.org/wiki/Earnings_before_interest_and_taxes

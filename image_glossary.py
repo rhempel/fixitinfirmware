@@ -17,6 +17,12 @@ IMAGE_GLOSSARY = {
     , "alt" : "A picture of Gene Kranz looking intently at a console in NASA Mission Control"
     , "source" : "" },
 
+ "Calatrava Arts and Sciences":
+   { "uri" : "/images/accent/CalatravaArtsAndSciences.thumbnail.jpg"
+    , "title" : "Valencia - City of Arts and Sciences"
+    , "alt" : "The City of Arts and Sciences in Valencia - Santiago Calatrava"
+    , "source" : "" },
+
  "HAL 9000 Front Panel":
    { "uri" : "/images/accent/Hal_9000_Panel.jpg"
     , "title" : "Hal-9000 Front Panel"

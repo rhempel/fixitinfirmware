@@ -45,6 +45,8 @@ Let's find out how to approach this starting with the HAL ...
 
 .. TEASER_END
 
+.. contents:: In this post ...
+
 Your HAL Might Not Be Helping
 -----------------------------
 
