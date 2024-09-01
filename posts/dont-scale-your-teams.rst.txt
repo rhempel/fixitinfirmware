@@ -1,0 +1,238 @@
+.. title: Don't Scale Your Successful Teams
+.. slug: dont-scale-your-teams
+.. date: 2024-08-15 12:00:00 UTC-05:00
+.. status: published
+.. tags: teams
+.. category: Management
+.. link: 
+.. description: 
+.. type: text
+
+
+{{% glossary_image "Wool Sheep" %}}
+
+
+The team you have been a part of for the last 6 months has been amazing. No, they
+haven't pulled a month of 60+ hour work weeks to get a new release out the
+door.
+
+It has just been a stream of steady progress towards a shared goal, true collaboration
+instead of procedural coordination, willingness to change ways of working
+in small steps, and a sense of getting really good at what they are doing.
+
+The team is getting noticed, not for heroics, but for simply getting sh#t done.
+
+And with that recognition comes the request to somehow capture the *process* that your
+team is using, and then replicate or scale that to other teams. What could possibly
+go wrong?
+
+Just about everything - starting with the assumption that the high-functioning team is
+somehow adhering to a checklist of process steps to efficiently deliver value, and by
+extension good outcomes for the business. Similarly, high-functioning teams in an
+organization that doesn't support collaboaration are doomed to an existence of
+frustration.
+
+It's almost impossible to "process" your way out of trouble when doing complex work, but
+you can definitely make your culture more friendly to complex work.
+ 
+Let's dive a little deeper, and hopefully come away with an appreciation of how a
+high-functioning team gets that way, and why scaling that team's ways of working
+rarely has the intended impact across the organization.
+
+.. TEASER_END
+
+.. contents:: In this post ...
+
+Why Management Likes Processes
+------------------------------
+
+First, let me clear the air and say that I like process for tasks that require it. As an
+embedded systems developer, process helps me and my team release reliable firmware that 
+we believe works. Process helps us to ensure that the components in the embedded system
+are suited to the task, and that together with our electrical and mechanical partners
+in crime we build a product that can actually be manufactured.
+
+Traditional `Command and Control`_ management relies on process to reliably produce outputs
+using repetitive tasks given uniform quality inputs. It works well as long as the workforce
+is treated fairly and has a stake in the outcome. It works for building PCBAs, running
+test equipment, and assembling your product.
+
+If you are a manager trained in the traditional Taylorian ways, and you are looking
+after a department that makes products that suit this way of working, great. You are
+going to be just fine, and you are completely replaceable.
+
+Process helps make predictable work ... predicatable.
+
+My key insight after 40 years of building and delivering embedded systems is that it
+is far from predictable. In fact, most of the time you will spend trying to make delivering
+complex work predictable is waste. Wasted time, effort, and resources are your worst
+enemy - in any business.
+
+What does this have to do with scaling successful teams across your organization?
+
+It is the realaization that your team success has very little to do with exactly which
+process they are following to get things done - it has everything to do with how they
+are able to inspect and adapt their ways of working to changing conditions while still
+following the processes relevant to delivering on goals that are shared with other teams.
+
+Process Can Make Brittle Productivity
+-------------------------------------
+
+When I first heard the term "brittle productivity", it immediately clicked as a way of
+understanding the difference between doing lots of things and actually getting things
+done. I also realized that a checklist of process steps could become a negotiation
+point - what can you shave off the checklist to get the thing done faster?
+
+Once you start negotiating a checklist, you build a well-worn path to chaos
+and mediocrity. Pilots never negotiate the checklist - they also don't put useless
+items in the checklist. The trick is in ensuring that your checklist is there to help
+your team get things done.
+
+Checklists filled with steps that don't provide value are examples of brittle
+productivity. Yes, the steps are getting done, but how well? Do we have metrics for
+those steps? Wait, we need to add some more steps to ensure that THIS step is
+performed correctly, and we need a report, or a meeting for people to sign
+off on the checklist ... it's exhausting.
+
+What happens when the signoff meeting only happens every two weeks - the step is
+delayed. What happens when the step is skipped due to schedule pressure - the risk
+of delivering poor quality increases. What happens when someone identifies a way to
+change the process and eliminate the step - the process change management process
+kicks in and nothing changes because of the effort required to change a process.
+
+This is brittle productivity - a team is doing a lot of things, but it seems like
+nothing is getting done.
+
+Wait, what about your team? Why is it doing so much better than the others? How
+can we translate what your team is doing and bring it to the other teams?
+
+The Team Controls Some Of The Process
+-------------------------------------
+
+Don't be tempted to talk about starting a transformation journey to empower teams
+to be more agile and drive decision making further down the chain unless you are
+prepared for pushback on process or business tactics. Why are we building this
+thing when the other thing is what's keeping our business running? Are you sure
+customers want this redesign? Why do we make an annual project plan and then
+blow it up 3 months later?
+
+This is where I tend to lose many leaders. Having a team control the process of
+how they deliver value to the business sounds like a recipe for disaster. One
+way to avoid trouble is to be clear about what is non-negotiable, and what is
+in the control of the team.
+
+This can be done in a meeting where Diana Larsen's `Soup Exercise`_ plays
+a key role in clearly defining what the team has control over.
+
+Maybe an example would help. Let's take a common step in delivering a piece of
+software - the code review. Love them or hate them, they are on almost every
+software delivery checklist, and for good reason. Unless the reason is catching
+bugs.
+
+I used to really dislike code reviews because they were often tacked on very late
+in the development cycle, sometimes even after testing. They were huge, bloated, and
+unfocused in scope. They included all kinds of non-functional changes such as
+reformatting whitespace, comment alignments, and even re-ordering functions to
+avoid having to add prototypes. They took forever to complete because nobody had
+the time to do them properly, and they were often just exercises in pointing out
+things to change the next time we had to touch the code.
+
+Code reviews were required, but how they were executed made them almost
+useless. The code review was non-negotiable - the culture around code
+review was up to the team.
+
+We had a meeting where we agreed that code reviews were required, but we
+also had a deep dive into the role of the review - and it turned out that the real
+purpose was as a training tool. This is how we think about making changes to the
+code. This is how we make sure the code is testable. This is why we break the coupling
+with that module. And on it goes.
+
+But to do that, we had to take control of the code review process - and that meant
+establishing a lightweight approach that could adapt as needed. Here is what we
+started with:
+
+- No whitespace changes. Those belong in a different set of commits, and don't need
+  review. Better yet, use a tool like `uncrustify`_ and git pre-commit hooks and
+  never argue about code formatting again.
+- Small, focused commits. Your merge request has 26 files and 8 unrelated changes? Nope.
+  Break your change set into 8 commits and learn to use ``git add -p``. A code review
+  takes time and mental effort to be useful, so respect your reviewer and make your
+  review request as easy as possible to understand.
+- Don't put more than one or two people on the review list. Code review is a learning
+  experience for you and other developers. So add a reviewer that is likely to benefit
+  from seeing your changes, and a developer that can give constructive feedback.
+- All tests are passing. Your tests are just there to ensure code coverage? Nope. Make
+  those tests mean something. They should link back to an actual requirement, use case,
+  error condition, etc. There is an exception for code that is truly a proof-of-concept
+  and you're looking for feedback on the approach. In that case you want to have a
+  discussion about how this approach affects testability. 
+- The code review tool doesn't integrate well with your git provider? Stop using that
+  tool and use whatever your git system has that is already built-in.
+
+One more thing - we gave any developer the authority and autonomy to refuse a code
+review as long as they could point to one of the basic process steps that would make
+the review a waste of time.
+
+Within a couple of cycles we had code reviews that were useful and completed quickly.
+The team understood the value of more frequent reviews
+and started to collaborate earlier in the development process. By building a learning
+culture around code review, we also supported developers reaching out to each other
+to discuss different approaches. This resulted in less rework, and enabled more junior
+developers to improve their design and presentation skills when asking seniors for
+input.
+
+Scaling Complex Work != Process
+-------------------------------
+
+Let's circle back to the main point of this post, which is why you shouldn't try
+to scale your teams. Of course, you should try to use common tools where it makes
+sense, and to share best practices across teams. Be wary of trying to standardize
+process or tools across all teams in an organization. Every project really is
+different, each team will have unique dynamics, and unique unexpected challenges will
+be revealed randomly.
+
+It makes no sense to expect that uniform ways of working will ensure the same level
+of quality or pace when there is so much complexity in the work itself. If your
+teams span multipler cultures then you have yet another variable to take into
+account.
+
+And no, after fixing the obvious process issues, you can't just think harder or
+engineer better to improve predictability.
+
+One more challenge with scaling across the organization - it often leads to the creation
+of a separate function that is responsible for developing, delivering, and maintaining a complex
+process. By definition, this will now be a bottleneck for continuous improvement in
+your development process.
+
+The new engineering process team will say that the process is a "living document" and will
+be continuously updated to reflect "industry best practices" so that we can "improve
+delivery efficiency and reliabilty". Unfortunately I have never seen such a department
+be flexible or update the process unless there is yet another massive project to
+simplify the development process and standardize work across teams. 
+
+The cycle is never ending.
+
+TL;DR
+-----
+
+Long story short, you want to scale the adoption of a learning culture, not the tools
+or rules for the steps in your process. A learning culture lets teams build their own
+ways of working, and multiple collaborative teams will naturally enforce basic 
+standards of work when shared across teams.
+
+One very important caveat though! Leadership MUST support the learning culture and
+take decisive action when a team is obviously not delivering valuable outcomes to
+their dependent teams. How that should be done depends on the situation, but it's
+often removing toxic leaders or team members, and sometimes finding a suitable role
+for an individual that is not fitting in. That's a post for another time.
+
+One final thought, if you have one or more teams that are doing really well when the
+rest of the organization is struggling, please take the opportunity to ask yourself
+what the organizational impediments might be - not what the struggling teams are
+doing wrong.
+
+https://www.catharsisinsight.com/_files/ugd/fce7f8_2a41aa82670f4f08a3e403d196bcc341.pdf
+
+.. _Command and Control: https://en.m.wikipedia.org/wiki/Command_and_control_(management)
+.. _Soup Exercise: https://www.dianalarsen.com/blog/2010/07/26/circles-and-soup/
+.. _uncrustify: https://github.com/uncrustify/uncrustify
