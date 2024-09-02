@@ -969,7 +969,6 @@ nav.mb-4 {
   color: #3e3f3a !important;
   padding-right: .5rem !important;
   padding-left: .5rem !important;
-  text-decoration: underline !important;
 }
 
 a.navbar-brand {
@@ -994,9 +993,14 @@ a.navbar-brand {
 }
 
 a {
-  color: #325d88 !important;
-  text-decoration: underline;
+  color: #3d72c7 !important;
 }
+
+/*
+a.u-url, a.toc-backref, a.reference.internal {
+  color: #3e3f3a !important;
+}
+*/
 
 span#blog-title {
   font-family: 'Acme', sans-serif !important;
