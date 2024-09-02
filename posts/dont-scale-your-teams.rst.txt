@@ -2,15 +2,13 @@
 .. slug: dont-scale-your-teams
 .. date: 2024-08-15 12:00:00 UTC-05:00
 .. status: published
-.. tags: teams
+.. tags: teams, codereview
 .. category: Management
 .. link: 
 .. description: 
 .. type: text
 
-
 {{% glossary_image "Wool Sheep" %}}
-
 
 The team you have been a part of for the last 6 months has been amazing. No, they
 haven't pulled a month of 60+ hour work weeks to get a new release out the
@@ -181,6 +179,11 @@ to discuss different approaches. This resulted in less rework, and enabled more 
 developers to improve their design and presentation skills when asking seniors for
 input.
 
+For a really interesting study into the impact of a learning culture on topics
+like code review, I recommend reading "`It's Like Coding In The Dark`_" by
+Dr. Cat Hicks. They make a great case for supporting a learning culture in
+complex work.
+
 Scaling Complex Work != Process
 -------------------------------
 
@@ -231,8 +234,7 @@ rest of the organization is struggling, please take the opportunity to ask yours
 what the organizational impediments might be - not what the struggling teams are
 doing wrong.
 
-https://www.catharsisinsight.com/_files/ugd/fce7f8_2a41aa82670f4f08a3e403d196bcc341.pdf
-
 .. _Command and Control: https://en.m.wikipedia.org/wiki/Command_and_control_(management)
 .. _Soup Exercise: https://www.dianalarsen.com/blog/2010/07/26/circles-and-soup/
 .. _uncrustify: https://github.com/uncrustify/uncrustify
+.. _It's Like Coding In The Dark: https://www.catharsisinsight.com/_files/ugd/fce7f8_2a41aa82670f4f08a3e403d196bcc341.pdf
