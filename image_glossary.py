@@ -29,9 +29,15 @@ IMAGE_GLOSSARY = {
     , "alt" : "A picture of the Hal-9000 Front Panel From 2001: A Space Odyssey"
     , "source" : "https://en.wikipedia.org/wiki/HAL_9000" },
  
-   "Wool Sheep":
+"Wool Sheep":
    { "uri" : "/images/accent/WoolSheep.jpg"
     , "title" : "Wool Sheeep"
     , "alt" : "Woolen sheep of various sizes in a wooden box with dividers"
     , "source" : "Ralph Hempel" },
+
+"787 Wing Load":
+   { "uri" : "/images/accent/Boeing787WingStressTest.jpg"
+    , "title" : "Boeing 787 Wig Stress Test"
+    , "alt" : "A Boeing 787 Wing is bending under extreme stress"
+    , "source" : "Boeing Image Repository" },
  }

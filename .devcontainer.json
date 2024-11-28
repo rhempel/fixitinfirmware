@@ -1,8 +1,8 @@
 //Add details here
 
 {
-  "image": "registry.gitlab.com/paddy-hack/nikola:8.3.0",
-  "name" : "paddy-nikola-fixitinfirmware",
+  "image": "ubuntu-python:22.04",
+//  "name" : "paddy-nikola-fixitinfirmware",
   "forwardPorts": [8000],
   "customizations": {
     // Configure properties specific to VS Code.
