@@ -1,13 +1,6 @@
-# Ignote these files and folders - they are generated
+# Ignore these files and folders - they are generated
 
-/.doit.db*
-/cache/*
-/output/*
-
-**/__pycache__
-
-# /output is now a submodule that syncs to GitHub pages for
-#         servig up the site
-
-# Ignore the nikola-venv
-/nikola-venv/*
+cache
+.doit.db.db
+__pycache__
+output
