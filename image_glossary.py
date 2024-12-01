@@ -40,4 +40,11 @@ IMAGE_GLOSSARY = {
     , "title" : "Boeing 787 Wig Stress Test"
     , "alt" : "A Boeing 787 Wing is bending under extreme stress"
     , "source" : "Boeing Image Repository" },
+
+"Flight Director Emily Nelson":
+   { "uri" : "/images/accent/FlightDirectorEmilyNelson.jpg"
+    , "title" : "Flight Director Emily Nelson"
+    , "alt" : "ISS flight director Emily Nelson monitors data at her console in the space station flight control room in the Mission Control Center at NASA's Johnson Space Center during STS-132/ULF-4"
+    , "source" : "https://images.nasa.gov/details/jsc2010e081946" },
+
  }
