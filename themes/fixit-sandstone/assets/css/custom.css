@@ -75,6 +75,18 @@ a.u-url, a.toc-backref, a.reference.internal {
 }
 */
 
+dl dd p {
+  margin-left: 2rem;
+}
+
+ul.simple {
+  margin-bottom: 1rem;
+}
+
+table {
+  margin-bottom: 1rem;
+}
+
 span#blog-title {
   font-family: 'Acme', sans-serif !important;
   font-size: 250%;
