@@ -23,7 +23,7 @@ Sometime later your team has run into some obstacles, and when they are
 finally moving forward again, the design docs don't get updated because
 - well, because you're probably behind schedule.
 
-By the tie firmware is due for final testing before release to production
+By the time firmware is due for final testing before release to production
 you're just hoping nothing major happens because you *think* you're done,
 but if you're honest, the code reviews and tests have been deprioritized
 and you're not really sure if all the corner cases are covered.
@@ -45,27 +45,26 @@ small organization or even a solo developer, it just doesn't make sense
 to use these suites.
 
 On the other hand, there are very few open source alternatives that are up
-to a level of usablity and maintainability that I would recommend.
-
-For an overview of Requirements Management tools see this
+to a level of usablity and maintainability that I would be comfortabe
+recommending. For an overview of Requirements Management tools see this
 `Wikipedia page for Requirements analysis`_
 
 So what do I suggest for getting started with Requirements, Tests, and CI/CD
 automation?
 
-**Jira**.
-
-Yes, that `Jira`_, along with the `Xray`_ and `R4J - easeRequirements`_ plugins.
+**Jira**. Yes, that `Jira`_, along with the `Xray`_ and `R4J - easeRequirements`_ plugins.
 
 As you will see, this is "good enough" for what many organizations need, and it
-lets you introduce better requirements management without breaking the bank.
+lets you introduce better requirements management to your team without breaking
+the bank.
 
 Bare Minimum Requirements for Managing Requirements and Tests
 -------------------------------------------------------------
 
 Before we get too far ahead, it's helpful to take a step back and reflect on *why*
 we want to take on this extra work of managing tests and requirements. What is
-the payoff for you and your team?
+the payoff for you and your team? What are some of the questions you and the team
+struggle to answer?
 
 #. How close is the team to being done?
 #. Is this requirement covered by a test?
@@ -86,15 +85,19 @@ to lose their new capability.
 
 I have set up a `public instance of Jira`_ that you can follow along with. I will
 be adding requirements for `umm_malloc`_ - a heap memory management library for 
-embedded systems. Unless absolutely necessary, I will avoid making any changes
+embedded systems that I wrote some years ago. Over time I have taken the time
+to add a unit test suite to the pipeline. We can use this project to kickstart
+this experiment for better automated test and requirements manaement.
+
+Unless absolutely necessary, I will avoid making any changes
 to the default configuration of Jira and its plugins. If I do make changes, there
 will be an explanation for why it was necessary.
 
 This is not a step-by-step handholding tutorial for using Jira, Xray, and R4J. There
 are many online resources on how to get things done with these applications, starting
-at the product's own website. I will assume you have the ability search for anything
-that I am assuming you already know. Do feel free to reach out if you have suggestions
-fo improvements.
+at the product's own website. I will expect that you have the ability to search for
+anything that I am assuming you already know. Do feel free to reach out if you have
+suggestions for improvements to this series.
 
 Finally, you will need your own Jira instance to actually make queries against. The
 good news is that `Atlassian`_ is very generous with open source projects (like this site)
@@ -108,10 +111,10 @@ Verify the Jira REST API Is Working
 The first thing we need to do is get a Personal Access Token (PAT) for your scripts
 to use as the authentication method to interact with Jira and its plugins. You might
 consider creating a virtual user for automation that is authenticated with their own
-user. That will make it easier to restrict what your scripts can do and lets you know
-whether a change came from automation or a human.
+credentials. That will make it easier to restrict what your scripts can do and lets
+you know whether a change came from automation or a human.
 
-In Jira navigate to user account and then to ``Security`` | ``API Tokens`` | ``Create and manage API tokens``
+In Jira, navigate to user account and then to ``Security`` | ``API Tokens`` | ``Create and manage API tokens``
 to create a new token. You will need to save this token and treat it like a password.
 It will be used to identify any HTTPS requests as coming from you.
 
@@ -138,19 +141,21 @@ that plan.
 Resist the urge to dive in and just start writing requirements and tests until
 you are clear on what is needed to make these artifacts useful.
 
-Unless you already have a functional CI/CD pipeline, and you can answer the
-big "How close are we to done?" question confidently, do *not* import your existing
-requirements and tests into Jira. They are probably not very good requirements, and
-you will actually have MORE work sorting out the good requirements from the bad.
+.. admonition:: Test and Requirement Import is NOT Your Friend
 
-Your organization probably has some form of the 'V Model'_ for systems engineering.
-It probably looks a lot like the one on the 'V Model'_  Wikipedia page - with the
+    Unless you already have a functional CI/CD pipeline, and you can answer the
+    big "How close are we to done?" question confidently, do NOT import your existing
+    requirements and tests into Jira. They are probably not very good requirements, and
+    you will actually have MORE work sorting out the good requirements from the bad.
+
+Your organization probably has some form of the `V Model`_ for systems engineering.
+It probably looks a lot like the one on the `V Model`_  Wikipedia page - with the
 Implementation at the bottom of the V shown as a vague yellow blob.
 
 That's where we will be putting our focus, and we don't really care what the rest
-of the organization's requirements tool is. We need to ba able to leverage the
+of the organization's requirements tool is. We need to be able to leverage the
 power of Jira and those plugins ourselves, because almost everything above that blob
-will involve coordination with other teams, and our goal here is to be sure
+will involve coordination with other teams. Our goal here is to be sure
 our part of the system works properly before integration.
 
 Let's start with a brief section on each kind of artifact.
@@ -173,8 +178,8 @@ Specific
   of tests to fulfill the requirement.
   
   You know when your requirement is too broad becuase you will have a dozen or more
-  tests to fulfill the requirement, and those tests each link link to multiple
-  requirements.
+  tests to fulfill the requirement. Similarly, your tests are too broad if they
+  cover multiple requirements.
 
 Measureable
   Requirements for embedded systems are measureable - and that means that you
@@ -230,10 +235,10 @@ Non-Invasive
   You will know when you have broken this rule the first time you change
   an implementation and multiple tests break.
 
-Requirement, Test, Sets Set, Test Plan, Execution - Oh My!
+Requirement, Test, Test Set, Test Plan, Execution - Oh My!
 ----------------------------------------------------------
 
-I have used all these terms at some poinnt in this document, and now it's
+I have used all these terms at some point in this document, and now it's
 time to do a very bierf overview of what they mean:
 
 A **Requirement** is a specific description of something that your API, or
@@ -241,7 +246,7 @@ subsystem, or firmware has to do to fulfil a customer level requirement. It
 is not a description of how that functionality is implemented.
 
 A **Test** is a specific description of one or more preconditions, operations,
-and expected outputs of the interface or API that is implemented in firmare. It
+and expected outputs of the interface or API that is implemented in firmware. It
 is not a test of the implementation, it is a test of the operation.
 
 A **Test Set** is simply a group of one or more tests that cover a related
@@ -253,7 +258,7 @@ variant or version. Tests and Test Sets can exist in multiple Test Plans.
 A **Test Execution** is the result of running a Test Plan with optional
 variables for version, environment, product variant.
 
-The Xray documentation is very good, and a good place to start is with
+The Xray documentation is very good - start with
 the 'Xray Terms and Concepts'_ page.
 
 Next Steps
@@ -270,12 +275,12 @@ in Python for all of the ideas in this post. We will:
 #. Verify in Jira that the test has been executed and the requirement is satisfied
 
 That sounds like a lot of steps, and it is. Would you rather track requirements
-and test cases and executionss manually? I didn't think so.
+and test cases and executions manually? I didn't think so.
 
 If you are unfamiliar with Python, then I recommend you get Al Sweigart's book
-'Automate the Boring Stuff WIth Python'_. Invest some time in learning because
+`Automate the Boring Stuff WIth Python`_. Invest some time in learning because
 using a scripting language like Python will up your embedded development game
-by making many of your tasks much easier.
+by making many of your tasks much easier to automate.
 
 I hope you are ready for a transformative journey!
 

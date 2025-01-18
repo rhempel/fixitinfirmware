@@ -11,7 +11,7 @@
 {{% glossary_image "Flight Director Emily Nelson" %}}
 
 In the first post of this series we covered some background on requirements
-and tests for embedded systems development, and introduced te idea of using
+and tests for embedded systems development, and introduced the idea of using
 `Jira`_ together with the `Xray`_ and `R4J - easeRequirements`_ to manage
 this task. Your organization is probably already using Jira, and the plugins
 aren't that expensive.
@@ -36,15 +36,19 @@ Prepare the Groundwork
 ----------------------
 
 As a reminder, this is not a step-by-step tutorial. The documentation teams
-at Jira, Xray and easeRequirements have done a great job putting together
-guides and API references - so use them. There are a few things you want to
-know before setting up a Jira project for requirements and tests that will
-make your life easier.
+at `Jira`_, `Xray`_, and `R4J - easeRequirements`_ have done a great job
+putting together guides and API references - so use them. There are a few
+things you want to know before setting up a Jira project for requirements and
+tests that will make your life easier.
+
+The notes below are probably more confusing than they should be - I ended
+up having to "explore" the UI more than I would have liked to get things
+into the correct state.
 
 #. Avoid customizing any issue schemas or workflows until you have had some
    experience with Jira in its default configuration. No matter what your
    current development workflow is, we are focusing on the bottom of the
-   V-Model - and we have to keep things simple.
+   `V Model`_ - and we have to keep things simple.
 
 #. Create a blank Company Managed project, not Team Managed if you want 
    access to issue schemas and workflows. Jira has a number of bundled project
@@ -52,12 +56,14 @@ make your life easier.
    really set up for requirements management.
 
    The easeRequirements application sets up new issue types for requirements,
-   but they are not easily available to team managed projects. 
+   but they are not easily available to Team Managed projects, so stick
+   with COmpany Managed for now. 
 
 #. Use the `easeRequirements default configuration`_ for requirement types.
    There is a setup assistant in the "Getting Started" section of the Ease
    Requirements app menu. It sets up 4 basic issue types and I suggest you
-   stick with them for now.
+   stick with them for now. You can also open your JIRA instance setting
+   menu and navigate to Issue Types menu and add the following types:
 
    - Customer Requirement
    - Functional Requirement
@@ -68,7 +74,8 @@ make your life easier.
    docs say to avoid "Epic" so I created a new issue type called "Requirement Folder"
    to make its purpose clear.
 
-#. Create an Issue Type Scheme called "Requirements" and pull in the 4 basic issue
+#. Open your JIRA instance setting menu and navigate to Issue Type Scheme. Create an
+   Issue Type Scheme called "Requirements" and pull in the 4 basic issue
    types for requirements plus the "Requirements Folder" type. Assign this scheme
    to your Jira project that you will use for requirements.
 
@@ -93,7 +100,7 @@ make your life easier.
    project for test executions because that's typically a lot of data and often
    makes sense to be separated by product or even project.
 
-#. In the Requirements project, got to the Project Settings and then to the
+#. In the Requirements project, go to the Project Settings and then to the
    Xray Settings. Under the Test Coverage tab, move the 4 Requirement Types
    to the Coverable Issue Types. This is needed to allow the Xray Test Coverage
    report to work.
@@ -123,8 +130,8 @@ a test result.
 I'm going to skip the steps where we make an actual Python class library and a pytest suite
 for it. Let's assume for now that we have these in place and need to upload a successful test run.
 
-We will start with the `Xray execution result formats`_ page and choose the simplest format
-for now - the `Xray JSON Format`_.
+We are using Xray Cloud, which only supports the `Xray JSON Format`_. The Server and DataCenter
+installs support many other formats, but we will stick with Xray JSON for flexibility.
 
 The minimal JSON file for uploading a test execution result looks like this:
 
@@ -142,7 +149,8 @@ The minimal Python code for uploading a test result looks like this:
 Of course you will substitute your own credentials and use your own instance of Jira.
 
 You can have a look at 
-`REQ-1 (HelloWorld default value after initialization) on my Jira instance <https://fixitinfirmware.atlassian.net/browse/REQ-1>`_
+`REQ-1 (HelloWorld default value after initialization) <https://fixitinfirmware.atlassian.net/browse/REQ-1>`_
+on my Jira instance
 and see that the Test Case linked to the Requirements was executed and it passed. 
 
 Of course, this is just a toy example. All it proves is that it is possible to
@@ -169,7 +177,11 @@ our Jra instance.
 
 .. _Xray Terms and Concepts: https://docs.getxray.app/display/XRAYCLOUD/Terms+and+Concepts
 
+..  _Xray JSON Format: https://docs.getxray.app/display/XRAYCLOUD/Using+Xray+JSON+format+to+import+execution+results
+.. _easeRequirements default configuration: https://easesolutions.atlassian.net/wiki/spaces/REQ4J/pages/5406896/easeRequirements+Installation#Project-Creation-Template
+
 .. _Automate the Boring Stuff With Python: https://automatetheboringstuff.com/
+.. _V Model: https://en.wikipedia.org/wiki/V-model 
 
 .. _EARS syntax: https://alistairmavin.com/ears/
 .. _V Model: https://en.wikipedia.org/wiki/V-model 
