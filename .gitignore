@@ -1,6 +1,5 @@
 # Ignore these files and folders - they are generated
 
 cache
-.doit.db.db
 __pycache__
-output
+build

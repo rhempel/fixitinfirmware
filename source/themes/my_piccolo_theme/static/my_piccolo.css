@@ -1,0 +1,105 @@
+:root {
+  --navbarHeight: 6rem;
+  --rightSidebarPadding: 6rem;
+}
+html {
+  scroll-padding-top: calc(var(--navbarHeight) + 1em);
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+               "Helvetica Neue", sans-serif;
+}
+div#top_nav {
+  position: fixed;
+  background-image: url('./resistors.jpg');
+}
+div#top_nav nav {
+  background-color: transparent;
+  margin-block-start: 0.5em;
+  margin-block-end: 0em;
+  padding: 0em 1em 0em 1em;
+}
+div#top_nav nav.header_links {
+  margin: 0;
+  padding: 0em 1em 0em 1em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+div#top_nav nav h1 a {
+  font-size: 1.5rem;
+  padding: 0.25em;
+  backdrop-filter: blur(10px);
+  border-radius: 0.25em;
+}
+div#top_nav nav.header_links h2 a {
+  font-size: 1.1rem;
+  color: white;
+  padding: 0.25em;
+  backdrop-filter: blur(10px);
+  border-radius: 0.25em;
+}
+p#toggle_sidebar a {
+  padding: 0.25em;
+  backdrop-filter: blur(10px);
+  border-radius: 0.25em;
+}
+div#right_sidebar {
+    padding: var(--rightSidebarPadding) 1rem 1rem;
+}
+a#mode_toggle {
+  padding: 0.25rem;
+  backdrop-filter: blur(10px);
+  border-radius: 0.25rem;
+}
+div.document {
+    margin-top:0em;
+    margin-bottom: 0em;
+}
+div.document hr {
+    margin: 0.5rem 0 0.5rem 0;
+}
+div.document
+div.documentwrapper {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+div.documentwrapper {
+    border-top: 1px solid var(--faintFontColor);
+    border-bottom: 1px solid var(--faintFontColor);
+}
+img.align-right {
+  float: right;
+  margin-left: 2rem;
+  max-width: 33%;
+}
+div.document section,
+div.document div.section {
+  margin: 1rem 0;
+}
+div.document section > section,
+div.document div.section > div.section {
+  margin: 1rem 0;
+}
+div.document h1 + section,
+div.document h1 + div.section {
+  margin-top: 0.5rem !important;
+}
+div.document div.highlight pre {
+    font-family: monospace, Monaco, Consolas, Andale Mono;
+}
+div.document code, div.document dl.cpp dt.sig, div.document dl.c dt.sig {
+  font-family: monospace, Monaco, Consolas, Andale Mono;
+}
+blockquote {
+  font-style: italic;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 1.12rem;
+}

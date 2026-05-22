@@ -1,0 +1,19 @@
+[theme]
+inherit = "piccolo_theme"
+stylesheets = [
+    "basic_mod.css",
+    "my_piccolo.css",
+]
+sidebars = [
+   "globaltoc.html",
+#    "relations.html",
+#    "sourcelink.html",
+#    "searchbox.html",
+]
+# Style names from https://pygments.org/styles/
+pygments_style = { default = "solarized-light", dark = "solarized-dark" }
+
+[options]
+header_nav_links = {}
+globaltoc_maxdepth = 1
+globaltoc_collapse = true
