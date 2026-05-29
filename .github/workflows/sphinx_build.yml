@@ -35,8 +35,8 @@ jobs:
     - name: Commit documentation in gh-pages branch
      # Store documentation in a temporary one-commit git repo.
       run: |
-        cp files/CNAME build/html
-        cd build/html
+        cp files/CNAME build
+        cd build
         git init -b gh-pages
         touch .nojekyll
         git config --local user.name "GitHub Actions Bot"
