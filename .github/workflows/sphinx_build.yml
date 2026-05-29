@@ -4,6 +4,11 @@ on:
   push:
     # Build docs when pushing to `main` branch.
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      parameter:
+        description: My Parameter
+  pull_request: -- Add this here
 
 jobs:
   build:
