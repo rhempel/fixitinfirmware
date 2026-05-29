@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Coding Standards Are A Waste Of Time &#8212; fixitinfirmware  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=02ca0aaa" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css?v=d8568271" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic_mod.css?v=9b2032db" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my_piccolo.css?v=452679a6" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <script src="../../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Let’s Be Innovative!" href="../lets-be-innovative/index.html" /> 
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../../index.html" title="Go to homepage">Fix It In Firmware ...</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+    <nav class="header_links">
+        <h2>
+              <a href="../../pages/about/index.html">About</a>
+              <a href="../../pages/resources/index.html">Resources</a>
+              <a href="../index.html">Archive</a>
+        </h2>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../pages/about/index.html">About FixItInFirmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/resources/index.html">Resources</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Archive</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="coding-standards-are-a-waste-of-time">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">Coding Standards Are A Waste Of Time</a><a class="headerlink" href="#coding-standards-are-a-waste-of-time" title="Link to this heading">¶</a></h1>
+<a class="reference internal image-reference" href="../../_images/MargaretHamiltonCodeStack.jpg"><img alt="A picture of Margaret Hamilton standing next to a tall stack of printouts for the Apollo Lunar Lander" class="align-right" src="../../_images/MargaretHamiltonCodeStack.jpg" style="width: 40%;" />
+</a>
+<p>You’ve been working for hours to figure out why the system you have delivered
+fails very occasionally.</p>
+<p>You have good bug reports that show it takes
+about 25 days of continuous run time for the failure to occur, and it’s
+happened at 4 different sites now. You get a spidey sense that it might be
+related to a timer and pull out your phone and fire up <a class="reference external" href="https://thomasokken.com/free42/">Free-42</a> (because you
+like RPN calculators). The math for a 1 msec timer interval says
+that a 32 bit unsigned int should be good for about 50 days … wait a
+minute. The restarts happen about 25 days apart!</p>
+<p>You find the place where someone did a calculation with the clock using
+signed instead of unsigned values, and mumble “I wish that we had a coding
+standard to catch this”.</p>
+<p>Said nobody. Ever.</p>
+<p>What you really needed was a Developer’s Guide for this project, a test-driven
+development mindset, and a review process that could work together with continuous
+integration to have a better chance at catching the problem.</p>
+<p>Of course the title is designed to catch your eye, and a coding standard is
+not a bad thing. Just pick one that’s already out there like the Linux Kernel
+or MicroPython coding standard and call it a day.</p>
+<nav class="contents" id="in-this-post">
+<p class="topic-title">In this post …</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#coding-standards-are-a-waste-of-time" id="id1">Coding Standards Are A Waste Of Time</a></p>
+<ul>
+<li><p><a class="reference internal" href="#why-management-likes-coding-standards" id="id2">Why Management Likes Coding Standards</a></p></li>
+<li><p><a class="reference internal" href="#but-coding-standards-make-reading-code-easier" id="id3">But Coding Standards Make Reading Code Easier</a></p></li>
+<li><p><a class="reference internal" href="#but-coding-standards-make-understanding-code-easier" id="id4">But Coding Standards Make Understanding Code Easier</a></p></li>
+<li><p><a class="reference internal" href="#but-coding-standards-make-maintanance-and-debugging-easier" id="id5">But Coding Standards Make Maintanance and Debugging Easier</a></p></li>
+<li><p><a class="reference internal" href="#what-can-we-do-to-improve-outcomes" id="id6">What Can We Do To Improve Outcomes?</a></p></li>
+<li><p><a class="reference internal" href="#conclusion" id="id7">Conclusion</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="why-management-likes-coding-standards">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Why Management Likes Coding Standards</a><a class="headerlink" href="#why-management-likes-coding-standards" title="Link to this heading">¶</a></h2>
+<p>If you take a few minutes and Google “are coding standards useful” you will get
+many articles and blog posts promoting the same basic benefits:</p>
+<ul class="simple">
+<li><p>The code will be easy to read</p></li>
+<li><p>The code will be easy to understand</p></li>
+<li><p>The code will be easy to maintain</p></li>
+<li><p>The code will be easy to debug</p></li>
+</ul>
+<p>This is exactly the kind of fluff that management likes to read after yet
+another difficult project delivery. Sometimes consultants are brought in to
+review the development process and they comment on the lack of a coding standard
+(among other things).</p>
+<p>If only we had a coding standard our problems would go away.</p>
+<p>The thing is, a coding standard is the easiest document to write and to have
+meetings about. Everyone has an opinion about how to write pretty code, how
+variables and functions should be named, and whether to use camel-case or
+underlines to separate words.</p>
+<p>But is the coding standard really going to fix things? There is a hard truth in
+software engineering that is often forgotten. Joel Spolsky summarized it very
+neatly in Part 1 of <a class="reference external" href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">Things You Should Never Do</a>:</p>
+<blockquote class="epigraph">
+<div><p>There’s a subtle reason that programmers always want to throw away the code
+and start over. The reason is that they think the old code is a mess. And
+here is the interesting observation: they are probably wrong. The reason that
+they think the old code is a mess is because of a cardinal, fundamental law of
+programming:</p>
+<p><strong>It’s harder to read code than to write it.</strong></p>
+<p>This is why code reuse is so hard. This is why everybody on your team has a
+different function they like to use for splitting strings into arrays of
+strings. They write their own function because it’s easier and more fun than
+figuring out how the old function works.</p>
+<p class="attribution">—Joel Spolsky</p>
+</div></blockquote>
+<p>Let’s explore these magic bullet points a bit further and I’ll try to convince
+you to minimize the effort on picking a coding standard and focus instead on
+making a Developer’s Guide that will help the team on your next project.</p>
+</section>
+<section id="but-coding-standards-make-reading-code-easier">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">But Coding Standards Make Reading Code Easier</a><a class="headerlink" href="#but-coding-standards-make-reading-code-easier" title="Link to this heading">¶</a></h2>
+<p>To be fair, it <em>is</em> actually a little easier to read well-formed code, but
+that’s something you can fix in a few minutes with any number of code
+formatting utilities. You can fix up most naming problems with a decent editor
+and a few minutes of extra time to choose (or change to) a meanginful name.</p>
+<p>But you can’t make a complex module easier to understand, maintain, or
+debug just by having a coding standard.</p>
+<p>It feels good to write and read a nicely formatted block of code where the
+names all make sense, the flow is clear, and the comments explain the thinking
+behind the hard parts.</p>
+<p>Now multiply that by a few hundred files and pretty soon you are in the 20-50
+kloc range - here’s where the time you and your team discussed the number of
+spaces to indent a block or enforcing only one exit point per function was
+wasted. You would have been better off working on a project level design and
+a Developers Guide.</p>
+</section>
+<section id="but-coding-standards-make-understanding-code-easier">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">But Coding Standards Make Understanding Code Easier</a><a class="headerlink" href="#but-coding-standards-make-understanding-code-easier" title="Link to this heading">¶</a></h2>
+<p>Sure. For projects with a hundred or so lines of code. Do you really think that
+your coding standard is the one thing that is keeping new team members from
+understanding how your interrupt domain functions buffer data so the background
+task can process it when it’s needed? Or how you guarantee that time critical
+hardware updates can run during garbage collection cycles?</p>
+<p>It doesn’t matter if the code is easy to read if the system is hard to
+understand. That’s why there are <a class="reference external" href="https://www.cliffsnotes.com/">Cliff’s Notes</a> for topics like The Great Gatsby
+and Differential Equations.</p>
+<p>It’s very helpful to have a relatively short document to give you and your team
+a detailed guide to the technical challenges the system is designed to solve as
+well as a Developer’s Guide that explains how those challenges are solved.</p>
+<p>But wait. Isn’t writing a Design Guide and Developer’s Guide exactly what we
+are <em>not</em> supposed to do anymore? Doesn’t Agile prefer working code over
+documentation? Shouldn’t we avoid doing Big Up Front Design (BUFD)?</p>
+<p>Maybe, yes, and yes.</p>
+<p>I’m no fan of BUFD - unless it’s for a relatively small
+piece of code where you know all the design constraints and requirements and
+you have good acceptance criteria and your team has written some variant of
+this code more than once or twice.</p>
+<p>For any complex project that’s going to run for a few quarters or years there
+is no way to think ahead to all the problems or to find a process to eliminate
+risk. And that’s why you and your team should spend your time writing Design
+Guides and Developer’s Guides as you go. Take time in each sprint to update
+these guides with new knowledge for the project.</p>
+<p>For long-running and complex projects, your biggest enemy is not the lack of
+coding standards. It’s staff turnover and adding more developers to the
+project. The loss of tribal knowledge and the friction of onboarding new
+developers is what’s going to be the root cause of many issues that can be
+avoided if you spend time writing and maintaining great guides. More on that
+in another post.</p>
+</section>
+<section id="but-coding-standards-make-maintanance-and-debugging-easier">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">But Coding Standards Make Maintanance and Debugging Easier</a><a class="headerlink" href="#but-coding-standards-make-maintanance-and-debugging-easier" title="Link to this heading">¶</a></h2>
+<p>A coding standard might make the <em>mechanics</em> of maintaining code easier, but
+they sure don’t help you find <em>where</em> to make the changes to add features or
+fix bugs.</p>
+<p>Debugging code is one of the hardest activities there is, and a coding standard
+is not going to help with that either. There are of course a few general rules
+that can be used to make it easier for the compiler to tell you about a
+potential bug. And there are static and dynamic code analyzers that can point
+you to dangerous constructs.</p>
+<p>In my experience, this is completely backwards. For full disclosure I was a
+strong advocate for compile time and code analyzers to find potential bugs. I
+changed my mind when I discovered Test-Driven Development (TDD).</p>
+<p>Actually I discovered the <a class="reference external" href="https://www.amazon.com/Driven-Development-Embedded-Pragmatic-Programmers/dp/193435662X">TDD For Embedded Systems</a> book by James Grenning back
+in 2011, but I didn’t really dig in and <em>do</em> TDD until I refactored my
+<a class="reference external" href="https://github.com/rhempel/umm_malloc">umm_malloc</a> project using TDD in about 2018.</p>
+<p>Then I wrote a non-trivial (2000 loc) feature extension for another project
+using TDD. It worked pretty much the first time it was integrated it into the
+codebase running on our embedded target.  When I reflected on how TDD improved
+our development process I realized that <em>I never had to use the debugger</em>.</p>
+<p>Ever. Not even once.</p>
+<p>Long story short, the bit about debugging being easier when you have a coding
+standard is simply untrue. Easier maintenance is also a myth - you still have
+to know where to change the code, or how to plug a new feature in.</p>
+</section>
+<section id="what-can-we-do-to-improve-outcomes">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">What Can We Do To Improve Outcomes?</a><a class="headerlink" href="#what-can-we-do-to-improve-outcomes" title="Link to this heading">¶</a></h2>
+<p>The first thing we can do is take a look around us and have some hard
+conversations about <em>why</em> we think a coding standard is so important, and
+if so, does it need to apply uniformly to each and every project?</p>
+<p>I’m going to argue that a coding standard is not nearly as important as a project level
+Developers Guide - even if your department only works on variants of the same
+codebase for all projects. I’ll also ask you to recall all the hours you have
+spent getting to a semi-done coding standard, giving up in the end because
+you cannot get an agreement on something like allowing an early return out
+of a function.</p>
+<p>Next we can do a literature survey looking for actual (not anecdotal)
+evidence of the benefit of a coding standard - even an industry standard one
+like MISRA-C. Guess what? A <a class="reference external" href="http://resolver.tudelft.nl/uuid:646de5ba-eee8-4ec8-8bbc-2c188e1847ea">study at TU Delft</a> (a very well respected CS school)
+and Les Hatton’s paper on <a class="reference external" href="https://www.leshatton.org/Documents/MISRA_comp_1105.pdf">Language Subsetting</a> using MISRA-C have shown that
+the standard is not much better than random chance at catching faults. To make
+matters worse, Hatton’s earlier paper shows that there is a non-trivial chance
+that fixing code to be MISRA-C compliant actually <em>increases</em> the risk of
+introducing new and subtle bugs.</p>
+<p>The third thing you and your team can do is start working in pairs or small
+groups to break down your functional components into pieces that are
+decoupled from the rest of the system, and that follow good software engineering
+principles, like <a class="reference external" href="https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html">Uncle Bob’s SOLID</a> response to a reader’s letter.</p>
+<p>Finally, find a TDD evangelist in your team and take them off their
+assigned tasks for a while. Let them float in a couple of teams and ask them
+to coach developers in TDD. Make sure that your developers know the difference
+between code <em>coverage</em> and code <em>correctness</em> - it’s usually easy to write
+tests after the code is done that prove code coverage. That doesn’t mean its
+correct - and I’ve been bitten by that more than once.</p>
+<p>It takes a little longer (at the beginning) to write code that makes failing tests
+pass, but pretty soon the rhythm of writing a test, breaking your program, and then
+writing code to make the test pass becomes natural.</p>
+<p>Your new developers will be <em>much</em> more productive on your complex system
+if they have read a good Developers Guide and understand the workflow for
+adding features or fixing (hopefully rare) bugs. They won’t need a Coding
+Standard because you’ll have a senior staff member coaching them for the
+first few months, they will have a safety net of tests, and they will develop
+a mindset that drives quality, attention to detail, and testability that a
+coding standard simply cannot help with.</p>
+</section>
+<section id="conclusion">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Conclusion</a><a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>I encourage you to press for Design and Developer’s Guides for your projects, and
+to focus on becoming great at TDD and using your CI pipeline to run tests
+automatically. Learn to build decoupled systems and to work in pairs or close
+knit groups to keep each other thinking about how to write great code.</p>
+<p>The end result should be an awesome project. Nobody will care about which
+Coding Standard you used …</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">Coding Standards Are A Waste Of Time</a><ul>
+<li><a class="reference internal" href="#why-management-likes-coding-standards">Why Management Likes Coding Standards</a></li>
+<li><a class="reference internal" href="#but-coding-standards-make-reading-code-easier">But Coding Standards Make Reading Code Easier</a></li>
+<li><a class="reference internal" href="#but-coding-standards-make-understanding-code-easier">But Coding Standards Make Understanding Code Easier</a></li>
+<li><a class="reference internal" href="#but-coding-standards-make-maintanance-and-debugging-easier">But Coding Standards Make Maintanance and Debugging Easier</a></li>
+<li><a class="reference internal" href="#what-can-we-do-to-improve-outcomes">What Can We Do To Improve Outcomes?</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Ralph Hempel.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>
