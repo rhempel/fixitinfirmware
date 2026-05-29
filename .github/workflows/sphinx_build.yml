@@ -30,7 +30,7 @@ jobs:
     
     - name: Sphinx build
       # Build HTML documentation from sources under `docs` to `build` folder.
-      run: python -m sphinx -b html docs build
+      run: python -m sphinx -b html source build
     
     - name: Commit documentation in gh-pages branch
       # Store documentation in a temporary one-commit git repo.
