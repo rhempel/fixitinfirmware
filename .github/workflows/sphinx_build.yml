@@ -25,7 +25,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install sphinx
         # Install additional dependencies of your package, e.g. one of:
-        # python -m pip install .
+        python -m pip install piccolo_theme
         # python -m pip install -r requirements.txt
     
     - name: Sphinx build
