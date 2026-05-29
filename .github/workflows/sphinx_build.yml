@@ -1,4 +1,4 @@
-name: Sphinx Documentation to GitHub Pages
+name: 'Sphinx Documentation to GitHub Pages'
 
 on:
   push:
