@@ -8,7 +8,7 @@ on:
     inputs:
       parameter:
         description: My Parameter
-  pull_request: -- Add this here
+  pull_request:
 
 jobs:
   build:
